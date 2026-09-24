@@ -1,0 +1,7 @@
+WHERE TO PUT EACH PHOTO (keep the folder + file names, or edit the path in js/site.js)
+Page banners + page photos ....... IMG list at top of js/site.js  (about, services, menu, gallery, faq, contact banners; about portrait; service photos)
+Menu / cart product photos ....... PRODUCTS list in js/site.js  (img: ...)
+Gallery page ..................... images/gallery/gallery-01.jpg ... gallery-12.jpg  (missing ones are hidden automatically)
+Homepage hero / story / cakes .... edit the <img src="..."> lines in index.html
+Logo ............................. images/neeralogo.png
+Map .............................. contact.html, the iframe src (change q=Atlanta,+Georgia)

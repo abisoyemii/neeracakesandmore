@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NeeraCakesAndMore | Cakes & Catering in Atlanta</title>
+<meta name="description" content="NeeraCakesAndMore creates Nigerian-inspired cakes, small chops and finger foods for celebrations in Atlanta, Georgia.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#150c10;--ember:#24141a;--cream:#f3e9dc;--dim:#c9b9a5;--gold:#e8a0b6;--pink:#c94572;--pink-deep:#a93560;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#150c10}}
+:root[data-theme="dark"]{--ink:#150c10}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}html.lock{overflow:hidden}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1vw,1.1rem);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+img{display:block;width:100%;height:100%;object-fit:cover;color:transparent}
+body::after{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none;opacity:.09;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");animation:grain .9s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-5%,-2%)}80%{transform:translate(4%,4%)}100%{transform:translate(0,0)}}
+#bar{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);z-index:40}
+
+/* intro title card */
+#intro{position:fixed;inset:0;z-index:100;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity 1.6s ease 0s}
+#intro.out{opacity:0;pointer-events:none}
+#intro>*{opacity:0;transform:translateY(10px);transition:opacity 1.8s ease,transform 2.4s ease}#intro.show>*{opacity:1;transform:none}
+#intro img{height:80px;width:auto;object-fit:contain}#intro .wm{font-size:clamp(2rem,6vw,3.6rem)}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:calc(20px + env(safe-area-inset-top,0px)) clamp(20px,4vw,56px) 20px;background:linear-gradient(#150c10b3,transparent)}
+.brand{display:flex;flex-direction:column;gap:2px}.brand img{height:48px;width:auto;object-fit:contain}
+.wm{font-family:var(--serif);font-size:1.5rem;font-weight:500;letter-spacing:.02em;line-height:1}
+.tag{font-size:.64rem;letter-spacing:.34em;color:var(--gold)}
+nav ul{display:flex;gap:clamp(16px,2.6vw,40px);list-style:none;padding:0;font-size:.86rem;letter-spacing:.06em}
+nav ul a{opacity:.8;transition:opacity .6s}nav ul a:hover{opacity:1}.burger{display:none;width:48px;height:48px;background:none;border:0;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:7px;padding:0;position:relative;z-index:31}
+.burger span{display:block;width:26px;height:2px;background:var(--cream);transition:transform .5s ease}
+.menu-open .burger span:first-child{transform:translateY(4.5px) rotate(45deg)}.menu-open .burger span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+#menu{position:fixed;inset:0;z-index:29;background:#150c10f7;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,3.5vh,28px);padding:0 8vw;opacity:0;pointer-events:none;transition:opacity .6s ease}
+.menu-open #menu{opacity:1;pointer-events:auto}html.menu-open{overflow:hidden}
+#menu a{font-family:var(--serif);font-size:clamp(2.2rem,9vw,3.6rem);font-weight:300;line-height:1.1}#menu a.cta{color:var(--gold)}
+@media(max-width:980px){nav ul{display:none}.burger{display:flex}.brand img.logo{width:60px;height:60px}}
+
+.wrap{position:relative}.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--ink)}
+.abs{position:absolute;inset:0}.abs img{position:absolute;inset:0;will-change:transform}
+.veil::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#150c108c 0%,#150c1030 42%,#150c10d9 100%);pointer-events:none}
+.frame{position:relative;overflow:hidden;background:var(--ember)}
+.frame img{position:absolute;left:0;top:-9%;height:118%;will-change:transform}
+.brand img.logo{width:72px;height:72px;border-radius:50%;object-fit:cover}#intro img.logo{width:120px;height:120px;border-radius:50%;object-fit:cover}.inquire .brand img.logo{width:100px;height:100px}
+
+/* hero */
+#hero{height:420vh}
+#hero .abs img{animation:drift 30s ease-out both;animation-play-state:paused}.go #hero .abs img{animation-play-state:running}
+@keyframes drift{from{scale:1.02}to{scale:1.08}}
+.dim{position:absolute;inset:0;background:#150c10;opacity:0}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 45%,#000000a6 100%);pointer-events:none}
+.lb{position:absolute;left:0;right:0;height:10vh;background:#000;z-index:5;transition:transform 2.6s cubic-bezier(.7,0,.2,1) .5s}
+.lb.t{top:0}.lb.b{bottom:0}.go .lb.t{transform:translateY(-100%)}.go .lb.b{transform:translateY(100%)}
+.hcopy{position:absolute;left:0;bottom:0;padding:0 clamp(20px,5vw,72px) clamp(48px,9vh,110px);max-width:1400px;z-index:3}
+.kicker{font-size:clamp(.95rem,1.25vw,1.2rem);letter-spacing:.22em;color:var(--dim);margin-bottom:22px}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.5rem,9.6vw,9.4rem);line-height:.98;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--dim)}
+.ln{display:block;overflow:hidden;padding-bottom:.08em}.ln>span{display:block;transform:translateY(112%);transition:transform 2.2s cubic-bezier(.16,.8,.2,1)}
+.go .ln>span{transform:none}.go .ln:nth-child(2)>span{transition-delay:.35s}
+.fadein{opacity:0;transition:opacity 2s ease 1.6s}.go .fadein{opacity:1}
+.lede{max-width:760px;margin-top:36px;font-size:clamp(1.50rem,1.12vw,1.80rem);line-height:1.6;opacity:.95}
+.ctas{display:flex;flex-wrap:wrap;gap:18px 40px;margin-top:44px;align-items:center}
+.btn{display:inline-block;padding:20px 46px;background:var(--pink);color:#fff;font-size:1rem;letter-spacing:.12em;transition:background .6s}.btn:hover{background:var(--pink-deep)}
+.ghost{font-size:1rem;letter-spacing:.12em;color:#fff;border-bottom:2px solid var(--pink);padding-bottom:5px;transition:border-color .6s}.ghost:hover{border-color:#fff}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,8vw,140px);align-items:center;padding:clamp(140px,28vh,320px) clamp(20px,5vw,72px)}
+h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,6vw,5.6rem);line-height:1;letter-spacing:-.015em}
+.story h2{margin-bottom:44px}
+.story p{font-family:var(--serif);font-size:clamp(1.50rem,1.80vw,1.90rem);line-height:1.7;color:var(--dim);max-width:34em}
+.story p+p{margin-top:1.3em;color:var(--cream)}.story .frame{aspect-ratio:3/4;min-height:70vh}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+
+/* cakes sequence */
+#cakes{height:680vh}
+.ptitle{position:absolute;z-index:4;top:calc(96px + env(safe-area-inset-top,0px));left:clamp(20px,5vw,72px);font-size:clamp(2.4rem,5vw,4.4rem)}
+.cap{position:absolute;z-index:4;left:clamp(20px,5vw,72px);bottom:clamp(60px,12vh,130px);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.9rem,4.4vw,4rem);line-height:1.08;max-width:11em;opacity:0}
+.ticks{position:absolute;z-index:4;right:clamp(20px,5vw,72px);bottom:clamp(60px,12vh,130px);display:flex;gap:8px}
+.ticks i{width:48px;height:2px;background:#f3e9dc44}.ticks i.on{background:var(--gold)}
+
+/* small chops */
+.chops{padding:clamp(150px,28vh,320px) 0 clamp(120px,22vh,260px);background:var(--ember)}
+.chapter{padding:0 clamp(20px,5vw,72px) clamp(48px,9vh,110px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.chapter h2{font-size:clamp(3.2rem,9vw,8.4rem);line-height:.92}.chapter p{max-width:360px;color:var(--dim);font-size:.98rem}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2.4vw,36px);padding:0 clamp(12px,2vw,28px)}
+.mosaic figure{margin:0}.mosaic .frame{height:100%}
+.m1{grid-column:1/9;aspect-ratio:16/11}.m2{grid-column:9/13;aspect-ratio:4/5;margin-top:clamp(60px,14vw,240px)}
+.m3{grid-column:1/6;aspect-ratio:4/5;margin-top:clamp(40px,8vw,120px)}.m4{grid-column:6/13;aspect-ratio:16/11;margin-top:clamp(100px,18vw,300px)}
+@media(max-width:760px){.m1,.m2,.m3,.m4{grid-column:1/13;margin-top:18px}}
+
+/* catering widening frame */
+#cater{height:340vh}
+#cater .abs{clip-path:inset(26vh 14vw)}
+.cin{position:absolute;z-index:4;left:clamp(20px,5vw,72px);bottom:clamp(48px,10vh,120px);max-width:640px;opacity:0}
+.cin h2{font-size:clamp(3rem,8vw,7.4rem);line-height:.94}.cin p{margin-top:24px;max-width:480px;font-size:clamp(1rem,1.2vw,1.15rem)}
+
+/* horizontal gallery */
+#gal{height:400vh}
+.track{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;gap:clamp(16px,3vw,44px);padding:0 8vw;will-change:transform}
+.track>*{flex:none}.track h2{font-size:clamp(3.2rem,9vw,8.4rem);padding-right:6vw}
+.gi{height:74vh}.gi:nth-of-type(odd){transform:translateY(-6vh)}.gi:nth-of-type(even){transform:translateY(7vh)}
+.gi.w{height:60vh;aspect-ratio:3/2}.gi.t{aspect-ratio:3/4}.gi.s{height:66vh;aspect-ratio:1/1}
+
+/* close */
+.inquire{text-align:center;padding:clamp(160px,30vh,340px) 24px calc(60px + env(safe-area-inset-bottom,0px));background:#000}
+.inquire h2{max-width:11em;margin:0 auto 46px;font-size:clamp(2.8rem,7.4vw,6.8rem);line-height:.98}
+.inquire .brand{align-items:center;margin-top:clamp(90px,16vh,180px)}.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;margin-top:64px;font-family:var(--serif);font-size:clamp(1.1rem,1.7vw,1.5rem)}.contact a{border-bottom:1px solid #f3e9dc33;padding-bottom:4px;transition:border-color .6s,color .6s}.contact a:hover{border-color:var(--gold);color:var(--gold)}.inquire small{display:block;margin-top:40px;color:var(--dim);font-size:.75rem;letter-spacing:.08em}
+
+/* reveals */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1.8s cubic-bezier(.2,.7,.2,1),transform 1.8s cubic-bezier(.2,.7,.2,1)}.rv.on{opacity:1;transform:none}
+.frame.rv{transform:none;clip-path:inset(0 0 16% 0);transition:opacity 1.8s ease,clip-path 2.2s cubic-bezier(.2,.7,.2,1)}.frame.rv.on{clip-path:inset(0)}
+@media(prefers-reduced-motion:reduce){body::after{animation:none}#hero .abs img{animation:none}.rv{opacity:1;transform:none;transition:none;clip-path:none!important}.ln>span{transform:none;transition:none}.fadein{opacity:1;transition:none}}
+/* responsive: phones, tablets, landscape phones, big screens */
+@media(max-width:760px){
+ #hero{height:220vh}
+ #intro{transition-duration:.8s}#intro>*{transition:opacity .9s ease,transform 1.1s ease}
+ .lb{transition-duration:1.2s;transition-delay:.1s}
+ .ln>span{transition-duration:1.1s}.go .ln:nth-child(2)>span{transition-delay:.15s}
+ .fadein{transition:opacity 1s ease .4s}
+ #hero .veil::after{background:linear-gradient(180deg,#150c10a6 0%,#150c1033 22%,#150c1099 48%,#150c10ee 100%)}
+ body::after{animation:none;opacity:.06}
+ .kicker{letter-spacing:.12em}
+ .hcopy{padding-bottom:calc(clamp(48px,9vh,110px) + env(safe-area-inset-bottom,0px))}
+ .btn{padding:18px 34px;font-size:.95rem}.ghost{font-size:.95rem}
+ .ptitle{top:calc(120px + env(safe-area-inset-top,0px))}
+ .cap{bottom:96px;max-width:9em}.ticks{right:auto;left:clamp(20px,5vw,72px);bottom:52px}.ticks i{width:36px}
+ .gi{height:58vh}.gi.w{height:44vh}.gi.s{height:50vh}.track{padding:0 6vw}
+ .story .frame{min-height:0}.chapter{flex-direction:column;align-items:flex-start}
+}
+@media(max-height:520px) and (orientation:landscape){h1{font-size:clamp(2rem,7vw,3.4rem)}.lede,.kicker{display:none}.ctas{margin-top:18px}.brand img.logo{width:44px;height:44px}.ptitle{top:84px}.cap{bottom:40px;font-size:1.8rem}.ticks{bottom:40px}}
+@media(min-width:1800px){.hcopy{max-width:1700px}.story p{max-width:32em}}
+body{font-size:clamp(1.05rem,1vw,1.15rem)}
+nav ul{font-size:.92rem}
+.btn,.ghost{font-size:1.02rem}
+@media(max-width:760px){body{font-size:1.08rem}nav ul{font-size:1rem}.btn,.ghost{font-size:1.02rem}.tag{font-size:.68rem}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="intro" aria-hidden="true">
+  <img class="logo" src="images/neeralogo.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="wm" style="display:none">NeeraCakesAndMore</span>
+  <span class="tag">A TASTE TO REMEMBER</span>
+</div>
+
+<nav>
+  <a class="brand" href="#top" aria-label="NeeraCakesAndMore">
+    <img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="wm" style="display:none">NeeraCakesAndMore</span>
+    <span class="tag">A TASTE TO REMEMBER</span>
+  </a>
+  <ul><li><a href="about.html">Our Story</a></li><li><a href="services.html">Services</a></li><li><a href="#cakes">Cakes</a></li><li><a href="#small-chops">Small Chops</a></li><li><a href="faq.html">FAQ</a></li><li><a href="cart.html">Order / Inquire</a></li></ul>
+  <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</nav>
+<div id="menu"><a href="about.html">Our Story</a><a href="services.html">Services</a><a href="#cakes">Cakes</a><a href="#small-chops">Small Chops</a><a href="faq.html">FAQ</a><a class="cta" href="cart.html">Order / Inquire</a></div>
+
+<header class="wrap" id="hero"><div class="pin" id="top">
+  <div class="abs veil"><img id="himg" src="images/hero/small-chops-hero.jpg" alt="Nigerian small chops and finger foods styled for an Atlanta celebration" style="object-position:50% 45%"><canvas id="hcv" style="display:none;position:absolute;inset:0;width:100%;height:100%" aria-hidden="true"></canvas></div>
+  <div class="dim" id="hdim"></div><div class="vig"></div>
+  <div class="lb t"></div><div class="lb b"></div>
+  <div class="hcopy" id="hcopy">
+    <p class="kicker fadein">Cakes · Small Chops · Finger Foods</p>
+    <h1><span class="ln"><span>Beautifully made.</span></span><span class="ln"><span><em>Thoughtfully served.</em></span></span></h1>
+    <div class="fadein"><p class="lede">NeeraCakesAndMore brings Nigerian-inspired hospitality to celebrations through cakes, small chops, finger foods, and beautifully presented treats.</p>
+    <div class="ctas"><a class="btn" href="#inquire">Order / Inquire</a><a class="ghost" href="#small-chops">Explore the Menu</a></div></div>
+  </div>
+</div></header>
+
+<section class="story" id="story">
+  <div>
+    <h2 class="rv">Our Story</h2>
+    <p class="rv">At Neeracakesandmore, we believe good food brings people together and makes every celebration more memorable. What started as a passion for creating delicious Nigerian small chops has grown into a business offering finger foods, small chops, cakes, and beautifully presented treats for all kinds of events.</p>
+    <p class="rv">From intimate celebrations to weddings, birthdays, baby showers, and special occasions, we put care, flavor, and beautiful presentation into everything we create. Our goal is simple: to give you and your guests A Taste to Remember.</p>
+  </div>
+  <div class="frame rv" data-z><img src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats prepared for a celebration in Atlanta" style="object-position:50% 50%"></div>
+</section>
+
+<section class="wrap" id="cakes"><div class="pin">
+  <div class="abs veil cl"><img src="images/cakes/cake1.jpg" alt="NeeraCakesAndMore celebration cake" style="object-position:50% 50%"></div>
+  <div class="abs veil cl"><img src="images/cakes/cake2.jpg" alt="NeeraCakesAndMore celebration cake detail" style="object-position:50% 45%"></div>
+  <div class="abs veil cl"><img src="images/cakes/cake3.jpg" alt="NeeraCakesAndMore decorated cake" style="object-position:50% 50%"></div>
+  <div class="abs veil cl"><img src="images/cakes/cake4.jpg" alt="NeeraCakesAndMore finished celebration cake" style="object-position:50% 55%"></div>
+  <div class="vig"></div>
+  <h2 class="ptitle">Cakes</h2>
+  <p class="cap">The centrepiece of the table.</p><p class="cap">Made to be remembered.</p><p class="cap">Every layer, considered.</p><p class="cap">For the moment the room goes quiet.</p>
+  <div class="ticks"><i></i><i></i><i></i><i></i></div>
+</div></section>
+
+<section class="chops" id="small-chops">
+  <div class="chapter"><h2 class="rv">Small Chops</h2><p class="rv">Nigerian-inspired bites, made with care and presented to be shared.</p></div>
+  <div class="mosaic">
+    <figure class="m1"><div class="frame rv" data-z><img src="images/small-chops/small-chops-01.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+    <figure class="m2"><div class="frame rv" data-z><img src="images/small-chops/small-chops-02.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+    <figure class="m3"><div class="frame rv" data-z><img src="images/hero/small-chops-hero.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+    <figure class="m4"><div class="frame rv" data-z><img src="images/small-chops/small-chops-01.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+  </div>
+</section>
+
+<section class="wrap" id="cater"><div class="pin">
+  <div class="abs veil"><video id="cimg" class="media-video" autoplay muted loop playsinline preload="metadata" poster="images/hero/small-chops-hero.jpg" aria-label="Food beautifully presented for an Atlanta event"><source src="images/fourthvid.mp4" type="video/mp4"></video></div>
+  <div class="cin" id="ctext"><h2>Catering</h2><p>Weddings, birthdays, baby showers and special occasions, with the same care in every tray.</p></div>
+</div></section>
+
+<section class="wrap" id="gal"><div class="pin"><div class="track" id="track">
+  <h2>Gallery</h2>
+  <div class="frame gi t"><img src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats" style="object-position:50% 50%"></div>
+  <div class="frame gi w"><img src="images/hero/small-chops-hero.jpg" alt="Small chops prepared in Atlanta" style="object-position:50% 50%"></div>
+  <div class="frame gi s"><img src="images/small-chops/small-chops-02.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div>
+  <div class="frame gi t"><img src="images/small-chops/small-chops-01.jpg" alt="Party food presentation" style="object-position:50% 50%"></div>
+  <div class="frame gi w"><img src="images/hero/small-chops-hero.jpg" alt="Catering spread in Atlanta" style="object-position:50% 50%"></div>
+  <div class="frame gi s"><img src="images/small-chops/small-chops-02.jpg" alt="Finger foods for a celebration" style="object-position:50% 50%"></div>
+</div></div></section>
+
+<footer class="inquire" id="inquire">
+  <h2 class="rv">A Taste to Remember</h2>
+  <a class="btn rv" href="cart.html">Order / Inquire</a>
+  <div class="contact rv">
+    <a href="tel:+14709626866">+1 (470) 962-6866</a>
+    <a href="https://www.instagram.com/neeracakesandmore" target="_blank" rel="noopener">Instagram @neeracakesandmore</a>
+    <a href="https://www.tiktok.com/@neeracakesandmore" target="_blank" rel="noopener">TikTok @neeracakesandmore</a>
+  </div>
+  <a class="brand" href="#top" aria-label="NeeraCakesAndMore"><img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="wm" style="display:none">NeeraCakesAndMore</span><span class="tag">A TASTE TO REMEMBER</span></a>
+  <small>© 2026 NeeraCakesAndMore. Cakes, small chops and finger foods.</small>
+</footer>
+
+<script>
+(function(){
+var $=function(q){return [].slice.call(document.querySelectorAll(q))},cl=function(v,a,b){return Math.max(a,Math.min(b,v))},H=document.documentElement;
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// title card, then the picture opens
+var intro=document.getElementById('intro');
+function go(){intro.classList.add('out');H.classList.remove('lock');document.body.classList.add('go')}
+if(rm){intro.remove();document.body.classList.add('go')}else{H.classList.add('lock');var mq=innerWidth<761;setTimeout(function(){intro.classList.add('show')},mq?100:150);setTimeout(go,mq?1500:3300)}
+// reveals
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
+$('.rv').forEach(function(e){io.observe(e)});
+var vh=innerHeight,vw=innerWidth,S={},MOB=innerWidth/innerHeight<.8;
+function sm(k,t,f){S[k]=S[k]===undefined?t:S[k]+(t-S[k])*(rm?1:(f||(MOB?.13:.06)));return S[k]}
+var hero=$('#hero')[0],cakes=$('#cakes')[0],cater=$('#cater')[0],gal=$('#gal')[0],track=$('#track');track=track[0]||document.getElementById('track');
+/* HERO SMOKE. Frame paths are RELATIVE (no leading slash) so they work from any folder or host.
+   Needs: images/hero/frames/ezgif-frame-001..072.webp  and  images/hero/frames-m/ezgif-frame-001..040.webp
+   If the frames cannot be loaded, live smoke is drawn over the photo instead (and a warning is printed in the browser console). */
+var CM={n:40,path:function(i){return 'images/hero/frames-m/ezgif-frame-'+String(i).padStart(3,'0')+'.webp'}},CD={n:72,path:function(i){return 'images/hero/frames/ezgif-frame-'+String(i).padStart(3,'0')+'.webp'}};
+var SETS=MOB?[CM,CD]:[CD],FR=SETS[0],fimgs=[],fok=false,smk=false,puffs=[],cv=document.getElementById('hcv'),cx=cv.getContext('2d');
+function np(r){return{x:Math.random(),y:r?Math.random():1.05,s:.14+Math.random()*.22,a:.06+Math.random()*.1,v:.00005+Math.random()*.0001,dx:(Math.random()-.5)*.00005,ph:Math.random()*6}}
+function boot(k){FR=SETS[k];var f0=new Image();f0.onload=function(){fimgs=[];fok=true;cv.style.display='block';sizeCv();for(var i=1;i<=FR.n;i++){var im=new Image();im.src=FR.path(i);fimgs[i]=im}};
+  f0.onerror=function(){if(SETS[k+1])boot(k+1);else{console.warn('Hero smoke frames not found at '+FR.path(1)+'. Upload the images/hero/frames and frames-m folders next to index.html. Using live smoke instead.');smk=true;cv.style.display='block';sizeCv();for(var i=0;i<32;i++)puffs.push(np(true))}};f0.src=FR.path(1)}boot(0);
+function rdy(i,strict){var m=fimgs[i];while(!strict&&i>1&&!(m&&m.complete&&m.naturalWidth)){i--;m=fimgs[i]}return m&&m.complete&&m.naturalWidth?m:null}
+function sizeCv(){var d=smk?.5:Math.min(devicePixelRatio||1,2);cv.width=innerWidth*d;cv.height=innerHeight*d}
+function paint(im){var cw=cv.width,ch=cv.height,iw=im.naturalWidth,ih=im.naturalHeight,r2=Math.max(cw/iw,ch/ih),w2=iw*r2,h2=ih*r2;cx.drawImage(im,(cw-w2)/2,(ch-h2)/2,w2,h2)}
+function smoke(t){var cw=cv.width,ch=cv.height,base=Math.max(cw,ch);cx.clearRect(0,0,cw,ch);
+  puffs.forEach(function(q,i){q.y-=q.v*16;q.x+=q.dx*16+Math.sin(t/2200+q.ph)*.0004;if(q.y<-.25){puffs[i]=np(false);return}
+    var r=q.s*base*.5*(1+(1-q.y)*.7),al=q.a*Math.min(1,(1.15-q.y)*3)*Math.min(1,q.y*3+.7),px=q.x*cw,py=q.y*ch,g=cx.createRadialGradient(px,py,0,px,py,r);
+    g.addColorStop(0,'rgba(252,244,236,'+al.toFixed(3)+')');g.addColorStop(1,'rgba(252,244,236,0)');cx.fillStyle=g;cx.beginPath();cx.arc(px,py,r,0,7);cx.fill()})}
+var himg=document.getElementById('himg'),hdim=document.getElementById('hdim'),hcopy=document.getElementById('hcopy'),cimg=document.getElementById('cimg'),ctext=document.getElementById('ctext');
+var layers=$('#cakes .cl'),caps=$('#cakes .cap'),ticks=$('#cakes .ticks i'),zs=$('[data-z]'),bar=document.getElementById('bar');
+function wp(el){var r=el.getBoundingClientRect();return cl(-r.top/(r.height-vh),0,1)}
+function size(){vh=innerHeight;vw=innerWidth;gal.style.height=(track.scrollWidth-vw+vh)+'px'}
+var lw=innerWidth,lh=innerHeight;
+addEventListener('resize',function(){if(innerWidth!==lw||Math.abs(innerHeight-lh)>140){lw=innerWidth;lh=innerHeight;size();if(fok||smk)sizeCv()}else{vh=innerHeight}});addEventListener('load',size);size();
+var bg=document.querySelector('.burger');function menu(o){H.classList.toggle('menu-open',o);document.body.classList.toggle('menu-open',o);bg.setAttribute('aria-expanded',o)}
+bg.addEventListener('click',function(){menu(!H.classList.contains('menu-open'))});
+$('#menu a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
+function draw(){
+  // hero: the photograph stays, slowly pushes in and dims to a dusk
+  var p=sm('h',wp(hero));
+  if(fok){var idle=rm?0:(1-cl(p*8,0,1))*(.5-.5*Math.cos(performance.now()/2600))*.2,fp=cl(p+idle,0,1)*(FR.n-1),i0=Math.floor(fp),fr=fp-i0,a=rdy(i0+1),b=fr>.02?rdy(Math.min(i0+2,FR.n),1):null;
+    if(a){paint(a);if(b&&b!==a){cx.globalAlpha=fr;paint(b);cx.globalAlpha=1}}}
+  else{himg.style.transform='translate3d(0,'+(p*6)+'%,0) scale('+(1+.05*p)+')';if(smk)smoke(performance.now())}
+  hdim.style.opacity=(fok?p*.25:p*.6).toFixed(3);
+  hcopy.style.transform='translateY('+(-p*110)+'px)';hcopy.style.opacity=1-cl((p-.3)/.4,0,1);
+  // cakes: four plates dissolve into each other, scene by scene
+  var s=sm('c',wp(cakes))*4;
+  layers.forEach(function(l,i){var o=i?cl((s-i+.18)/.36,0,1):1,t=cl((s-i+.18)/1.4,0,1);
+    l.style.opacity=o;l.firstElementChild.style.transform='scale('+(1.14-.1*t)+')'});
+  caps.forEach(function(c,i){var d=s-(i+.5),o=cl((.4-Math.abs(d))/.12,0,1);c.style.opacity=o;c.style.transform='translateY('+(-d*46)+'px)'});
+  ticks.forEach(function(t,i){t.classList.toggle('on',Math.floor(Math.min(s,3.99))===i)});
+  // catering: a letterbox band widens into the full frame
+  var q=sm('k',wp(cater)),e=cl(q/.6,0,1);e=1-Math.pow(1-e,3);
+  cater.querySelector('.abs').style.clipPath='inset('+((1-e)*vh*.26).toFixed(1)+'px '+((1-e)*vw*.14).toFixed(1)+'px)';
+  cimg.style.transform='scale('+(1.3-.26*e)+')';
+  var to=cl((q-.55)/.25,0,1);ctext.style.opacity=to;ctext.style.transform='translateY('+((1-to)*40)+'px)';
+  // gallery: vertical scroll pulls the film strip sideways
+  var g=sm('g',wp(gal),.08);track.style.transform='translate3d('+(-g*(track.scrollWidth-vw))+'px,0,0)';
+  // small chops and story: slow push-in as each frame crosses the screen
+  zs.forEach(function(f,i){var r=f.getBoundingClientRect();if(r.bottom<-80||r.top>vh+80)return;
+    var pp=cl((r.top+r.height/2-vh/2)/(vh/2+r.height/2),-1,1);pp=sm('z'+i,pp,.08);
+    var im=f.firstElementChild;im.style.transform='translate3d(0,'+(-pp*5)+'%,0) scale('+(1.04+.1*(1-Math.abs(pp)))+')'});
+  bar.style.transform='scaleX('+cl(scrollY/(document.body.scrollHeight-vh),0,1)+')';
+  requestAnimationFrame(draw)
+}
+draw();
+})();
+</script>
+</body>
+</html>
