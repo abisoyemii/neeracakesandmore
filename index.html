@@ -42,7 +42,7 @@ nav ul a{opacity:.8;transition:opacity .6s}nav ul a:hover{opacity:1}.burger{disp
 @media(max-width:980px){nav ul{display:none}.burger{display:flex}.brand img.logo{width:60px;height:60px}}
 
 .wrap{position:relative}.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--ink)}
-.abs{position:absolute;inset:0}.abs img{position:absolute;inset:0;will-change:transform}
+.abs{position:absolute;inset:0}.abs img{position:absolute;inset:0;will-change:transform}.media-video{display:block;width:100%;height:100%;object-fit:cover;background:var(--ink)}#cater .media-video{position:absolute;inset:0}
 .veil::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#150c108c 0%,#150c1030 42%,#150c10d9 100%);pointer-events:none}
 .frame{position:relative;overflow:hidden;background:var(--ember)}
 .frame img{position:absolute;left:0;top:-9%;height:118%;will-change:transform}
@@ -146,7 +146,7 @@ nav ul{font-size:.92rem}
 @media(min-width:1001px){#hero .hcopy{max-width:1120px;padding-left:clamp(48px,7vw,104px);padding-bottom:clamp(88px,13vh,140px)}#hero h1{font-size:clamp(4.8rem,7.8vw,8rem);max-width:10em}#hero .lede{max-width:620px;margin-top:28px;font-size:clamp(1.25rem,1.3vw,1.55rem)}#hero .ctas{margin-top:32px}}
 @media(max-width:760px){#hero h1{font-size:clamp(2.8rem,11.5vw,5rem)}#hero .lede{font-size:clamp(1.35rem,4.3vw,1.6rem);margin-top:28px}#hero .kicker{font-size:1rem}}
 html[data-theme="light"] #hero .hcopy{color:#fff;text-shadow:0 2px 18px #000,0 1px 3px #000}html[data-theme="light"] #hero .hcopy .kicker,html[data-theme="light"] #hero .hcopy .lede{color:#fff}html[data-theme="light"] #hero .hcopy::before{content:"";position:absolute;inset:-18px -28px -28px -28px;z-index:-1;background:linear-gradient(90deg,#0009,transparent 78%);pointer-events:none}
-@media(max-width:760px){body{font-size:1.12rem}p,li,button,input,select,textarea,label{font-size:1.08rem}#hero .hcopy{padding-bottom:calc(52px + env(safe-area-inset-bottom,0px))}#hero h1{font-size:clamp(2.55rem,10.5vw,4.3rem);line-height:1.02}#hero .kicker{font-size:.98rem;margin-bottom:16px}#hero .lede{font-size:clamp(1.2rem,4vw,1.45rem);line-height:1.48;margin-top:24px}#hero .ctas{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px;max-width:290px}.ctas .btn,.ctas .ghost{width:100%;text-align:center}.btn,.ghost{font-size:1.05rem}}
+@media(max-width:760px){body{font-size:1.08rem}p,li,button,input,select,textarea,label{font-size:1.04rem}#hero .hcopy{padding-bottom:calc(52px + env(safe-area-inset-bottom,0px))}#hero h1{font-size:clamp(2.45rem,10.2vw,4.1rem);line-height:1.02}#hero .kicker{font-size:.96rem;margin-bottom:16px}#hero .lede{font-size:clamp(1.16rem,3.8vw,1.38rem);line-height:1.48;margin-top:24px}#hero .ctas{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px;max-width:290px}.ctas .btn,.ctas .ghost{width:100%;text-align:center}.btn,.ghost{font-size:1.04rem}}
 </style>
 </head>
 <body>
@@ -167,7 +167,7 @@ html[data-theme="light"] #hero .hcopy{color:#fff;text-shadow:0 2px 18px #000,0 1
 <div id="menu"><a href="about.html">Our Story</a><a href="luxsetup.html">Lux Set-Up</a><a href="services.html">Services</a><a href="#cakes">Cakes</a><a href="#small-chops">Small Chops</a><a href="faq.html">FAQ</a><a class="cta" href="cart.html">Order / Inquire</a></div>
 
 <header class="wrap" id="hero"><div class="pin" id="top">
-  <div class="abs veil"><img id="himg" src="images/hero/small-chops-hero.jpg" alt="Nigerian small chops and finger foods styled for an Atlanta celebration" style="object-position:50% 45%"><canvas id="hcv" style="display:none;position:absolute;inset:0;width:100%;height:100%" aria-hidden="true"></canvas></div>
+  <div class="abs veil"><img id="himg" src="images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg" alt="NeeraCakesAndMore catering spread" style="object-position:50% 45%"><img id="himg2" src="images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg" alt="NeeraCakesAndMore catering spread" style="object-position:50% 45%;opacity:0"><canvas id="hcv" style="display:none;position:absolute;inset:0;width:100%;height:100%" aria-hidden="true"></canvas></div>
   <div class="dim" id="hdim"></div><div class="vig"></div>
   <div class="lb t"></div><div class="lb b"></div>
   <div class="hcopy" id="hcopy">
@@ -269,7 +269,7 @@ var CM={n:40,path:function(i){return 'images/hero/frames-m/ezgif-frame-'+String(
 var SETS=MOB?[CM,CD]:[CD],FR=SETS[0],fimgs=[],fok=false,smk=false,puffs=[],cv=document.getElementById('hcv'),cx=cv.getContext('2d');
 function np(r){return{x:Math.random(),y:r?Math.random():1.05,s:.14+Math.random()*.22,a:.06+Math.random()*.1,v:.00005+Math.random()*.0001,dx:(Math.random()-.5)*.00005,ph:Math.random()*6}}
 function boot(k){FR=SETS[k];var f0=new Image();f0.onload=function(){fimgs=[];fok=true;cv.style.display='block';sizeCv();for(var i=1;i<=FR.n;i++){var im=new Image();im.src=FR.path(i);fimgs[i]=im}};
-  f0.onerror=function(){if(SETS[k+1])boot(k+1);else{console.warn('Hero smoke frames not found at '+FR.path(1)+'. Upload the images/hero/frames and frames-m folders next to index.html. Using live smoke instead.');smk=true;cv.style.display='block';sizeCv();for(var i=0;i<32;i++)puffs.push(np(true))}};f0.src=FR.path(1)}boot(0);
+  f0.onerror=function(){if(SETS[k+1])boot(k+1);else{console.warn('Hero smoke frames not found at '+FR.path(1)+'. Using the client photo sequence instead.');smk=false}};f0.src=FR.path(1)}
 function rdy(i,strict){var m=fimgs[i];while(!strict&&i>1&&!(m&&m.complete&&m.naturalWidth)){i--;m=fimgs[i]}return m&&m.complete&&m.naturalWidth?m:null}
 function sizeCv(){var d=smk?.5:Math.min(devicePixelRatio||1,2);cv.width=innerWidth*d;cv.height=innerHeight*d}
 function paint(im){var cw=cv.width,ch=cv.height,iw=im.naturalWidth,ih=im.naturalHeight,r2=Math.max(cw/iw,ch/ih),w2=iw*r2,h2=ih*r2;cx.drawImage(im,(cw-w2)/2,(ch-h2)/2,w2,h2)}
@@ -277,7 +277,7 @@ function smoke(t){var cw=cv.width,ch=cv.height,base=Math.max(cw,ch);cx.clearRect
   puffs.forEach(function(q,i){q.y-=q.v*16;q.x+=q.dx*16+Math.sin(t/2200+q.ph)*.0004;if(q.y<-.25){puffs[i]=np(false);return}
     var r=q.s*base*.5*(1+(1-q.y)*.7),al=q.a*Math.min(1,(1.15-q.y)*3)*Math.min(1,q.y*3+.7),px=q.x*cw,py=q.y*ch,g=cx.createRadialGradient(px,py,0,px,py,r);
     g.addColorStop(0,'rgba(252,244,236,'+al.toFixed(3)+')');g.addColorStop(1,'rgba(252,244,236,0)');cx.fillStyle=g;cx.beginPath();cx.arc(px,py,r,0,7);cx.fill()})}
-var himg=document.getElementById('himg'),hdim=document.getElementById('hdim'),hcopy=document.getElementById('hcopy'),cimg=document.getElementById('cimg'),ctext=document.getElementById('ctext');
+var himg=document.getElementById('himg'),himg2=document.getElementById('himg2'),hdim=document.getElementById('hdim'),hcopy=document.getElementById('hcopy'),cimg=document.getElementById('cimg'),ctext=document.getElementById('ctext');
 if(cimg&&cimg.tagName==='VIDEO'){cimg.preload='none';var cvo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cimg.play().catch(function(){});}else{cimg.pause()}})},{threshold:.15});cvo.observe(cimg)}
 var layers=$('#cakes .cl'),caps=$('#cakes .cap'),ticks=$('#cakes .ticks i'),zs=$('[data-z]'),bar=document.getElementById('bar');
 function wp(el){var r=el.getBoundingClientRect();return cl(-r.top/(r.height-vh),0,1)}
@@ -293,7 +293,7 @@ function draw(){
   var p=sm('h',wp(hero));
   if(fok){var idle=rm?0:(1-cl(p*8,0,1))*(.5-.5*Math.cos(performance.now()/2600))*.2,fp=cl(p+idle,0,1)*(FR.n-1),i0=Math.floor(fp),fr=fp-i0,a=rdy(i0+1),b=fr>.02?rdy(Math.min(i0+2,FR.n),1):null;
     if(a){paint(a);if(b&&b!==a){cx.globalAlpha=fr;paint(b);cx.globalAlpha=1}}}
-  else{himg.style.transform='translate3d(0,'+(p*6)+'%,0) scale('+(1+.05*p)+')';if(smk)smoke(performance.now())}
+  else{var cross=cl((p-.16)/.48,0,1);himg.style.transform='translate3d(0,'+(p*6)+'%,0) scale('+(1+.05*p)+')';himg2.style.transform='translate3d(0,'+((p-.16)*-4)+'%,0) scale('+(1.08+.04*cross)+')';himg.style.opacity=(1-cross).toFixed(3);himg2.style.opacity=cross.toFixed(3);if(smk)smoke(performance.now())}
   hdim.style.opacity=(fok?p*.25:p*.6).toFixed(3);
   hcopy.style.transform='translateY('+(-p*110)+'px)';hcopy.style.opacity=1-cl((p-.3)/.4,0,1);
   // cakes: four plates dissolve into each other, scene by scene

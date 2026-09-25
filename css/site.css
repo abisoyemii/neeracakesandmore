@@ -46,7 +46,7 @@ summary::after{content:"+";color:var(--gold)}details[open] summary::after{conten
 .qty button{width:40px;height:40px;background:none;border:0;color:var(--cream);font-size:1.3rem;cursor:pointer}.qty span{min-width:34px;text-align:center}
 .rm{background:none;border:0;color:var(--dim);cursor:pointer;text-decoration:underline;margin-left:14px;font:inherit;font-size:.9rem}
 .total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #f3e9dc55;padding:24px 0;font-family:var(--serif);font-size:2rem}
-form{display:grid;gap:18px;margin-top:30px;max-width:640px}label{font-size:.85rem;letter-spacing:.12em;color:var(--dim);display:grid;gap:8px}
+form{display:grid;gap:26px;margin-top:30px;max-width:760px}label{font-size:.85rem;letter-spacing:.12em;color:var(--dim);display:grid;gap:8px}fieldset{border:0;border-top:1px solid #f3e9dc33;padding:24px 0 0;margin:0;display:grid;gap:18px}legend{font-family:var(--serif);font-size:1.8rem;color:var(--cream);padding:0 18px 0 0}.form-grid,.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.choice-grid label{display:flex;align-items:center;gap:10px;letter-spacing:0;color:var(--cream);font-size:1rem}.choice-grid input{width:auto;padding:0;accent-color:var(--pink)}.field-help{color:var(--dim);font-size:.9rem;margin:0}
 input,select,textarea{background:var(--ember);border:1px solid #f3e9dc33;color:var(--cream);font:inherit;padding:15px 16px;border-radius:0;width:100%}
 .note{background:var(--ember);border-left:3px solid var(--pink);padding:22px 26px;margin:34px 0;color:var(--dim);max-width:720px}.note b{color:var(--cream);font-weight:400}
 .ok{border-left-color:var(--gold)}
@@ -73,4 +73,4 @@ footer small{font-size:.9rem}
 .btn{font-size:1.05rem}
 .eyebrow{font-size:.88rem}
 @media(max-width:560px){body{font-size:1.08rem}.bt p{font-size:1.25rem}.row2 p,.steps p,.summary p{font-size:1.05rem}.inquire .tag{font-size:.62rem}.btn{font-size:1.05rem}}
-@media(max-width:560px){body{font-size:1.12rem}p,li,button,input,select,textarea,label{font-size:1.08rem}.bt p,.row2 p,.steps p,.summary p,.service-area{font-size:1.1rem}.tag{font-size:.65rem}.btn{font-size:1.08rem}}
+@media(max-width:560px){body{font-size:1.08rem}p,li,button,input,select,textarea,label{font-size:1.04rem}.bt p,.row2 p,.steps p,.summary p,.service-area{font-size:1.06rem}.tag{font-size:.64rem}.btn{font-size:1.04rem}}
