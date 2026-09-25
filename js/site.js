@@ -3,19 +3,54 @@
 var WA='14709626866';
 /* ===== EDIT HERE: products. price: number in USD, or null = "price on request". SAMPLE PRICES, replace before going live. ===== */
 var PRODUCTS=[
- {id:'puff',name:'Puff-Puff',unit:'Tray of 50',price:30,img:'images/small-chops/small-chops-02.jpg',desc:'Soft, golden and freshly fried.'},
- {id:'samosa',name:'Samosas',unit:'Tray of 30',price:45,img:'images/hero/small-chops-hero.jpg',desc:'Crisp pastry, generously filled.'},
- {id:'roll',name:'Spring Rolls',unit:'Tray of 30',price:45,img:'images/small-chops/small-chops-01.jpg',desc:'Crunchy rolls, party-ready.'},
- {id:'mix',name:'Small Chops Platter',unit:'Mixed platter',price:85,img:'images/small-chops/small-chops-02.jpg',desc:'Puff-puff, samosas and spring rolls together.'},
- {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,img:'images/cakes/cake1.jpg',desc:'Designed for your occasion. Tell us the size, flavour and date.'},
- {id:'cater',name:'Event Catering',unit:'Quote',price:null,img:'images/hero/small-chops-hero.jpg',desc:'Finger foods and small chops for weddings, birthdays and more.'}
+ {id:'roll',name:'Spring Rolls',unit:'Dozen',price:20,displayPrice:'$20/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Crisp, crunchy and ready to share.'},
+ {id:'samosa',name:'Samosas',unit:'Dozen',price:24,displayPrice:'$24/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Seasoned pastry filled for every occasion.'},
+ {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Dozen',price:36,displayPrice:'$36/dozen',img:'images/small-chops/small-chops-02.jpg',desc:'A rich shrimp-filled party bite.'},
+ {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Dozen',price:36,displayPrice:'$36/dozen',img:'images/small-chops/small-chops-02.jpg',desc:'Crisp, golden shrimp for celebrations.'},
+ {id:'mini-meat-pie',name:'Mini Size Meat Pie',unit:'Dozen',price:24,displayPrice:'$24/dozen',img:'images/cakes/cake1.jpg',desc:'Mini savoury pies, perfect for sharing.'},
+ {id:'corn',name:'Corn on Cob',unit:'Dozen',price:25,displayPrice:'$25/dozen',img:'images/hero/small-chops-hero.jpg',desc:'A dozen seasoned corn on the cob.'},
+ {id:'egg-roll',name:'Egg Rolls',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Golden egg rolls for your gathering.'},
+ {id:'meat-pie',name:'Meat Pie',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/cakes/cake2.jpg',desc:'Classic savoury meat pies.'},
+ {id:'chicken-kebab',name:'Chicken Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Tender chicken kebabs.'},
+ {id:'beef-kebab',name:'Beef Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Seasoned beef kebabs.'},
+ {id:'gizzard-kebab',name:'Gizzard Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Gizzard kebabs, newly available.'},
+ {id:'mini-chicken-burger',name:'Mini Chicken Burger',unit:'Dozen',price:60,displayPrice:'$60/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Mini chicken burgers for parties.'},
+ {id:'mini-beef-burger',name:'Mini Beef Burger',unit:'Dozen',price:70,displayPrice:'$70/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Mini beef burgers for parties.'},
+ {id:'shawarma',name:'Shawarma',unit:'Half / Full',price:null,displayPrice:'Half $8 / Full $15',img:'images/hero/small-chops-hero.jpg',desc:'Choose a half or full portion.'},
+ {id:'suya',name:'Nigerian Suya',unit:'Half / Full',price:null,displayPrice:'Half $250 / Full $350',img:'images/hero/small-chops-hero.jpg',desc:'Choose a half or full portion.'},
+ {id:'cocktail',name:'Cocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg',desc:'$24 minimum order.'},
+ {id:'mocktail',name:'Mocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg',desc:'$24 minimum order.'},
+ {id:'fruit-cup',name:'Fruit Cup',unit:'Each',price:3,displayPrice:'$3',img:'images/small-chops/small-chops-02.jpg',desc:'$24 minimum order.'},
+ {id:'combo-1',name:'Combo 1',unit:'Combo',price:6,displayPrice:'$6',img:'images/small-chops/small-chops-01.jpg',desc:'Spring roll, samosa and 3 puff-puff.'},
+ {id:'combo-2',name:'Combo 2',unit:'Combo',price:9.5,displayPrice:'$9.50',img:'images/small-chops/small-chops-01.jpg',desc:'Combo 1 plus your choice of gizzard, chicken or beef kebab.'},
+ {id:'party',name:'Party Pack',unit:'Custom mix',price:null,displayPrice:'Quote',img:'images/small-chops/small-chops-02.jpg',desc:'Choose your mix of bites for the party.'},
+ {id:'combo',name:'Build Your Own Combo',unit:'Custom mix',price:null,displayPrice:'Quote',img:'images/small-chops/small-chops-01.jpg',desc:'Tell us exactly which bites and quantities you want.'},
+ {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour, design and date.'},
+ {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On request',img:'images/hero/small-chops-hero.jpg',desc:'Private events, church gatherings and corporate functions.'},
+ {id:'lux',name:'Luxury Set-Up',unit:'Quote',price:null,displayPrice:'On request',img:'images/hero/small-chops-hero.jpg',desc:'Inquire about our luxury setup options.'}
 ];
 var IMAGES={
  'banner.about':'images/hero/small-chops-hero.jpg','banner.services':'images/hero/small-chops-hero.jpg','banner.menu':'images/hero/small-chops-hero.jpg','banner.gallery':'images/small-chops/small-chops-01.jpg','banner.faq':'images/small-chops/small-chops-02.jpg','banner.contact':'images/hero/small-chops-hero.jpg',
- 'about.portrait':'images/small-chops/small-chops-01.jpg','svc.smallchops':'images/small-chops/small-chops-01.jpg','svc.finger':'images/small-chops/small-chops-02.jpg','svc.cakes':'images/cakes/cake1.jpg','svc.catering':'images/hero/small-chops-hero.jpg',
+ 'about.portrait':'images/small-chops/small-chops-01.jpg','luxsetup.portrait':'images/hero/small-chops-hero.jpg','banner.luxsetup':'images/hero/small-chops-hero.jpg','svc.smallchops':'images/small-chops/small-chops-01.jpg','svc.finger':'images/small-chops/small-chops-02.jpg','svc.cakes':'images/cakes/cake1.jpg','svc.catering':'images/hero/small-chops-hero.jpg','svc.luxe':'images/hero/small-chops-hero.jpg',
  'gallery.1':'images/small-chops/small-chops-01.jpg','gallery.2':'images/small-chops/small-chops-02.jpg','gallery.3':'images/cakes/cake1.jpg','gallery.4':'images/cakes/cake2.jpg','gallery.5':'images/cakes/cake3.jpg','gallery.6':'images/cakes/cake4.jpg','gallery.7':'images/hero/small-chops-hero.jpg','gallery.8':'images/small-chops/small-chops-01.jpg','gallery.9':'images/small-chops/small-chops-02.jpg','gallery.10':'images/cakes/cake1.jpg','gallery.11':'images/cakes/cake2.jpg','gallery.12':'images/cakes/cake3.jpg'
 };
-[].forEach.call(document.querySelectorAll('[data-img]'),function(i){var src=IMAGES[i.getAttribute('data-img')];if(!src)return;i.src=src;i.addEventListener('error',function(){if(i.hasAttribute('data-opt')){var parent=i.parentNode;if(parent&&parent.classList.contains('fr'))parent.parentNode.removeChild(parent);else if(i.parentNode)i.parentNode.removeChild(i)}})});
+[].forEach.call(document.querySelectorAll('[data-img]'),function(i){var key=i.getAttribute('data-img'),src=IMAGES[key];if(!src)return;i.loading=key.indexOf('banner.')===0?'eager':'lazy';i.decoding='async';i.src=src;i.addEventListener('error',function(){if(i.hasAttribute('data-opt')){var parent=i.parentNode;if(parent&&parent.classList.contains('fr'))parent.parentNode.removeChild(parent);else if(i.parentNode)i.parentNode.removeChild(i)}})});
+[].forEach.call(document.querySelectorAll('source[src*="images/video/"]'),function(s){var old=s.getAttribute('src'),next=old.indexOf('shrimp')>-1?'images/shrimp-only.mp4':'images/fourthvid-web.mp4';s.setAttribute('src',next);if(s.parentNode&&s.parentNode.load)s.parentNode.load()});
+function addNavLink(){[].forEach.call(document.querySelectorAll('nav ul,#menu'),function(n){if(n.querySelector('a[href="luxsetup.html"]'))return;var a=document.createElement('a');a.href='luxsetup.html';a.textContent='Lux Set-Up';if(n.tagName.toLowerCase()==='ul'){var li=document.createElement('li');li.appendChild(a);n.insertBefore(li,n.firstChild)}else n.insertBefore(a,n.firstChild)})}
+addNavLink();
+var savedTheme;try{savedTheme=localStorage.getItem('nc-theme')}catch(e){}if(savedTheme==='light'||savedTheme==='dark')document.documentElement.setAttribute('data-theme',savedTheme);
+function addThemeToggle(){var nav=document.querySelector('nav');if(!nav||nav.querySelector('.theme-toggle'))return;var b=document.createElement('button');b.className='theme-toggle';b.type='button';b.setAttribute('aria-label','Switch to light theme');b.innerHTML='<span aria-hidden="true">☾</span>';function update(){var dark=document.documentElement.getAttribute('data-theme')!=='light';b.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');b.innerHTML='<span aria-hidden="true">'+(dark?'☼':'☾')+'</span>'}b.onclick=function(){var next=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',next);try{localStorage.setItem('nc-theme',next)}catch(e){}update()};var burger=nav.querySelector('.burger');if(burger)nav.insertBefore(b,burger);else nav.appendChild(b);update()}
+addThemeToggle();
+[].forEach.call(document.querySelectorAll('footer:not(.inquire)'),function(f){f.className='inquire';f.id='inquire';f.innerHTML='<h2 class="rv">A Taste to Remember</h2><a class="btn rv" href="cart.html">Order / Inquire</a><div class="contact rv"><a href="tel:+14709626866">+1 (470) 962-6866</a><a href="https://www.instagram.com/neeracakesandmore" target="_blank" rel="noopener">Instagram @neeracakesandmore</a><a href="https://www.tiktok.com/@neeracakesandmore" target="_blank" rel="noopener">TikTok @neeracakesandmore</a></div><a class="brand" href="index.html#top" aria-label="NeeraCakesAndMore"><img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo"><span class="wm" style="display:none">NeeraCakesAndMore</span><span class="tag">A TASTE TO REMEMBER</span></a><small>© 2026 NeeraCakesAndMore. Cakes, small chops and finger foods.</small>';});
+[].forEach.call(document.querySelectorAll('p'),function(p){if(p.textContent.indexOf('Pickup or delivery')>-1)p.textContent=p.textContent.replace('Pickup or delivery','Pickup')});
+[].forEach.call(document.querySelectorAll('details'),function(d){var s=d.querySelector('summary'),p=d.querySelector('p');if(s&&s.textContent.indexOf('pickup or delivery')>-1){s.textContent='Do you offer delivery?';if(p)p.textContent='No. Orders are pickup only.'}});
+[].forEach.call(document.querySelectorAll('details'),function(d){var s=d.querySelector('summary'),p=d.querySelector('p');if(s&&s.textContent.indexOf('How early')>-1){s.textContent='How early should I order?';if(p)p.textContent='A minimum of 48 hours is required.'}});
+var menuLead=document.querySelector('#products')&&document.querySelector('.lead');if(menuLead)menuLead.textContent='Build your own combo, choose a party pack, or request a custom cake, cocktail hour or event catering quote. A minimum of 48 hours is required; pickup only.';
+var serviceTitle=document.querySelector('.bt h1');if(serviceTitle&&serviceTitle.textContent.trim()==='Services'){var serviceMain=document.querySelector('main.pg.tight'),serviceEnd=serviceMain&&serviceMain.querySelector('h2[style]');if(serviceMain&&serviceEnd){var row=document.createElement('div');row.className='row2';row.innerHTML='<div class="fr rv"><img src="images/hero/small-chops-hero.jpg" alt="Cocktail hour catering"></div><div class="rv"><h2>Cocktail Hour</h2><p>Curated small chops and finger foods for cocktail hours, private events, church gatherings and corporate functions.</p><a class="btn" href="menu.html">Plan cocktail hour</a></div>';serviceMain.insertBefore(row,serviceEnd)}}
+var faqMain=document.querySelector('main.pg.tight');if(faqMain&&document.querySelector('.bt h1')&&document.querySelector('.bt h1').textContent.trim()==='FAQ'){[['How much notice do I need?','A minimum of 48 hours is required. Earlier notice is recommended for cakes, cocktail hour and luxury setup requests.'],['Do you offer delivery?','No. Orders are pickup only.'],['How does the deposit work?','A 50% nonrefundable deposit is required after Neera confirms availability and you agree to reserve the date.'],['Where are you based?','Based in Atlanta, Georgia. Serving clients locally and beyond; travel is available for events.']].forEach(function(item){var d=document.createElement('details');d.className='rv';d.innerHTML='<summary>'+item[0]+'</summary><p>'+item[1]+'</p>';faqMain.appendChild(d)})}
+if(faqMain&&document.querySelector('.bt h1')&&document.querySelector('.bt h1').textContent.trim()==='FAQ'){var seen={};[].forEach.call(faqMain.querySelectorAll('details'),function(d){var s=d.querySelector('summary'),p=d.querySelector('p'),title=s?s.textContent.replace(/\s*\+\s*$/,'').trim():'';if(title==='How much notice do I need?'){d.parentNode.removeChild(d);return}if(seen[title]){d.parentNode.removeChild(d);return}seen[title]=true;if(title==='How early should I order?'){p.textContent='A minimum of 48 hours is required.'}if(title==='Do you offer delivery?'){p.textContent='No. Orders are pickup only.'}if(title==='Do I pay when I send a request?'){p.textContent='No payment is taken when you send a request. A 50% nonrefundable deposit is required after availability is confirmed to reserve your date.'}if(title==='Where are you based?'){p.textContent='Based in Atlanta, Georgia. Serving clients locally and beyond; travel is available for events.'}})}
+var contactMain=document.querySelector('main.pg.tight'),contactTitle=document.querySelector('.bt h1');if(contactMain&&contactTitle&&contactTitle.textContent.trim()==='Contact'){var area=document.createElement('p');area.className='service-area';area.textContent='Based in Atlanta, Georgia | Serving clients locally & beyond - travel available for events.';contactMain.appendChild(area)}
+if(serviceTitle&&serviceTitle.textContent.trim()==='Services'&&serviceMain){var policy=document.createElement('p');policy.className='service-area';policy.textContent='A minimum of 48 hours is required. Pickup only. Inquire about our luxury setup options.';serviceMain.insertBefore(policy,serviceMain.querySelector('h2[style]'))}
 var K='neera_cart',R='neera_req',mem={};
 function rd(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return mem[k]||null}}
 function wr(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){mem[k]=v}}
@@ -26,12 +61,13 @@ function badge(){[].forEach.call(document.querySelectorAll('.cc'),function(e){va
 function $(q){return document.querySelector(q)}
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
 function money(v){return '$'+v.toFixed(2).replace(/\.00$/,'')}
+function priceLabel(p){return p.displayPrice||(p.price==null?'On request':money(p.price))}
 function P(id){return PRODUCTS.filter(function(p){return p.id===id})[0]}
 function pic(p){var w=el('div','ph'),i=el('img');i.src=p.img;i.alt=p.name;i.loading='lazy';w.appendChild(i);return w}
 /* menu page */
 var mg=$('#products');
 if(mg)PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el('div','row');
- r.appendChild(el('h3',0,p.name));r.appendChild(el('span','price',p.price==null?'On request':money(p.price)));
+ r.appendChild(el('h3',0,p.name));r.appendChild(el('span','price',priceLabel(p)));
  b.appendChild(r);b.appendChild(el('p',0,p.unit+' · '+p.desc));
  var a=el('button','btn',p.price==null?'Add to request':'Add to cart');a.type='button';
  a.onclick=function(){var k=cart();k[p.id]=(k[p.id]||0)+1;save(k);a.textContent='Added ✓';setTimeout(function(){a.textContent=p.price==null?'Add to request':'Add to cart'},1200)};
@@ -51,14 +87,15 @@ function draw(){
   mi.onclick=function(){var x=cart();x[k]=Math.max(0,x[k]-1);if(!x[k])delete x[k];save(x);draw()};pl.onclick=function(){var x=cart();x[k]++;save(x);draw()};
   q.appendChild(mi);q.appendChild(el('span',0,c[k]));q.appendChild(pl);m.appendChild(q);
   var rm=el('button','rm','Remove');rm.type='button';rm.onclick=function(){var x=cart();delete x[k];save(x);draw()};m.appendChild(rm);
-  ln.appendChild(th);ln.appendChild(m);ln.appendChild(el('span','price',p.price==null?'On request':money(p.price*c[k])));box.appendChild(ln)});
+    ln.appendChild(th);ln.appendChild(m);ln.appendChild(el('span','price',p.price==null?priceLabel(p):money(p.price*c[k])));box.appendChild(ln)});
  var t=total(),tt=el('div','total');tt.appendChild(el('span',0,t.q?'Estimated total (+ items on request)':'Estimated total'));tt.appendChild(el('span','price',money(t.s)));box.appendChild(tt)}
 var f=$('#f');
+if(f){var dateField=f.querySelector('input[name="date"]'),minDate=new Date();minDate.setDate(minDate.getDate()+2);if(dateField)dateField.min=minDate.toISOString().slice(0,10)}
 if(f)f.onsubmit=function(e){e.preventDefault();var c=cart(),ids=Object.keys(c).filter(function(k){return P(k)});if(!ids.length)return;
  var d=new FormData(f),code='NC-'+Math.floor(1000+Math.random()*9000),t=total();
- var L=['New order request '+code,'Name: '+d.get('name'),'Phone: '+(d.get('phone')||'-'),'Date needed: '+(d.get('date')||'-'),'Pickup or delivery: '+d.get('mode'),'','Items:'];
- ids.forEach(function(k){var p=P(k);L.push('- '+c[k]+' x '+p.name+' ('+p.unit+') '+(p.price==null?'price on request':money(p.price*c[k])))});
- L.push('','Estimated total: '+money(t.s)+(t.q?' + items on request':''),'Notes: '+(d.get('notes')||'-'),'','Please confirm availability. Thank you!');
+ var L=['New order request '+code,'Name: '+d.get('name'),'Phone: '+(d.get('phone')||'-'),'Date needed: '+(d.get('date')||'-'),'Pickup: '+d.get('mode'),'','Items:'];
+ ids.forEach(function(k){var p=P(k);L.push('- '+c[k]+' x '+p.name+' ('+p.unit+') '+(p.price==null?priceLabel(p):money(p.price*c[k])))});
+ L.push('','Estimated total: '+money(t.s)+(t.q?' + items on request':''),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. Pickup only; no delivery. A 50% nonrefundable deposit is required to reserve the date. Please confirm availability. Thank you!');
  wr(R,{code:code,time:Date.now()});draw();
  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener')};
 var cl=$('#clear');if(cl)cl.onclick=function(){save({});wr(R,null);draw()};
