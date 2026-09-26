@@ -3,21 +3,28 @@
 var WA='14709626866';
 /* ===== EDIT HERE: products. price: number in USD, or null = "price on request". SAMPLE PRICES, replace before going live. ===== */
 var PRODUCTS=[
- {id:'roll',name:'Spring Rolls',unit:'Dozen',price:20,displayPrice:'$20/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Crisp, crunchy and ready to share.'},
- {id:'samosa',name:'Samosas',unit:'Dozen',price:24,displayPrice:'$24/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Seasoned pastry filled for every occasion.'},
- {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Dozen',price:36,displayPrice:'$36/dozen',img:'images/small-chops/small-chops-02.jpg',desc:'A rich shrimp-filled party bite.'},
- {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Dozen',price:36,displayPrice:'$36/dozen',img:'images/small-chops/small-chops-02.jpg',desc:'Crisp, golden shrimp for celebrations.'},
- {id:'mini-meat-pie',name:'Mini Size Meat Pie',unit:'Dozen',price:24,displayPrice:'$24/dozen',img:'images/cakes/cake1.jpg',desc:'Mini savoury pies, perfect for sharing.'},
- {id:'corn',name:'Corn on Cob',unit:'Dozen',price:25,displayPrice:'$25/dozen',img:'images/hero/small-chops-hero.jpg',desc:'A dozen seasoned corn on the cob.'},
- {id:'egg-roll',name:'Egg Rolls',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Golden egg rolls for your gathering.'},
- {id:'meat-pie',name:'Meat Pie',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/cakes/cake2.jpg',desc:'Classic savoury meat pies.'},
- {id:'chicken-kebab',name:'Chicken Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Tender chicken kebabs.'},
- {id:'beef-kebab',name:'Beef Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Seasoned beef kebabs.'},
- {id:'gizzard-kebab',name:'Gizzard Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/hero/small-chops-hero.jpg',desc:'Gizzard kebabs, newly available.'},
- {id:'mini-chicken-burger',name:'Mini Chicken Burger',unit:'Dozen',price:60,displayPrice:'$60/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Mini chicken burgers for parties.'},
- {id:'mini-beef-burger',name:'Mini Beef Burger',unit:'Dozen',price:70,displayPrice:'$70/dozen',img:'images/small-chops/small-chops-01.jpg',desc:'Mini beef burgers for parties.'},
- {id:'shawarma',name:'Shawarma',unit:'Half / Full',price:null,displayPrice:'Half $8 / Full $15',img:'images/hero/small-chops-hero.jpg',desc:'Choose a half or full portion.'},
- {id:'suya',name:'Nigerian Suya',unit:'Half / Full',price:null,displayPrice:'Half $250 / Full $350',img:'images/hero/small-chops-hero.jpg',desc:'Choose a half or full portion.'},
+ {id:'roll',name:'Spring Rolls',unit:'3',price:20,displayPrice:'$20/3',img:'images/small-chops/small-chops-01.jpg',desc:'Crisp, crunchy and ready to share.'},
+ {id:'samosa',name:'Samosas',unit:'3',price:24,displayPrice:'$24/3',video:'images/firstvid.mp4',desc:'Seasoned pastry filled for every occasion.'},
+ {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Order on request',price:null,displayPrice:'On request',video:'images/shrimp-only.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Order on request',price:null,displayPrice:'On request',video:'images/shrimp-only.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'mini-meat-pie',name:'Mini Size Meat Pie',unit:'Order on request',price:null,displayPrice:'On request',img:'images/small-chops/meatpie.PNG',desc:'Request pricing on WhatsApp.'},
+ {id:'corn',name:'Corn on Cob',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'egg-roll',name:'Egg Rolls',unit:'Order on request',price:null,displayPrice:'On request',video:'images/firstvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'meat-pie',name:'Meat Pie',unit:'Order on request',price:null,displayPrice:'On request',img:'images/small-chops/meatpie.PNG',desc:'Request pricing on WhatsApp.'},
+ {id:'chicken-kebab',name:'Chicken Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',video:'images/peppered-tray-crop.mp4',desc:'Tender chicken kebabs.'},
+ {id:'beef-kebab',name:'Beef Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',video:'images/peppered-tray-crop.mp4',desc:'Seasoned beef kebabs.'},
+ {id:'gizzard-kebab',name:'Gizzard Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',video:'images/peppered-tray-crop.mp4',desc:'Gizzard kebabs, newly available.'},
+ {id:'mini-chicken-burger',name:'Mini Chicken Burger',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'mini-beef-burger',name:'Mini Beef Burger',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'shawarma',name:'Shawarma',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'suya',name:'Nigerian Suya',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'puff-puff',name:'Puff-Puff',unit:'Order on request',price:null,displayPrice:'On request',video:'images/firstvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'fries',name:'Fries',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'fried-yam',name:'Fried Yam',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'grilled-fish',name:'Grilled Fish',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'turkey',name:'Turkey',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'chicken',name:'Chicken',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'beef',name:'Beef',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
  {id:'cocktail',name:'Cocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg',desc:'$24 minimum order.'},
  {id:'mocktail',name:'Mocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg',desc:'$24 minimum order.'},
 {id:'fruit-cup',name:'Fruit Cup',unit:'3oz / 5oz',price:null,displayPrice:'$2.50 (3oz) / $3.50 (5oz)',img:'images/small-chops/small-chops-02.jpg',desc:'Minimum order is 20.'},
@@ -26,12 +33,12 @@ var PRODUCTS=[
  {id:'party',name:'Party Pack',unit:'Custom mix',price:null,displayPrice:'Quote',img:'images/small-chops/small-chops-02.jpg',desc:'Choose your mix of bites for the party.'},
  {id:'combo',name:'Customize Your Own Combo',unit:'Custom mix',price:null,displayPrice:'Quote',img:'images/small-chops/small-chops-01.jpg',desc:'Tell us exactly which bites and quantities you want.'},
  {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour, design and date.'},
- {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On request',img:'images/hero/small-chops-hero.jpg',desc:'Private events, church gatherings and corporate functions.'},
- {id:'lux',name:'Luxury Set-Up',unit:'Quote',price:null,displayPrice:'On request',img:'images/hero/small-chops-hero.jpg',desc:'Inquire about our luxury setup options.'}
+ {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On request',desc:'Private events, church gatherings and corporate functions.'},
+ {id:'lux',name:'Luxury Set-Up',unit:'Quote',price:null,displayPrice:'On request',desc:'Inquire about our luxury setup options.'}
 ];
 var IMAGES={
- 'banner.about':'images/hero/small-chops-hero.jpg','banner.services':'images/hero/small-chops-hero.jpg','banner.menu':'images/hero/small-chops-hero.jpg','banner.gallery':'images/small-chops/small-chops-01.jpg','banner.faq':'images/small-chops/small-chops-02.jpg','banner.contact':'images/hero/small-chops-hero.jpg',
- 'about.portrait':'images/small-chops/small-chops-01.jpg','luxsetup.portrait':'images/hero/small-chops-hero.jpg','banner.luxsetup':'images/hero/small-chops-hero.jpg','svc.smallchops':'images/small-chops/small-chops-01.jpg','svc.finger':'images/small-chops/small-chops-02.jpg','svc.cakes':'images/cakes/cake1.jpg','svc.catering':'images/hero/small-chops-hero.jpg','svc.luxe':'images/hero/small-chops-hero.jpg',
+ 'banner.about':'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg','banner.services':'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg','banner.menu':'images/small-chops/small-chops-01.jpg','banner.gallery':'images/small-chops/small-chops-02.jpg','banner.faq':'images/cakes/cake4.jpg','banner.contact':'images/cakes/cake3.jpg',
+ 'about.portrait':'images/small-chops/small-chops-01.jpg','luxsetup.portrait':'images/hero/small-chops-hero.jpg','banner.luxsetup':'images/hero/small-chops-hero.jpg','svc.smallchops':'images/small-chops/small-chops-01.jpg','svc.finger':'images/small-chops/small-chops-02.jpg','svc.cakes':'images/cakes/cake1.jpg','svc.catering':'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg','svc.luxe':'images/hero/small-chops-hero.jpg',
  'gallery.1':'images/small-chops/small-chops-01.jpg','gallery.2':'images/small-chops/small-chops-02.jpg','gallery.3':'images/cakes/cake1.jpg','gallery.4':'images/cakes/cake2.jpg','gallery.5':'images/cakes/cake3.jpg','gallery.6':'images/cakes/cake4.jpg','gallery.7':'images/hero/small-chops-hero.jpg','gallery.8':'images/small-chops/small-chops-01.jpg','gallery.9':'images/small-chops/small-chops-02.jpg','gallery.10':'images/cakes/cake1.jpg','gallery.11':'images/cakes/cake2.jpg','gallery.12':'images/cakes/cake3.jpg'
 };
 [].forEach.call(document.querySelectorAll('[data-img]'),function(i){var key=i.getAttribute('data-img'),src=IMAGES[key];if(!src)return;i.loading=key.indexOf('banner.')===0?'eager':'lazy';i.decoding='async';i.src=src;i.addEventListener('error',function(){if(i.hasAttribute('data-opt')){var parent=i.parentNode;if(parent&&parent.classList.contains('fr'))parent.parentNode.removeChild(parent);else if(i.parentNode)i.parentNode.removeChild(i)}})});
@@ -51,7 +58,7 @@ var faqMain=document.querySelector('main.pg.tight');if(faqMain&&document.querySe
 if(faqMain&&document.querySelector('.bt h1')&&document.querySelector('.bt h1').textContent.trim()==='FAQ'){var seen={};[].forEach.call(faqMain.querySelectorAll('details'),function(d){var s=d.querySelector('summary'),p=d.querySelector('p'),title=s?s.textContent.replace(/\s*\+\s*$/,'').trim():'';if(title==='How much notice do I need?'){d.parentNode.removeChild(d);return}if(seen[title]){d.parentNode.removeChild(d);return}seen[title]=true;if(title==='How early should I order?'){p.textContent='A minimum of 48 hours is required.'}if(title==='Do you offer delivery?'){p.textContent='No. Orders are pickup only.'}if(title==='Do I pay when I send a request?'){p.textContent='No payment is taken when you send a request. A 50% nonrefundable deposit is required after availability is confirmed to reserve your date.'}if(title==='Where are you based?'){p.textContent='Based in Atlanta, Georgia. Serving clients locally and beyond; travel is available for events.'}})}
 [].forEach.call(document.querySelectorAll('p'),function(p){p.textContent=p.textContent.replace(/50% nonrefundable/g,'20% nonrefundable')});
 var contactMain=document.querySelector('main.pg.tight'),contactTitle=document.querySelector('.bt h1');if(contactMain&&contactTitle&&contactTitle.textContent.trim()==='Contact'){var area=document.createElement('p');area.className='service-area';area.textContent='Based in Atlanta, Georgia | Serving clients locally & beyond - travel available for events.';contactMain.appendChild(area)}
-if(serviceTitle&&serviceTitle.textContent.trim()==='Services'&&serviceMain){var policy=document.createElement('p');policy.className='service-area';policy.textContent='A minimum of 48 hours is required. Pickup only. Inquire about our luxury setup options.';serviceMain.insertBefore(policy,serviceMain.querySelector('h2[style]'))}
+if(serviceTitle&&serviceTitle.textContent.trim()==='Services'&&serviceMain){var policy=document.createElement('p');policy.className='service-area';policy.textContent='A minimum of 48 hours is required. Travel is available for events. Inquire about our luxury setup options.';serviceMain.insertBefore(policy,serviceMain.querySelector('h2[style]'))}
 var K='neera_cart',R='neera_req',mem={};
 function rd(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return mem[k]||null}}
 function wr(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){mem[k]=v}}
@@ -64,7 +71,7 @@ function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null
 function money(v){return '$'+v.toFixed(2).replace(/\.00$/,'')}
 function priceLabel(p){return p.displayPrice||(p.price==null?'On request':money(p.price))}
 function P(id){return PRODUCTS.filter(function(p){return p.id===id})[0]}
-function pic(p){var w=el('div','ph'),i=el('img');i.src=p.img;i.alt=p.name;i.loading='lazy';w.appendChild(i);return w}
+function pic(p){var w=el('div','ph');if(p.video){var v=el('video','media-video');v.src=p.video;v.muted=true;v.loop=true;v.autoplay=true;v.playsInline=true;v.preload='metadata';v.setAttribute('aria-label',p.name);w.appendChild(v);return w}if(p.img){var i=el('img');i.src=p.img;i.alt=p.name;i.loading='lazy';w.appendChild(i);return w}w.className+=' empty';w.setAttribute('aria-label',p.name+' image coming soon');return w}
 /* menu page */
 var mg=$('#products');
 if(mg)PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el('div','row');

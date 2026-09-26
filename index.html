@@ -51,20 +51,17 @@ nav ul a{opacity:.8;transition:opacity .6s}nav ul a:hover{opacity:1}.burger{disp
 html[data-theme="light"] nav{background:linear-gradient(#f7f2ebf2,transparent)}html[data-theme="light"] #menu{background:#f7f2ebf5}html[data-theme="light"] footer{background:#e9ded1}html[data-theme="light"] .inquire{background:#e9ded1}
 
 /* hero */
-#hero{height:420vh}
-#hero .abs img{animation:drift 30s ease-out both;animation-play-state:paused}.go #hero .abs img{animation-play-state:running}
-@keyframes drift{from{scale:1.02}to{scale:1.08}}
+#hero{height:100vh}
+#hero .abs img{animation:none!important;transform:none!important;opacity:1!important}
 .dim{position:absolute;inset:0;background:#150c10;opacity:0}
 .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 45%,#000000a6 100%);pointer-events:none}
-.lb{position:absolute;left:0;right:0;height:10vh;background:#000;z-index:5;transition:transform 2.6s cubic-bezier(.7,0,.2,1) .5s}
-.lb.t{top:0}.lb.b{bottom:0}.go .lb.t{transform:translateY(-100%)}.go .lb.b{transform:translateY(100%)}
+.lb{display:none}
 .hcopy{position:absolute;left:0;bottom:0;padding:0 clamp(20px,5vw,72px) clamp(48px,9vh,110px);max-width:1400px;z-index:3}
 .kicker{font-size:clamp(.95rem,1.25vw,1.2rem);letter-spacing:.22em;color:var(--dim);margin-bottom:22px}
 h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.5rem,9.6vw,9.4rem);line-height:.98;letter-spacing:-.02em}
 h1 em{font-style:italic;color:var(--dim)}
-.ln{display:block;overflow:hidden;padding-bottom:.08em}.ln>span{display:block;transform:translateY(112%);transition:transform 2.2s cubic-bezier(.16,.8,.2,1)}
-.go .ln>span{transform:none}.go .ln:nth-child(2)>span{transition-delay:.35s}
-.fadein{opacity:0;transition:opacity 2s ease 1.6s}.go .fadein{opacity:1}
+.ln{display:block;overflow:hidden;padding-bottom:.08em}.ln>span{display:block;transform:none!important;transition:none!important}
+.fadein{opacity:1!important;transition:none!important}
 .lede{max-width:760px;margin-top:36px;font-size:clamp(1.50rem,1.12vw,1.80rem);line-height:1.6;opacity:.95}
 .ctas{display:flex;flex-wrap:wrap;gap:18px 40px;margin-top:44px;align-items:center}
 .btn{display:inline-block;padding:20px 46px;background:var(--pink);color:#fff;font-size:1rem;letter-spacing:.12em;transition:background .6s}.btn:hover{background:var(--pink-deep)}
@@ -79,7 +76,7 @@ h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,6vw,5.6rem);l
 @media(max-width:860px){.story{grid-template-columns:1fr}}
 
 /* cakes sequence */
-#cakes{height:680vh}
+#cakes{height:360vh}
 .ptitle{position:absolute;z-index:4;top:calc(96px + env(safe-area-inset-top,0px));left:clamp(20px,5vw,72px);font-size:clamp(2.4rem,5vw,4.4rem)}
 .cap{position:absolute;z-index:4;left:clamp(20px,5vw,72px);bottom:clamp(60px,12vh,130px);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.9rem,4.4vw,4rem);line-height:1.08;max-width:11em;opacity:0}
 .ticks{position:absolute;z-index:4;right:clamp(20px,5vw,72px);bottom:clamp(60px,12vh,130px);display:flex;gap:8px}
@@ -167,15 +164,8 @@ html[data-theme="light"] #hero .hcopy{color:#fff;text-shadow:0 2px 18px #000,0 1
 <div id="menu"><a href="about.html">Our Story</a><a href="luxsetup.html">Lux Set-Up</a><a href="services.html">Services</a><a href="#cakes">Cakes</a><a href="#small-chops">Small Chops</a><a href="faq.html">FAQ</a><a class="cta" href="cart.html">Order / Inquire</a></div>
 
 <header class="wrap" id="hero"><div class="pin" id="top">
-  <div class="abs veil"><img id="himg" src="images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg" alt="NeeraCakesAndMore catering spread" style="object-position:50% 45%"><img id="himg2" src="images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg" alt="NeeraCakesAndMore catering spread" style="object-position:50% 45%;opacity:0"><canvas id="hcv" style="display:none;position:absolute;inset:0;width:100%;height:100%" aria-hidden="true"></canvas></div>
-  <div class="dim" id="hdim"></div><div class="vig"></div>
-  <div class="lb t"></div><div class="lb b"></div>
-  <div class="hcopy" id="hcopy">
-    <p class="kicker fadein">Cakes · Small Chops · Finger Foods</p>
-    <h1><span class="ln"><span>Beautifully made.</span></span><span class="ln"><span><em>Thoughtfully served.</em></span></span></h1>
-    <div class="fadein"><p class="lede">NeeraCakesAndMore brings Nigerian-inspired hospitality to celebrations through cakes, small chops, finger foods, and beautifully presented treats.</p>
-    <div class="ctas"><a class="btn" href="#inquire">Order / Inquire</a><a class="ghost" href="#small-chops">Explore the Menu</a></div></div>
-  </div>
+  <div class="abs veil"><img id="himg" loading="eager" fetchpriority="high" decoding="async" src="images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg" alt="NeeraCakesAndMore catering spread" style="object-position:50% 45%"></div>
+  
 </div></header>
 
 <section class="story" id="story">
@@ -266,10 +256,10 @@ var hero=$('#hero')[0],cakes=$('#cakes')[0],cater=$('#cater')[0],gal=$('#gal')[0
    Needs: images/hero/frames/ezgif-frame-001..072.webp  and  images/hero/frames-m/ezgif-frame-001..040.webp
    If the frames cannot be loaded, live smoke is drawn over the photo instead (and a warning is printed in the browser console). */
 var CM={n:40,path:function(i){return 'images/hero/frames-m/ezgif-frame-'+String(i).padStart(3,'0')+'.webp'}},CD={n:72,path:function(i){return 'images/hero/frames/ezgif-frame-'+String(i).padStart(3,'0')+'.webp'}};
-var SETS=MOB?[CM,CD]:[CD],FR=SETS[0],fimgs=[],fok=false,smk=false,puffs=[],cv=document.getElementById('hcv'),cx=cv.getContext('2d');
+var SETS=MOB?[CM,CD]:[CD],FR=SETS[0],fimgs=[],fok=false,smk=false,puffs=[],cv=null,cx=null;
 function np(r){return{x:Math.random(),y:r?Math.random():1.05,s:.14+Math.random()*.22,a:.06+Math.random()*.1,v:.00005+Math.random()*.0001,dx:(Math.random()-.5)*.00005,ph:Math.random()*6}}
 function boot(k){FR=SETS[k];var f0=new Image();f0.onload=function(){fimgs=[];fok=true;cv.style.display='block';sizeCv();for(var i=1;i<=FR.n;i++){var im=new Image();im.src=FR.path(i);fimgs[i]=im}};
-  f0.onerror=function(){if(SETS[k+1])boot(k+1);else{console.warn('Hero smoke frames not found at '+FR.path(1)+'. Using the client photo sequence instead.');smk=false}};f0.src=FR.path(1)}
+  f0.onerror=function(){if(SETS[k+1])boot(k+1);else{smk=false}};f0.src=FR.path(1)}
 function rdy(i,strict){var m=fimgs[i];while(!strict&&i>1&&!(m&&m.complete&&m.naturalWidth)){i--;m=fimgs[i]}return m&&m.complete&&m.naturalWidth?m:null}
 function sizeCv(){var d=smk?.5:Math.min(devicePixelRatio||1,2);cv.width=innerWidth*d;cv.height=innerHeight*d}
 function paint(im){var cw=cv.width,ch=cv.height,iw=im.naturalWidth,ih=im.naturalHeight,r2=Math.max(cw/iw,ch/ih),w2=iw*r2,h2=ih*r2;cx.drawImage(im,(cw-w2)/2,(ch-h2)/2,w2,h2)}
@@ -277,7 +267,7 @@ function smoke(t){var cw=cv.width,ch=cv.height,base=Math.max(cw,ch);cx.clearRect
   puffs.forEach(function(q,i){q.y-=q.v*16;q.x+=q.dx*16+Math.sin(t/2200+q.ph)*.0004;if(q.y<-.25){puffs[i]=np(false);return}
     var r=q.s*base*.5*(1+(1-q.y)*.7),al=q.a*Math.min(1,(1.15-q.y)*3)*Math.min(1,q.y*3+.7),px=q.x*cw,py=q.y*ch,g=cx.createRadialGradient(px,py,0,px,py,r);
     g.addColorStop(0,'rgba(252,244,236,'+al.toFixed(3)+')');g.addColorStop(1,'rgba(252,244,236,0)');cx.fillStyle=g;cx.beginPath();cx.arc(px,py,r,0,7);cx.fill()})}
-var himg=document.getElementById('himg'),himg2=document.getElementById('himg2'),hdim=document.getElementById('hdim'),hcopy=document.getElementById('hcopy'),cimg=document.getElementById('cimg'),ctext=document.getElementById('ctext');
+var cimg=document.getElementById('cimg'),ctext=document.getElementById('ctext');
 if(cimg&&cimg.tagName==='VIDEO'){cimg.preload='none';var cvo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cimg.play().catch(function(){});}else{cimg.pause()}})},{threshold:.15});cvo.observe(cimg)}
 var layers=$('#cakes .cl'),caps=$('#cakes .cap'),ticks=$('#cakes .ticks i'),zs=$('[data-z]'),bar=document.getElementById('bar');
 function wp(el){var r=el.getBoundingClientRect();return cl(-r.top/(r.height-vh),0,1)}
@@ -289,13 +279,6 @@ bg.addEventListener('click',function(){menu(!H.classList.contains('menu-open'))}
 $('#menu a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
 addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
 function draw(){
-  // hero: the photograph stays, slowly pushes in and dims to a dusk
-  var p=sm('h',wp(hero));
-  if(fok){var idle=rm?0:(1-cl(p*8,0,1))*(.5-.5*Math.cos(performance.now()/2600))*.2,fp=cl(p+idle,0,1)*(FR.n-1),i0=Math.floor(fp),fr=fp-i0,a=rdy(i0+1),b=fr>.02?rdy(Math.min(i0+2,FR.n),1):null;
-    if(a){paint(a);if(b&&b!==a){cx.globalAlpha=fr;paint(b);cx.globalAlpha=1}}}
-  else{var cross=cl((p-.16)/.48,0,1);himg.style.transform='translate3d(0,'+(p*6)+'%,0) scale('+(1+.05*p)+')';himg2.style.transform='translate3d(0,'+((p-.16)*-4)+'%,0) scale('+(1.08+.04*cross)+')';himg.style.opacity=(1-cross).toFixed(3);himg2.style.opacity=cross.toFixed(3);if(smk)smoke(performance.now())}
-  hdim.style.opacity=(fok?p*.25:p*.6).toFixed(3);
-  hcopy.style.transform='translateY('+(-p*110)+'px)';hcopy.style.opacity=1-cl((p-.3)/.4,0,1);
   // cakes: four plates dissolve into each other, scene by scene
   var s=sm('c',wp(cakes))*4;
   layers.forEach(function(l,i){var o=i?cl((s-i+.18)/.36,0,1):1,t=cl((s-i+.18)/1.4,0,1);
