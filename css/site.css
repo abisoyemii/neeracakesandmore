@@ -31,7 +31,7 @@ h1{font-size:clamp(3.2rem,8vw,7rem);margin-bottom:.35em}h2{font-size:clamp(2.2re
 .btn{display:inline-block;padding:18px 40px;background:var(--pink);color:#fff;font:400 1rem var(--sans);letter-spacing:.1em;border:0;cursor:pointer;transition:background .5s}.btn:hover{background:var(--pink-deep)}
 .btn.ghost{background:none;border:1px solid #f3e9dc55}.btn.ghost:hover{background:#f3e9dc14}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(18px,2.4vw,36px);margin-top:clamp(36px,6vh,70px)}
-.card{background:var(--ember);display:flex;flex-direction:column}.card .ph{aspect-ratio:4/3;background:#1b0f14;overflow:hidden}.card .ph.empty{display:grid;place-items:center;color:var(--dim);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}.card .ph.empty::after{content:'Photo coming soon'}
+.card{background:var(--ember);display:flex;flex-direction:column}.card .ph{aspect-ratio:4/3;background:#1b0f14;overflow:hidden}.card .ph.empty{background:transparent}
 .card .bd{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}.card p{color:var(--dim);font-size:.98rem}
 .price{font-family:var(--serif);font-size:1.7rem;color:var(--gold)}.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}.card .btn{margin-top:auto;padding:15px 24px;text-align:center}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,100px);align-items:center;margin-top:clamp(40px,8vh,90px);min-width:0}.two>*{min-width:0}

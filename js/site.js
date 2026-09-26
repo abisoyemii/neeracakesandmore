@@ -3,31 +3,31 @@
 var WA='14709626866';
 /* ===== EDIT HERE: products. price: number in USD, or null = "price on request". SAMPLE PRICES, replace before going live. ===== */
 var PRODUCTS=[
- {id:'roll',name:'Spring Rolls',unit:'3',price:20,displayPrice:'$20/3',img:'images/small-chops/small-chops-01.jpg',desc:'Crisp, crunchy and ready to share.'},
- {id:'samosa',name:'Samosas',unit:'3',price:24,displayPrice:'$24/3',video:'images/firstvid.mp4',desc:'Seasoned pastry filled for every occasion.'},
- {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Order on request',price:null,displayPrice:'On request',video:'images/shrimp-only.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'roll',name:'Spring Rolls',unit:'3',price:20,displayPrice:'$20/3',desc:'Crisp, crunchy and ready to share.'},
+ {id:'samosa',name:'Samosas',unit:'3',price:24,displayPrice:'$24/3',desc:'Seasoned pastry filled for every occasion.'},
+ {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
  {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Order on request',price:null,displayPrice:'On request',video:'images/shrimp-only.mp4',desc:'Request pricing on WhatsApp.'},
  {id:'mini-meat-pie',name:'Mini Size Meat Pie',unit:'Order on request',price:null,displayPrice:'On request',img:'images/small-chops/meatpie.PNG',desc:'Request pricing on WhatsApp.'},
- {id:'corn',name:'Corn on Cob',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'egg-roll',name:'Egg Rolls',unit:'Order on request',price:null,displayPrice:'On request',video:'images/firstvid.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'corn',name:'Corn on Cob',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'egg-roll',name:'Egg Rolls',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
  {id:'meat-pie',name:'Meat Pie',unit:'Order on request',price:null,displayPrice:'On request',img:'images/small-chops/meatpie.PNG',desc:'Request pricing on WhatsApp.'},
- {id:'chicken-kebab',name:'Chicken Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',video:'images/peppered-tray-crop.mp4',desc:'Tender chicken kebabs.'},
- {id:'beef-kebab',name:'Beef Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',video:'images/peppered-tray-crop.mp4',desc:'Seasoned beef kebabs.'},
- {id:'gizzard-kebab',name:'Gizzard Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',video:'images/peppered-tray-crop.mp4',desc:'Gizzard kebabs, newly available.'},
- {id:'mini-chicken-burger',name:'Mini Chicken Burger',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'mini-beef-burger',name:'Mini Beef Burger',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'shawarma',name:'Shawarma',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'suya',name:'Nigerian Suya',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'puff-puff',name:'Puff-Puff',unit:'Order on request',price:null,displayPrice:'On request',video:'images/firstvid.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'fries',name:'Fries',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'fried-yam',name:'Fried Yam',unit:'Order on request',price:null,displayPrice:'On request',video:'images/secondvid.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'grilled-fish',name:'Grilled Fish',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'turkey',name:'Turkey',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'chicken',name:'Chicken',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'beef',name:'Beef',unit:'Order on request',price:null,displayPrice:'On request',video:'images/peppered-tray-crop.mp4',desc:'Request pricing on WhatsApp.'},
- {id:'cocktail',name:'Cocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg',desc:'$24 minimum order.'},
- {id:'mocktail',name:'Mocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg',desc:'$24 minimum order.'},
-{id:'fruit-cup',name:'Fruit Cup',unit:'3oz / 5oz',price:null,displayPrice:'$2.50 (3oz) / $3.50 (5oz)',img:'images/small-chops/small-chops-02.jpg',desc:'Minimum order is 20.'},
+ {id:'chicken-kebab',name:'Chicken Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',desc:'Tender chicken kebabs.'},
+ {id:'beef-kebab',name:'Beef Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',desc:'Seasoned beef kebabs.'},
+ {id:'gizzard-kebab',name:'Gizzard Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',desc:'Gizzard kebabs, newly available.'},
+ {id:'mini-chicken-burger',name:'Mini Chicken Burger',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'mini-beef-burger',name:'Mini Beef Burger',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'shawarma',name:'Shawarma',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'suya',name:'Nigerian Suya',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'puff-puff',name:'Puff-Puff',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'fries',name:'Fries',unit:'Quote',price:null,displayPrice:'On request',desc:'Minimum order: 20. On-the-spot frying is available for $300. Request pricing on WhatsApp.'},
+ {id:'fried-yam',name:'Fried Yam',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'grilled-fish',name:'Grilled Fish',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'turkey',name:'Turkey',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'chicken',name:'Chicken',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'beef',name:'Beef',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
+ {id:'cocktail',name:'Cocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg',desc:'Minimum order: 20.'},
+ {id:'mocktail',name:'Mocktail',unit:'Each',price:7,displayPrice:'$7',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg',desc:'Minimum order: 20.'},
+{id:'fruit-cup',name:'Fruit Cup',unit:'3oz / 5oz',price:null,displayPrice:'$2.50 (3oz) / $3.50 (5oz)',desc:'Available in 3 oz and 5 oz sizes.'},
  {id:'combo-1',name:'Combo 1',unit:'Combo',price:6,displayPrice:'$6',img:'images/small-chops/small-chops-01.jpg',desc:'Spring roll, samosa and 3 puff-puff.'},
  {id:'combo-2',name:'Combo 2',unit:'Combo',price:9.5,displayPrice:'$9.50',img:'images/small-chops/small-chops-01.jpg',desc:'Combo 1 plus your choice of gizzard, chicken or beef kebab.'},
  {id:'party',name:'Party Pack',unit:'Custom mix',price:null,displayPrice:'Quote',img:'images/small-chops/small-chops-02.jpg',desc:'Choose your mix of bites for the party.'},
@@ -71,7 +71,7 @@ function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null
 function money(v){return '$'+v.toFixed(2).replace(/\.00$/,'')}
 function priceLabel(p){return p.displayPrice||(p.price==null?'On request':money(p.price))}
 function P(id){return PRODUCTS.filter(function(p){return p.id===id})[0]}
-function pic(p){var w=el('div','ph');if(p.video){var v=el('video','media-video');v.src=p.video;v.muted=true;v.loop=true;v.autoplay=true;v.playsInline=true;v.preload='metadata';v.setAttribute('aria-label',p.name);w.appendChild(v);return w}if(p.img){var i=el('img');i.src=p.img;i.alt=p.name;i.loading='lazy';w.appendChild(i);return w}w.className+=' empty';w.setAttribute('aria-label',p.name+' image coming soon');return w}
+function pic(p){var w=el('div','ph');if(p.video){var v=el('video','media-video');v.src=p.video;v.muted=true;v.loop=true;v.autoplay=true;v.playsInline=true;v.preload='metadata';v.setAttribute('aria-label',p.name);w.appendChild(v);return w}if(p.img){var i=el('img');i.src=p.img;i.alt=p.name;i.loading='lazy';w.appendChild(i);return w}w.className+=' empty';w.setAttribute('aria-hidden','true');return w}
 /* menu page */
 var mg=$('#products');
 if(mg)PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el('div','row');
@@ -89,22 +89,22 @@ function draw(){
  if(rq){var nt=el('div','note ok');nt.appendChild(el('b',0,'Request '+rq.code+' sent. '));nt.appendChild(document.createTextNode('Waiting for Neera\u2019s go-ahead on WhatsApp. Nothing has been charged. Once she approves, she will send you the payment details and confirm your date.'));box.appendChild(nt)}
  if(!ids.length){box.appendChild(el('p','lead','Your cart is empty.'));var l=el('a','btn','Browse the menu');l.href='menu.html';l.style.marginTop='24px';box.appendChild(l);$('#fw').style.display='none';return}
  $('#fw').style.display='';
- ids.forEach(function(k){var p=P(k),ln=el('div','line'),th=el('div','th'),im=el('img');im.src=p.img;im.alt=p.name;th.appendChild(im);
-  var m=el('div');m.appendChild(el('h3',0,p.name));m.appendChild(el('p',0,p.unit));
+ ids.forEach(function(k){var p=P(k),ln=el('div','line'),th=el('div','th'),im;if(p.img){im=el('img');im.src=p.img;im.alt=p.name;th.appendChild(im)}else if(p.video){im=el('video','media-video');im.src=p.video;im.muted=true;im.loop=true;im.autoplay=true;im.playsInline=true;im.preload='metadata';im.setAttribute('aria-label',p.name);th.appendChild(im)}else{th.className+=' empty';th.setAttribute('aria-label',p.name+' image coming soon')}
+  var m=el('div');m.appendChild(el('h3',0,p.name));if(p.unit&&p.unit!=='Order on request')m.appendChild(el('p',0,p.unit));
   var q=el('div','qty'),mi=el('button',0,'−'),pl=el('button',0,'+');mi.type=pl.type='button';mi.setAttribute('aria-label','Less');pl.setAttribute('aria-label','More');
   mi.onclick=function(){var x=cart();x[k]=Math.max(0,x[k]-1);if(!x[k])delete x[k];save(x);draw()};pl.onclick=function(){var x=cart();x[k]++;save(x);draw()};
   q.appendChild(mi);q.appendChild(el('span',0,c[k]));q.appendChild(pl);m.appendChild(q);
   var rm=el('button','rm','Remove');rm.type='button';rm.onclick=function(){var x=cart();delete x[k];save(x);draw()};m.appendChild(rm);
-    ln.appendChild(th);ln.appendChild(m);ln.appendChild(el('span','price',p.price==null?priceLabel(p):money(p.price*c[k])));box.appendChild(ln)});
- var t=total(),tt=el('div','total');tt.appendChild(el('span',0,t.q?'Estimated total (+ items on request)':'Estimated total'));tt.appendChild(el('span','price',money(t.s)));box.appendChild(tt)}
+     ln.appendChild(th);ln.appendChild(m);ln.appendChild(el('span','price',p.price==null?'Quote pending':money(p.price*c[k])));box.appendChild(ln)});
+   var t=total(),tt=el('div','total');tt.appendChild(el('span',0,t.q?'Priced items subtotal':'Estimated total'));tt.appendChild(el('span','price',money(t.s)));box.appendChild(tt)}
 var f=$('#f');
 if(f){var dateField=f.querySelector('input[name="date"]'),minDate=new Date();minDate.setDate(minDate.getDate()+2);if(dateField)dateField.min=minDate.toISOString().slice(0,10)}
 if(f)f.onsubmit=function(e){e.preventDefault();var c=cart(),ids=Object.keys(c).filter(function(k){return P(k)});if(!ids.length)return;
  var d=new FormData(f),code='NC-'+Math.floor(1000+Math.random()*9000),t=total();
  var L=['New order request '+code,'','CUSTOMER INFORMATION','Full name: '+d.get('fullName'),'First name: '+d.get('firstName'),'Last name: '+d.get('lastName'),'Phone: '+(d.get('phone')||'-'),'Email: '+(d.get('email')||'-'),'','EVENT DETAILS','Event type: '+d.get('eventType'),'Picking up / service: '+d.get('mode'),'Venue street address: '+d.get('streetAddress'),'Address line 2: '+(d.get('streetAddress2')||'-'),'City: '+d.get('city'),'State / Province: '+d.get('state'),'ZIP / Postal code: '+d.get('postalCode'),'Event date: '+(d.get('date')||'-'),'Event time: '+(d.get('time')||'-'),'Time zone: America/New_York','Personalization: '+d.get('personalization'),'','About the event: '+(d.get('eventDetails')||'-'),'Menu interests and food allergies: '+(d.get('menuInterests')||'-'),'','Items:'];
- ids.forEach(function(k){var p=P(k);L.push('- '+c[k]+' x '+p.name+' ('+p.unit+') '+(p.price==null?priceLabel(p):money(p.price*c[k])))});
- L.push('','Estimated total: '+money(t.s)+(t.q?' + items on request':''),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. Pickup only; no delivery. A 50% nonrefundable deposit is required to reserve the date. Please confirm availability. Thank you!');
- L[L.length-1]=L[L.length-1].replace('Pickup only; no delivery.','Delivery and setup fees are paid by the client.').replace('Notes: -','');
+ ids.forEach(function(k){var p=P(k),unit=p.unit&&p.unit!=='Order on request'?' ('+p.unit+')':'';L.push('- '+c[k]+' x '+p.name+unit+': '+(p.price==null?'Price to be confirmed':money(p.price*c[k])))});
+ L.push('','Priced items subtotal: '+money(t.s),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. A 20% nonrefundable deposit is required to reserve the date. On-the-spot frying is $300. A minimum order of 20 applies to fries and cocktails/mocktails. Delivery and setup fees are paid by the client. Please confirm availability and quote unpriced items. Thank you!');
+ L[L.length-1]=L[L.length-1].replace('Notes: -','');
  wr(R,{code:code,time:Date.now()});draw();
  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener')};
 var cl=$('#clear');if(cl)cl.onclick=function(){save({});wr(R,null);draw()};
