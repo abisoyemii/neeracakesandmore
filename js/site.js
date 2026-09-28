@@ -90,7 +90,7 @@ function total(){var c=cart(),s=0,q=false;for(var k in c){var p=P(k);if(!p)conti
 function draw(){
  if(!box)return;box.textContent='';var c=cart(),ids=Object.keys(c).filter(function(k){return P(k)&&c[k]>0});
  var rq=rd(R);
- if(rq){var nt=el('div','note ok');nt.appendChild(el('b',0,'Request '+rq.code+' sent. '));nt.appendChild(document.createTextNode('Waiting for Neera\u2019s go-ahead on WhatsApp. Nothing has been charged. Once she approves, she will send you the payment details and confirm your date.'));box.appendChild(nt)}
+ if(rq){var nt=el('div','note ok');nt.appendChild(el('b',0,'Request '+rq.code+' prepared. '));nt.appendChild(document.createTextNode('Finish sending it in WhatsApp. Nothing has been charged. Neera will confirm availability, payment details, and your date there. WhatsApp replies do not update on this page.'));box.appendChild(nt)}
  if(!ids.length){box.appendChild(el('p','lead','Your cart is empty.'));var l=el('a','btn','Browse the menu');l.href='menu.html';l.style.marginTop='24px';box.appendChild(l);$('#fw').style.display='none';return}
  $('#fw').style.display='';
  ids.forEach(function(k){var p=P(k),ln=el('div','line'),th=el('div','th'),im;if(p.img){im=el('img');im.src=p.img;im.alt=p.name;th.appendChild(im)}else if(p.video){im=el('video','media-video');im.src=p.video;im.muted=true;im.loop=true;im.autoplay=true;im.playsInline=true;im.preload='metadata';im.setAttribute('aria-label',p.name);th.appendChild(im)}else{th.className+=' empty';th.setAttribute('aria-label',p.name+' image coming soon')}
