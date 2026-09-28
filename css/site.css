@@ -2,7 +2,7 @@
 :root[data-theme="light"]{--ink:#f7f2eb;--ember:#ebe1d5;--cream:#21191b;--dim:#665b57;--gold:#9c3152;--pink:#b73560;--pink-deep:#8e274a}
 *,*::before,*::after{box-sizing:border-box;margin:0}
 body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:clamp(1.1rem,1.1vw,1.25rem);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 img{display:block;width:100%;height:100%;object-fit:cover;color:transparent}
 nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,4vw,56px);background:linear-gradient(#150c10f2,#150c10b3 70%,transparent)}
 .brand{display:flex;flex-direction:column;gap:2px}.brand img{width:60px;height:60px;border-radius:50%}
