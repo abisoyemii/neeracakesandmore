@@ -5,8 +5,8 @@ var WA='14709626866';
 var PRODUCTS=[
  {id:'roll',name:'Spring Rolls',unit:'3',price:20,displayPrice:'$20/3',desc:'Crisp, crunchy and ready to share.'},
  {id:'samosa',name:'Samosas',unit:'3',price:24,displayPrice:'$24/3',desc:'Seasoned pastry filled for every occasion.'},
- {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
- {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Order on request',price:null,displayPrice:'On request',video:'images/shrimp-only.mp4',desc:'Request pricing on WhatsApp.'},
+ {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Order on request',price:null,displayPrice:'On Request',desc:'Request pricing on WhatsApp.'},
+ {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Order on request',price:null,displayPrice:'On Request',video:'images/shrimp-only.mp4',desc:'Request pricing on WhatsApp.'},
  {id:'mini-meat-pie',name:'Mini Size Meat Pie',unit:'Order on request',price:null,displayPrice:'On request',img:'images/small-chops/meatpie.PNG',desc:'Request pricing on WhatsApp.'},
  {id:'corn',name:'Corn on Cob',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
  {id:'egg-roll',name:'Egg Rolls',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
@@ -19,7 +19,7 @@ var PRODUCTS=[
  {id:'shawarma',name:'Shawarma',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
  {id:'suya',name:'Nigerian Suya',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
  {id:'puff-puff',name:'Puff-Puff',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
- {id:'fries',name:'Fries',unit:'Quote',price:null,displayPrice:'On request',desc:'Minimum order: 20. On-the-spot frying is available for $300. Request pricing on WhatsApp.'},
+ {id:'fries',name:'Fries',unit:'Quote',price:null,displayPrice:'On Request',desc:'Minimum order: 20. Request pricing on WhatsApp.'},
  {id:'fried-yam',name:'Fried Yam',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
  {id:'grilled-fish',name:'Grilled Fish',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
  {id:'turkey',name:'Turkey',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
@@ -30,11 +30,11 @@ var PRODUCTS=[
 {id:'fruit-cup',name:'Fruit Cup',unit:'3oz / 5oz',price:null,displayPrice:'$2.50 (3oz) / $3.50 (5oz)',desc:'Available in 3 oz and 5 oz sizes.'},
  {id:'combo-1',name:'Combo 1',unit:'Combo',price:6,displayPrice:'$6',img:'images/small-chops/small-chops-01.jpg',desc:'Spring roll, samosa and 3 puff-puff.'},
  {id:'combo-2',name:'Combo 2',unit:'Combo',price:9.5,displayPrice:'$9.50',img:'images/small-chops/small-chops-01.jpg',desc:'Combo 1 plus your choice of gizzard, chicken or beef kebab.'},
- {id:'party',name:'Party Pack',unit:'Custom mix',price:null,displayPrice:'Quote',img:'images/small-chops/small-chops-02.jpg',desc:'Choose your mix of bites for the party.'},
- {id:'combo',name:'Customize Your Own Combo',unit:'Custom mix',price:null,displayPrice:'Quote',img:'images/small-chops/small-chops-01.jpg',desc:'Tell us exactly which bites and quantities you want.'},
- {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour, design and date.'},
- {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On request',desc:'Private events, church gatherings and corporate functions.'},
- {id:'lux',name:'Luxury Set-Up',unit:'Quote',price:null,displayPrice:'On request',desc:'Inquire about our luxury setup options.'}
+ {id:'party',name:'Party Pack',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-02.jpg',desc:'Choose your mix of bites for the party.'},
+ {id:'combo',name:'Customize Your Own Combo',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-01.jpg',desc:'Tell us exactly which bites and quantities you want.'},
+ {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On Request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour, design and date.'},
+ {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On Request',desc:'Private events, church gatherings and corporate functions.'},
+ {id:'lux',name:'Luxury Set-Up',unit:'Quote',price:null,displayPrice:'On Request',desc:'Inquire about our luxury setup options.'}
 ];
 var IMAGES={
  'banner.about':'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg','banner.services':'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg','banner.menu':'images/small-chops/small-chops-01.jpg','banner.gallery':'images/small-chops/small-chops-02.jpg','banner.faq':'images/cakes/cake4.jpg','banner.contact':'images/cakes/cake3.jpg',
@@ -66,20 +66,24 @@ function cart(){return rd(K)||{}}
 function save(c){wr(K,c);badge()}
 function n(){var c=cart(),t=0;for(var k in c)t+=c[k];return t}
 function badge(){[].forEach.call(document.querySelectorAll('.cc'),function(e){var t=n();e.textContent=t;e.style.display=t?'inline-block':'none'})}
+var addToCart=new URLSearchParams(window.location.search).get('add');
+if(addToCart==='lux'){var currentCart=cart();currentCart.lux=(currentCart.lux||0)+1;save(currentCart);history.replaceState(null,'',window.location.pathname+window.location.hash)}
 function $(q){return document.querySelector(q)}
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
 function money(v){return '$'+v.toFixed(2).replace(/\.00$/,'')}
-function priceLabel(p){return p.displayPrice||(p.price==null?'On request':money(p.price))}
+function priceLabel(p){var label=p.displayPrice||(p.price==null?'On Request':money(p.price));return label.toLowerCase()==='on request'?'On Request':label}
 function P(id){return PRODUCTS.filter(function(p){return p.id===id})[0]}
 function pic(p){var w=el('div','ph');if(p.video){var v=el('video','media-video');v.src=p.video;v.muted=true;v.loop=true;v.autoplay=true;v.playsInline=true;v.preload='metadata';v.setAttribute('aria-label',p.name);w.appendChild(v);return w}if(p.img){var i=el('img');i.src=p.img;i.alt=p.name;i.loading='lazy';w.appendChild(i);return w}w.className+=' empty';w.setAttribute('aria-hidden','true');return w}
 /* menu page */
 var mg=$('#products');
-if(mg)PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el('div','row');
+if(mg){var menuNote=document.querySelector('main.pg.tight>.note'),priceHeading=el('h2',0,'Price List');mg.parentNode.insertBefore(priceHeading,mg);
+PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el('div','row');
  r.appendChild(el('h3',0,p.name));r.appendChild(el('span','price',priceLabel(p)));
  b.appendChild(r);b.appendChild(el('p',0,p.unit+' · '+p.desc));
  var a=el('button','btn',p.price==null?'Add to request':'Add to cart');a.type='button';
  a.onclick=function(){var k=cart();k[p.id]=(k[p.id]||0)+1;save(k);a.textContent='Added ✓';setTimeout(function(){a.textContent=p.price==null?'Add to request':'Add to cart'},1200)};
  b.appendChild(a);c.appendChild(pic(p));c.appendChild(b);mg.appendChild(c)});
+if(menuNote){menuNote.classList.add('price-notes');menuNote.textContent='';menuNote.appendChild(el('b',0,'Notes'));var noteList=el('ul');['20% is non-refundable.','On-the-spot frying fee: $300.','Servers: The number required is based on the number of guests/visitors expected for the event; $100 per server for up to 5 hours.','The minimum order of 20 applies to cocktails/mocktails and fruits.'].forEach(function(text){noteList.appendChild(el('li',0,text))});menuNote.appendChild(noteList);mg.parentNode.insertBefore(menuNote,mg.nextSibling)}}
 /* cart page */
 var box=$('#cart');
 function total(){var c=cart(),s=0,q=false;for(var k in c){var p=P(k);if(!p)continue;if(p.price==null)q=true;else s+=p.price*c[k]}return{s:s,q:q}}
