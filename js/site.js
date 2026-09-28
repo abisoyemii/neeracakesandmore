@@ -3,9 +3,9 @@
 var WA='14709626866';
 /* ===== EDIT HERE: products. price: number in USD, or null = "price on request". SAMPLE PRICES, replace before going live. ===== */
 var PRODUCTS=[
- {id:'roll',name:'Spring Rolls',unit:'3',price:20,displayPrice:'$20/3',desc:'Crisp, crunchy and ready to share.'},
+ {id:'roll',name:'Spring Rolls',unit:'Dozen',price:24,displayPrice:'$24/dozen',desc:'Crisp, crunchy and ready to share.'},
  {id:'samosa',name:'Samosas',unit:'3',price:24,displayPrice:'$24/3',desc:'Seasoned pastry filled for every occasion.'},
- {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Order on request',price:null,displayPrice:'On Request',desc:'Request pricing on WhatsApp.'},
+ {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'',price:36,displayPrice:'$36',desc:'Crisp shrimp roll.'},
  {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Order on request',price:null,displayPrice:'On Request',video:'images/shrimp-only.mp4',desc:'Request pricing on WhatsApp.'},
  {id:'mini-meat-pie',name:'Mini Size Meat Pie',unit:'Order on request',price:null,displayPrice:'On request',img:'images/small-chops/meatpie.PNG',desc:'Request pricing on WhatsApp.'},
  {id:'corn',name:'Corn on Cob',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
@@ -79,7 +79,7 @@ var mg=$('#products');
 if(mg){var menuNote=document.querySelector('main.pg.tight>.note'),priceHeading=el('h2',0,'Price List');priceHeading.style.marginTop='clamp(70px,12vh,140px)';mg.parentNode.insertBefore(priceHeading,mg);
 PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el('div','row');
  r.appendChild(el('h3',0,p.name));r.appendChild(el('span','price',priceLabel(p)));
- b.appendChild(r);b.appendChild(el('p',0,p.unit+' · '+p.desc));
+ b.appendChild(r);b.appendChild(el('p',0,(p.unit?p.unit+' · ':'')+p.desc));
  var a=el('button','btn',p.price==null?'Add to request':'Add to cart');a.type='button';
  a.onclick=function(){var k=cart();k[p.id]=(k[p.id]||0)+1;save(k);a.textContent='Added ✓';setTimeout(function(){a.textContent=p.price==null?'Add to request':'Add to cart'},1200)};
  b.appendChild(a);c.appendChild(pic(p));c.appendChild(b);mg.appendChild(c)});
