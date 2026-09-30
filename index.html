@@ -5,307 +5,343 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NeeraCakesAndMore | Cakes & Catering in Atlanta | A TASTE TO REMEMBER</title>
 <link rel="icon" type="image/png" href="images/neeralogo.png?v=2">
-<meta name="description" content="NeeraCakesAndMore creates Nigerian-inspired cakes, small chops and finger foods for celebrations in Atlanta, Georgia.">
+<meta name="description" content="NeeraCakesAndMore creates Nigerian-inspired cakes, small chops and pastries for celebrations in Atlanta, Georgia.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/cakes/WhatsApp%20Image%202026-09-25%20at%2010.14.40.jpeg" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;1,300&family=Figtree:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;1,300&family=Figtree:wght@400;500;600&display=swap"></noscript>
+<script>document.documentElement.classList.add('js')</script>
 <style>
-:root{--ink:#150c10;--ember:#24141a;--cream:#f3e9dc;--dim:#c9b9a5;--gold:#e8a0b6;--pink:#c94572;--pink-deep:#a93560;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#150c10}}
-:root[data-theme="dark"]{--ink:#150c10}
-:root[data-theme="light"]{--ink:#f7f2eb;--ember:#ebe1d5;--cream:#21191b;--dim:#665b57;--gold:#9c3152;--pink:#b73560;--pink-deep:#8e274a}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}html.lock{overflow:hidden}
+:root{--bg:#1d0f15;--bg2:#2b1620;--text:#f7ece6;--mute:#d2bfb8;--rose:#e8698f;--rose-d:#cf4f77;--line:#f7ece62e;--serif:"Fraunces",Georgia,serif;--sans:"Figtree","Helvetica Neue",Arial,sans-serif;--pad:clamp(20px,5vw,72px);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d0f15}}
+:root[data-theme="dark"]{--bg:#1d0f15}
+:root[data-theme="light"]{--bg:#fbf4ee;--bg2:#f3e5dc;--text:#2a1720;--mute:#6d5760;--rose:#c23c67;--rose-d:#a42d54;--line:#2a17202e}
+html{scroll-padding-top:calc(84px + env(safe-area-inset-top,0px));scroll-behavior:smooth}html.lock{overflow:hidden}
 *,*::before,*::after{box-sizing:inherit;margin:0}
-body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1vw,1.1rem);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
-a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-img{display:block;width:100%;height:100%;object-fit:cover;color:transparent}
-body::after{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none;opacity:.09;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");animation:grain .9s steps(6) infinite}
-@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-5%,-2%)}80%{transform:translate(4%,4%)}100%{transform:translate(0,0)}}
-#bar{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);z-index:40}
-
-/* intro title card */
-#intro{position:fixed;inset:0;z-index:100;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity 1.6s ease 0s}
-#intro.out{opacity:0;pointer-events:none}
-#intro>*{opacity:0;transform:translateY(10px);transition:opacity 1.8s ease,transform 2.4s ease}#intro.show>*{opacity:1;transform:none}
-#intro img{height:80px;width:auto;object-fit:contain}#intro .wm{font-size:clamp(2rem,6vw,3.6rem)}
+body{background:var(--bg);color:var(--text);font:400 clamp(1.05rem,1vw,1.15rem)/1.65 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+h1,h2{font-family:var(--serif);font-weight:300;line-height:1.02;letter-spacing:-.015em}
+h2{font-size:clamp(2.4rem,5.4vw,4.6rem)}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--rose);transform-origin:0 50%;transform:scaleX(0);z-index:50}
 
 /* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:calc(20px + env(safe-area-inset-top,0px)) clamp(20px,4vw,56px) 20px;background:linear-gradient(#150c10b3,transparent)}
-.brand{display:flex;flex-direction:column;gap:2px}.brand img{height:48px;width:auto;object-fit:contain}
-.wm{font-family:var(--serif);font-size:1.5rem;font-weight:500;letter-spacing:.02em;line-height:1}
-.tag{font-size:.64rem;letter-spacing:.34em;color:var(--gold)}
-nav ul{display:flex;gap:clamp(16px,2.6vw,40px);list-style:none;padding:0;font-size:.86rem;letter-spacing:.06em}
-nav ul a{opacity:.8;transition:opacity .6s}nav ul a:hover{opacity:1}.burger{display:none;width:48px;height:48px;background:none;border:0;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:7px;padding:0;position:relative;z-index:31}
-.burger span{display:block;width:26px;height:2px;background:var(--cream);transition:transform .5s ease}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;gap:20px;padding:calc(14px + env(safe-area-inset-top,0px)) var(--pad) 14px;transition:background .4s,box-shadow .4s}
+nav.solid{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;flex-direction:column;align-items:center;gap:5px;margin-right:auto}
+.brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
+.wm{font-family:var(--serif);font-size:1.25rem;font-weight:600;line-height:1.1}
+.tag{display:block;font-size:.6rem;font-weight:600;color:var(--rose);letter-spacing:.2em;line-height:1;white-space:nowrap;text-shadow:0 1px 8px #0008}nav.solid .tag,footer .tag{text-shadow:none}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+nav ul{display:flex;gap:clamp(16px,2.2vw,34px);list-style:none;padding:0;font-size:.98rem;font-weight:500}
+nav ul a{padding:6px 0;border-bottom:2px solid transparent;transition:border-color .3s}nav ul a:hover{border-color:var(--rose)}
+nav ul a.order{background:var(--rose);color:#fff;padding:10px 22px;border:0;border-radius:99px}nav ul a.order:hover{background:var(--rose-d)}
+.theme-toggle{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--text);font:1.2rem var(--sans);cursor:pointer;line-height:1}.theme-toggle:hover{border-color:var(--rose);color:var(--rose)}
+.burger{display:none;width:46px;height:46px;background:none;border:0;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:7px;padding:0;position:relative;z-index:42}
+.burger span{display:block;width:26px;height:2px;background:var(--text);transition:transform .4s}
 .menu-open .burger span:first-child{transform:translateY(4.5px) rotate(45deg)}.menu-open .burger span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
-#menu{position:fixed;inset:0;z-index:29;background:#150c10f7;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,3.5vh,28px);padding:0 8vw;opacity:0;pointer-events:none;transition:opacity .6s ease}
-.menu-open #menu{opacity:1;pointer-events:auto}html.menu-open{overflow:hidden}
-#menu a{font-family:var(--serif);font-size:clamp(2.2rem,9vw,3.6rem);font-weight:300;line-height:1.1}#menu a.cta{color:var(--gold)}
-@media(max-width:980px){nav ul{display:none}.burger{display:flex}.brand img.logo{width:60px;height:60px}}
-
-.wrap{position:relative}.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--ink)}
-.abs{position:absolute;inset:0}.abs img{position:absolute;inset:0;will-change:transform}.media-video{display:block;width:100%;height:100%;object-fit:cover;background:var(--ink)}#cater .media-video{position:absolute;inset:0}
-.veil::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#150c108c 0%,#150c1030 42%,#150c10d9 100%);pointer-events:none}
-.frame{position:relative;overflow:hidden;background:var(--ember)}
-.frame img{position:absolute;left:0;top:-9%;height:118%;will-change:transform}
-.brand img.logo{width:72px;height:72px;border-radius:50%;object-fit:cover}#intro img.logo{width:120px;height:120px;border-radius:50%;object-fit:cover}.inquire .brand img.logo{width:100px;height:100px}
-.theme-toggle{width:42px;height:42px;margin-left:18px;border:1px solid #f3e9dc66;border-radius:50%;background:transparent;color:var(--cream);font:1.25rem var(--sans);cursor:pointer;line-height:1}.theme-toggle:hover{border-color:var(--gold);color:var(--gold)}
-html[data-theme="light"] nav{background:linear-gradient(#f7f2ebf2,transparent)}html[data-theme="light"] #menu{background:#f7f2ebf5}html[data-theme="light"] footer{background:#e9ded1}html[data-theme="light"] .inquire{background:#e9ded1}
+#menu{position:fixed;inset:0;z-index:41;background:var(--bg);display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,3vh,24px);padding:0 var(--pad);opacity:0;pointer-events:none;transition:opacity .4s}
+.menu-open #menu{opacity:1;pointer-events:auto}.menu-open nav{z-index:42}html.menu-open{overflow:hidden}
+#menu a{font-family:var(--serif);font-size:clamp(2.2rem,9vw,3.4rem);font-weight:300;line-height:1.1}#menu a.cta{color:var(--rose)}
+@media(max-width:980px){nav ul{display:none}.burger{display:flex}}
 
 /* hero */
-#hero{height:100vh}
-#hero .abs img{animation:none!important;transform:none!important;object-fit:cover;object-position:50% 50%}
-#hero .abs img.hero-slide{transition:opacity .8s ease}
-#hero .veil::after{background:none!important}
-.dim{position:absolute;inset:0;background:#150c10;opacity:0}
-.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 45%,#000000a6 100%);pointer-events:none}
-.lb{display:none}
-.hcopy{position:absolute;left:0;bottom:0;padding:0 clamp(20px,5vw,72px) clamp(48px,9vh,110px);max-width:1400px;z-index:3}
-.kicker{font-size:clamp(.95rem,1.25vw,1.2rem);letter-spacing:.22em;color:var(--dim);margin-bottom:22px}
-h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.5rem,9.6vw,9.4rem);line-height:.98;letter-spacing:-.02em}
-h1 em{font-style:italic;color:var(--dim)}
-.ln{display:block;overflow:hidden;padding-bottom:.08em}.ln>span{display:block;transform:none!important;transition:none!important}
-.fadein{opacity:1!important;transition:none!important}
-.lede{max-width:760px;margin-top:36px;font-size:clamp(1.50rem,1.12vw,1.80rem);line-height:1.6;opacity:.95}
-.ctas{display:flex;flex-wrap:wrap;gap:18px 40px;margin-top:44px;align-items:center}
-.btn{display:inline-block;padding:20px 46px;background:var(--pink);color:#fff;font-size:1rem;letter-spacing:.12em;transition:background .6s}.btn:hover{background:var(--pink-deep)}
-.ghost{font-size:1rem;letter-spacing:.12em;color:#fff;border-bottom:2px solid var(--pink);padding-bottom:5px;transition:border-color .6s}.ghost:hover{border-color:#fff}
+#hero{position:relative;height:100vh;height:100svh;min-height:520px;overflow:hidden;background:var(--bg2);color:#fff}
+#hero img{position:absolute;inset:0;transition:opacity 1.6s ease;transform:scale(1.04)}
+#hero img.active{animation:drift 9s ease-out forwards}
+@keyframes drift{to{transform:scale(1)}}
+#hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#150a0ff0 0%,#150a0f80 38%,#150a0f14 70%,#150a0f59 100%)}
+.hcopy{position:absolute;z-index:2;left:var(--pad);right:var(--pad);bottom:clamp(48px,11vh,120px);max-width:900px}
+.hcopy h1{font-size:clamp(3rem,8.4vw,7.6rem);text-shadow:0 2px 24px #0006}
+.hcopy p{max-width:32em;margin-top:22px;font-size:clamp(1.15rem,1.5vw,1.4rem);line-height:1.5}
+.ctas{display:flex;flex-wrap:wrap;gap:16px 28px;margin-top:0;align-items:center}
+.btn{display:inline-block;padding:16px 34px;border-radius:99px;background:var(--rose);color:#fff;font-weight:600;font-size:1.02rem;transition:background .3s,transform .3s}.btn:hover{background:var(--rose-d);transform:translateY(-2px)}
+.ghost{font-weight:600;font-size:1.02rem;border-bottom:2px solid var(--rose);padding-bottom:4px}
+.dots{position:absolute;z-index:2;right:var(--pad);bottom:clamp(48px,11vh,120px);display:flex;gap:8px}.dots i{position:relative;overflow:hidden;width:34px;height:3px;background:#ffffff59}.dots i.on::after{content:"";position:absolute;inset:0;background:#fff;transform-origin:0 50%;animation:fill 6s linear both}@keyframes fill{from{transform:scaleX(0)}}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}}.ctas>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}.ctas>:nth-child(1){animation-delay:.5s}.ctas>:nth-child(2){animation-delay:.7s}
 
 /* story */
-.story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,8vw,140px);align-items:center;padding:clamp(140px,28vh,320px) clamp(20px,5vw,72px)}
-h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,6vw,5.6rem);line-height:1;letter-spacing:-.015em}
-.story h2{margin-bottom:44px}
-.story p{font-family:var(--serif);font-size:clamp(1.50rem,1.80vw,1.90rem);line-height:1.7;color:var(--dim);max-width:34em}
-.story p+p{margin-top:1.3em;color:var(--cream)}.story .frame{aspect-ratio:3/4;min-height:70vh}
-@media(max-width:860px){.story{grid-template-columns:1fr}}
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,7vw,120px);align-items:center;padding:clamp(90px,16vh,200px) var(--pad)}
+.story h2{margin-bottom:32px}
+.story p{font-family:var(--serif);font-weight:300;font-size:clamp(1.3rem,1.8vw,1.7rem);line-height:1.6;color:var(--mute);max-width:32em}
+.story p+p{margin-top:1.1em;color:var(--text)}
+.story .more{display:inline-block;margin-top:34px;font-weight:600;border-bottom:2px solid var(--rose);padding-bottom:4px}
+.frame{position:relative;overflow:hidden;background:var(--bg2);border-radius:220px 220px 14px 14px}
+.story .frame{aspect-ratio:4/5}
+.frame img{position:absolute;inset:0;transition:transform 1.2s ease}.frame:hover img{transform:scale(1.04)}
+@media(max-width:860px){.story{grid-template-columns:1fr}.story .frame{max-height:70vh;width:100%}}
 
-/* cakes sequence */
-#cakes{height:360vh}
-.ptitle{position:absolute;z-index:4;top:calc(96px + env(safe-area-inset-top,0px));left:clamp(20px,5vw,72px);font-size:clamp(2.4rem,5vw,4.4rem)}
-.cap{position:absolute;z-index:4;left:clamp(20px,5vw,72px);bottom:clamp(60px,12vh,130px);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.9rem,4.4vw,4rem);line-height:1.08;max-width:11em;opacity:0}
-.ticks{position:absolute;z-index:4;right:clamp(20px,5vw,72px);bottom:clamp(60px,12vh,130px);display:flex;gap:8px}
-.ticks i{width:48px;height:2px;background:#f3e9dc44}.ticks i.on{background:var(--gold)}
+/* cakes: pinned dissolve */
+#cakes{height:340vh;position:relative}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--bg2)}
+.cl{position:absolute;inset:0}.cl img{transform:scale(1.1);will-change:transform}
+.pin::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#150a0fcc 0%,transparent 55%,#150a0f66 100%);pointer-events:none}
+.ptitle{position:absolute;z-index:3;top:calc(110px + env(safe-area-inset-top,0px));left:var(--pad);color:#fff;font-size:clamp(2.6rem,6vw,5rem)}
+.cap{position:absolute;z-index:3;left:var(--pad);bottom:clamp(60px,12vh,120px);max-width:12em;color:#fff;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.8rem,4vw,3.6rem);line-height:1.1;opacity:0}
+.ticks{position:absolute;z-index:3;right:var(--pad);bottom:clamp(60px,12vh,120px);display:flex;gap:8px}.ticks i{width:44px;height:3px;background:#ffffff4d}.ticks i.on{background:var(--rose)}
+@media(max-width:760px){.cap{bottom:96px}.ticks{right:auto;left:var(--pad);bottom:52px}.ticks i{width:32px}}
 
 /* small chops */
-.chops{padding:clamp(150px,28vh,320px) 0 clamp(120px,22vh,260px);background:var(--ember)}
-.chapter{padding:0 clamp(20px,5vw,72px) clamp(48px,9vh,110px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
-.chapter h2{font-size:clamp(3.2rem,9vw,8.4rem);line-height:.92}.chapter p{max-width:360px;color:var(--dim);font-size:.98rem}
-.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2.4vw,36px);padding:0 clamp(12px,2vw,28px)}
-.mosaic figure{margin:0}.mosaic .frame{height:100%}
-.m1{grid-column:1/9;aspect-ratio:16/11}.m2{grid-column:9/13;aspect-ratio:4/5;margin-top:clamp(60px,14vw,240px)}
-.m3{grid-column:1/6;aspect-ratio:4/5;margin-top:clamp(40px,8vw,120px)}.m4{grid-column:6/13;aspect-ratio:16/11;margin-top:clamp(100px,18vw,300px)}
-@media(max-width:760px){.m1,.m2,.m3,.m4{grid-column:1/13;margin-top:18px}}
+.chops{padding:clamp(90px,16vh,190px) 0;background:var(--bg2)}
+.chapter{padding:0 var(--pad) clamp(40px,7vh,80px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.chapter p{max-width:24em;color:var(--mute)}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,2vw,28px);padding:0 var(--pad)}
+.mosaic .frame{height:100%;border-radius:14px}
+.m1{grid-column:1/8;aspect-ratio:4/3}.m2{grid-column:8/13;aspect-ratio:4/5;margin-top:clamp(40px,9vw,140px)}
+.m3{grid-column:1/6;aspect-ratio:4/5;margin-top:calc(-1*clamp(0px,4vw,60px))}.m4{grid-column:6/13;aspect-ratio:4/3;margin-top:clamp(20px,3vw,50px)}
+.mosaic figure{margin:0}
+@media(max-width:760px){.m1,.m2,.m3,.m4{grid-column:1/13;margin-top:0}}
 
-/* catering widening frame */
-#cater{height:340vh}
-#cater .abs{clip-path:inset(26vh 14vw)}
-.cin{position:absolute;z-index:4;left:clamp(20px,5vw,72px);bottom:clamp(48px,10vh,120px);max-width:640px;opacity:0}
-.cin h2{font-size:clamp(3rem,8vw,7.4rem);line-height:.94}.cin p{margin-top:24px;max-width:480px;font-size:clamp(1rem,1.2vw,1.15rem)}
+/* catering */
+#cater{height:300vh;position:relative}
+#cater .clip{position:absolute;inset:0;clip-path:inset(20vh 10vw round 18px)}
+.media-video{display:block;width:100%;height:100%;object-fit:cover}
+#cater .pin::after{background:linear-gradient(0deg,#150a0fd9 0%,transparent 60%)}
+.cin{position:absolute;z-index:3;left:var(--pad);bottom:clamp(48px,10vh,110px);max-width:620px;color:#fff;opacity:0}
+.cin h2{font-size:clamp(3rem,7.4vw,6.4rem)}.cin p{margin-top:20px;max-width:26em;font-size:clamp(1.1rem,1.3vw,1.25rem)}
+.cin .ghost{display:inline-block;margin-top:26px}
 
-/* horizontal gallery */
-#gal{height:400vh}
-.track{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;gap:clamp(16px,3vw,44px);padding:0 8vw;will-change:transform}
-.track>*{flex:none}.track h2{font-size:clamp(3.2rem,9vw,8.4rem);padding-right:6vw}
-.gi{height:74vh}.gi:nth-of-type(odd){transform:translateY(-6vh)}.gi:nth-of-type(even){transform:translateY(7vh)}
-.gi.w{height:60vh;aspect-ratio:3/2}.gi.t{aspect-ratio:3/4}.gi.s{height:66vh;aspect-ratio:1/1}
+/* gallery: native swipe strip */
+.gallery{padding:clamp(90px,16vh,190px) 0 clamp(70px,12vh,140px)}
+.gallery .chapter{align-items:end}
+.strip{display:flex;gap:clamp(14px,2vw,28px);overflow-x:auto;padding:0 var(--pad) 22px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--rose) transparent}
+.strip .frame{flex:none;height:min(66vh,520px);scroll-snap-align:start;border-radius:14px}
+.strip .t{aspect-ratio:3/4}.strip .w{aspect-ratio:3/2}.strip .s{aspect-ratio:1/1}
 
-/* close */
-.inquire{text-align:center;padding:clamp(160px,30vh,340px) 24px calc(60px + env(safe-area-inset-bottom,0px));background:#000}
-.inquire h2{max-width:11em;margin:0 auto 46px;font-size:clamp(2.8rem,7.4vw,6.8rem);line-height:.98}
-.inquire .brand{align-items:center;margin-top:clamp(90px,16vh,180px)}.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;margin-top:64px;font-family:var(--serif);font-size:clamp(1.1rem,1.7vw,1.5rem)}.contact a{border-bottom:1px solid #f3e9dc33;padding-bottom:4px;transition:border-color .6s,color .6s}.contact a:hover{border-color:var(--gold);color:var(--gold)}.inquire small{display:block;margin-top:40px;color:var(--dim);font-size:.75rem;letter-spacing:.08em}
-.testimonials{background:var(--ink);padding:clamp(100px,16vh,190px) clamp(20px,5vw,72px)}.testimonials-head{max-width:1120px;margin:0 auto clamp(34px,6vh,70px)}.testimonials-head p{color:var(--dim);max-width:34em;margin-top:16px}.testimonial-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.5vw,32px)}.testimonial{padding:clamp(22px,3vw,38px);border:1px solid #f3e9dc33;background:var(--ember);min-height:210px;display:flex;flex-direction:column;justify-content:space-between}.testimonial blockquote{font-family:var(--serif);font-size:clamp(1.25rem,1.8vw,1.65rem);line-height:1.35}.testimonial cite{color:var(--gold);font-style:normal;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-top:22px}
-html[data-theme="light"] .testimonial{border-color:#21191b33}
+/* testimonials */
+.testimonials{background:var(--bg2);padding:clamp(90px,16vh,190px) var(--pad)}
+.tin{max-width:1120px;margin:0 auto}
+.lead{margin:clamp(30px,5vh,56px) 0 clamp(36px,6vh,72px);max-width:22em}
+.lead blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,3.6vw,3.2rem);line-height:1.2}
+.lead cite,.tq cite{display:block;margin-top:16px;font-style:normal;font-size:.95rem;color:var(--rose);font-weight:600}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(24px,4vw,56px)}
+.tq{padding:26px 0;border-top:1px solid var(--line)}
+.tq blockquote{font-family:var(--serif);font-size:clamp(1.15rem,1.5vw,1.35rem);line-height:1.45}
+@media(max-width:860px){.tgrid{grid-template-columns:1fr}}
 
-/* reveals */
-.rv{opacity:0;transform:translateY(34px);transition:opacity 1.8s cubic-bezier(.2,.7,.2,1),transform 1.8s cubic-bezier(.2,.7,.2,1)}.rv.on{opacity:1;transform:none}
-.frame.rv{transform:none;clip-path:inset(0 0 16% 0);transition:opacity 1.8s ease,clip-path 2.2s cubic-bezier(.2,.7,.2,1)}.frame.rv.on{clip-path:inset(0)}
-@media(prefers-reduced-motion:reduce){body::after{animation:none}#hero .abs img{animation:none}.rv{opacity:1;transform:none;transition:none;clip-path:none!important}.ln>span{transform:none;transition:none}.fadein{opacity:1;transition:none}}
-/* responsive: phones, tablets, landscape phones, big screens */
-@media(max-width:760px){
- #hero{height:82svh;min-height:480px}
- #hero .abs img{object-fit:cover;object-position:50% 58%!important}
- #intro{transition-duration:.8s}#intro>*{transition:opacity .9s ease,transform 1.1s ease}
- .lb{transition-duration:1.2s;transition-delay:.1s}
- .ln>span{transition-duration:1.1s}.go .ln:nth-child(2)>span{transition-delay:.15s}
- .fadein{transition:opacity 1s ease .4s}
- #hero .veil::after{background:none!important}
- body::after{animation:none;opacity:.06}
- .kicker{letter-spacing:.12em}
- .hcopy{padding-bottom:calc(clamp(48px,9vh,110px) + env(safe-area-inset-bottom,0px))}
- .btn{padding:18px 34px;font-size:.95rem}.ghost{font-size:.95rem}.theme-toggle{margin-left:auto;margin-right:8px}
- .testimonial-grid{grid-template-columns:1fr}.testimonial{min-height:0}
- .ptitle{top:calc(120px + env(safe-area-inset-top,0px))}
- .cap{bottom:96px;max-width:9em}.ticks{right:auto;left:clamp(20px,5vw,72px);bottom:52px}.ticks i{width:36px}
- .gi{height:58vh}.gi.w{height:44vh}.gi.s{height:50vh}.track{padding:0 6vw}
- .story .frame{min-height:0}.chapter{flex-direction:column;align-items:flex-start}
-}
-@media(max-height:520px) and (orientation:landscape){h1{font-size:clamp(2rem,7vw,3.4rem)}.lede,.kicker{display:none}.ctas{margin-top:18px}.brand img.logo{width:44px;height:44px}.ptitle{top:84px}.cap{bottom:40px;font-size:1.8rem}.ticks{bottom:40px}}
-@media(min-width:1800px){.hcopy{max-width:1700px}.story p{max-width:32em}}
-body{font-size:clamp(1.05rem,1vw,1.15rem)}
-nav ul{font-size:.92rem}
-.btn,.ghost{font-size:1.02rem}
-@media(max-width:760px){body{font-size:1.08rem}nav ul{font-size:1rem}.btn,.ghost{font-size:1.02rem}.tag{font-size:.68rem}}
-@media(min-width:1001px){#hero .hcopy{max-width:1120px;padding-left:clamp(48px,7vw,104px);padding-bottom:clamp(88px,13vh,140px)}#hero h1{font-size:clamp(4.8rem,7.8vw,8rem);max-width:10em}#hero .lede{max-width:620px;margin-top:28px;font-size:clamp(1.25rem,1.3vw,1.55rem)}#hero .ctas{margin-top:32px}}
-@media(max-width:760px){#hero h1{font-size:clamp(2.8rem,11.5vw,5rem)}#hero .lede{font-size:clamp(1.35rem,4.3vw,1.6rem);margin-top:28px}#hero .kicker{font-size:1rem}}
-html[data-theme="light"] #hero .hcopy{color:#fff;text-shadow:0 2px 18px #000,0 1px 3px #000}html[data-theme="light"] #hero .hcopy .kicker,html[data-theme="light"] #hero .hcopy .lede{color:#fff}html[data-theme="light"] #hero .hcopy::before{content:"";position:absolute;inset:-18px -28px -28px -28px;z-index:-1;background:linear-gradient(90deg,#0009,transparent 78%);pointer-events:none}
-@media(max-width:760px){body{font-size:1.08rem}p,li,button,input,select,textarea,label{font-size:1.04rem}#hero .hcopy{padding-bottom:calc(52px + env(safe-area-inset-bottom,0px))}#hero h1{font-size:clamp(2.45rem,10.2vw,4.1rem);line-height:1.02}#hero .kicker{font-size:.96rem;margin-bottom:16px}#hero .lede{font-size:clamp(1.16rem,3.8vw,1.38rem);line-height:1.48;margin-top:24px}#hero .ctas{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px;max-width:290px}.ctas .btn,.ctas .ghost{width:100%;text-align:center}.btn,.ghost{font-size:1.04rem}}
+/* footer */
+footer{text-align:center;padding:clamp(100px,18vh,200px) var(--pad) calc(44px + env(safe-area-inset-bottom,0px));background:var(--bg)}
+footer h2{max-width:10em;margin:0 auto 38px;font-size:clamp(2.8rem,7vw,6rem)}
+.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 40px;margin-top:56px;font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem)}
+.contact a{border-bottom:1px solid var(--line);padding-bottom:4px;transition:border-color .3s,color .3s}.contact a:hover{border-color:var(--rose);color:var(--rose)}
+footer .brand{justify-content:center;margin:clamp(70px,12vh,130px) 0 0}footer .brand img{width:88px;height:88px}
+footer small{display:block;margin-top:30px;color:var(--mute);font-size:.85rem}
+
+/* offerings row */
+.offer{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,28px);padding:clamp(60px,10vh,110px) var(--pad) 0;max-width:1500px;margin:0 auto}
+.tile{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;border-radius:200px 200px 14px 14px;background:var(--bg2);color:#fff}
+.tile img{position:absolute;inset:0;z-index:0;transition:transform .9s cubic-bezier(.2,.7,.2,1)}.tile:hover img{transform:scale(1.06)}
+.tile::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(0deg,#150a0fd9 0%,transparent 55%)}
+.tile span{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;align-items:end;gap:12px;font-family:var(--serif);font-size:clamp(1.6rem,2.4vw,2.3rem);font-weight:300;line-height:1}
+.tile small{font:500 .92rem var(--sans);border-bottom:2px solid var(--rose);padding-bottom:2px;white-space:nowrap}
+@media(max-width:760px){.offer{grid-template-columns:1fr;padding-top:48px}.tile{aspect-ratio:16/10;border-radius:120px 120px 14px 14px}}
+/* scalloped edges */
+.chops,.testimonials{position:relative}
+.chops::before,.testimonials::before{content:"";position:absolute;z-index:2;left:0;right:0;top:-17px;height:18px;pointer-events:none;background:radial-gradient(circle at 18px 18px,var(--bg2) 17px,transparent 18px) 0 0/36px 18px repeat-x}
+/* mobile order pill */
+.pill{display:none;position:fixed;z-index:35;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);padding:15px 32px;border-radius:99px;background:var(--rose);color:#fff;font-weight:600;box-shadow:0 10px 30px #0006;transition:transform .5s cubic-bezier(.2,.7,.2,1);white-space:nowrap}
+.pill.on{transform:translate(-50%,0)}
+@media(max-width:980px){.pill{display:block}}
+.btn:active{transform:scale(.97)}
+/* welcome screen */
+#intro{display:none;position:fixed;inset:0;z-index:100;background:#150a0f;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity 1s ease}
+.js #intro{display:flex}#intro.out{opacity:0;pointer-events:none}
+#intro>*{opacity:0;transform:translateY(10px);transition:opacity 1.2s ease,transform 1.6s ease}#intro.show>*{opacity:1;transform:none}
+#intro img{width:120px;height:120px;border-radius:50%;object-fit:cover}#intro .tag{font-size:.8rem;text-shadow:none}#intro .tag{transition-delay:.25s}
+.js:not(.go) nav,.js:not(.go) .ctas>*{animation-play-state:paused}
+/* motion */
+:root{--ease:cubic-bezier(.2,.7,.2,1)}
+nav{animation:navin .9s var(--ease) .1s both}@keyframes navin{from{opacity:0;transform:translateY(-16px)}}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
+.js .rv.on{opacity:1;transform:none}
+.js .rh{clip-path:inset(0 100% 0 0);transition:clip-path 1.1s var(--ease)}
+.js .rh.on{clip-path:inset(-12% -6% -12% -6%)}
+.js .frame.rv,.js .tile.rv{opacity:1;transform:none;transition:none}
+.js .frame.rv img,.js .tile.rv img{clip-path:inset(100% 0 0 0);transition:clip-path 1.2s var(--ease) var(--d,0s),transform 1s ease}
+.js .frame.rv.on img,.js .tile.rv.on img{clip-path:inset(0)}
+.js .frame.rv:not(.on) img,.js .tile.rv:not(.on) img{transform:scale(1.2)}
+.btn{position:relative;overflow:hidden}.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,#ffffff59 50%,transparent 70%);transform:translateX(-120%)}.btn:hover::after{transform:translateX(120%);transition:transform .8s}
+.tile span{transition:transform .5s var(--ease)}.tile:hover span{transform:translateY(-6px)}
+.ghost{background:linear-gradient(var(--rose),var(--rose)) 0 100%/100% 2px no-repeat;border:0;transition:background-size .4s var(--ease)}.ghost:hover{background-size:0 2px;background-position:100% 100%}
+.gallery,footer{content-visibility:auto;contain-intrinsic-size:auto 700px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ctas>*,nav{animation:none}.js .rv,.js .rh{opacity:1;transform:none;clip-path:none}.dots i.on::after{animation:none}#hero img.active{animation:none;transform:none}*{transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
 <div id="bar"></div>
 <div id="intro" aria-hidden="true">
-  <img class="logo" src="images/neeralogo.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="wm" style="display:none">NeeraCakesAndMore</span>
+  <img src="images/neeralogo.png" alt="" onerror="this.style.display='none'">
   <span class="tag">A TASTE TO REMEMBER</span>
 </div>
 
-<nav>
+<nav id="nav">
   <a class="brand" href="#top" aria-label="NeeraCakesAndMore">
-    <img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="wm" style="display:none">NeeraCakesAndMore</span>
+    <img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo" onerror="this.style.display='none'">
     <span class="tag">A TASTE TO REMEMBER</span>
   </a>
-  <ul><li><a href="about.html">Our Story</a></li><li><a href="luxsetup.html">Lux Set-Up</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="services.html">Services</a><li><a href="faq.html">FAQ</a></li><li><a href="cart.html">Order / Inquire</a></li></ul>
+  <ul><li><a href="about.html">Our Story</a></li><li><a href="luxsetup.html">Lux Set-Up</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a class="order" href="cart.html">Order / Inquire</a></li></ul>
   <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
 </nav>
-<div id="menu"><a href="about.html">Our Story</a><a href="luxsetup.html">Lux Set-Up</a><a href="services.html">Services</a><a href="faq.html">FAQ</a><a class="cta" href="cart.html">Order / Inquire</a></div>
+<div id="menu"><a href="about.html">Our Story</a><a href="luxsetup.html">Lux Set-Up</a><a href="gallery.html">Gallery</a><a href="services.html">Services</a><a href="faq.html">FAQ</a><a class="cta" href="cart.html">Order / Inquire</a></div>
 
-<header class="wrap" id="hero"><div class="pin" id="top">
-  <div class="abs veil"><img class="hero-slide active" loading="eager" fetchpriority="high" decoding="async" src="images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg" alt="NeeraCakesAndMore catering display" style="object-position:50% 45%;opacity:1"><img class="hero-slide" loading="eager" decoding="async" src="images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg" alt="NeeraCakesAndMore drinks and catering display" style="object-position:50% 45%;opacity:0"></div>
-  
-</div></header>
+<header id="hero"><span id="top"></span>
+  <img class="hero-slide active" loading="eager" fetchpriority="high" decoding="async" src="images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg" alt="NeeraCakesAndMore catering display" style="object-position:50% 45%;opacity:1">
+  <img class="hero-slide" decoding="async" data-src="images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg" alt="NeeraCakesAndMore drinks and catering display" style="object-position:50% 45%;opacity:0">
+  <div class="hcopy">
+    <h1 class="sr">NeeraCakesAndMore: cakes, small chops and pastries in Atlanta</h1>
+    <div class="ctas"><a class="btn" href="cart.html">Order / Inquire</a><a class="ghost" href="about.html">Our Story</a></div>
+  </div>
+  <div class="dots" aria-hidden="true"><i class="on"></i><i></i></div>
+</header>
+
+<section class="offer" aria-label="What we make">
+  <a class="tile" href="#cakes"><img loading="eager" decoding="async" src="images/cakes/cake1.jpg" alt="Celebration cakes" style="object-position:50% 50%"><span>Cakes<small>See cakes</small></span></a>
+  <a class="tile" href="#small-chops"><img loading="eager" decoding="async" src="images/small-chops/small-chops-02.jpg" alt="Small chops" style="object-position:50% 50%"><span>Small chops<small>See small chops</small></span></a>
+  <a class="tile" href="#cater"><img loading="eager" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Catering" style="object-position:50% 50%"><span>Catering<small>See catering</small></span></a>
+</section>
 
 <section class="story" id="story">
   <div>
-    <h2 class="rv">Our Story</h2>
-    <p class="rv">At Neeracakesandmore, we believe good food brings people together and makes every celebration more memorable. What started as a passion for creating delicious Nigerian small chops has grown into a business offering finger foods, small chops, cakes, and beautifully presented treats for all kinds of events.</p>
-    <p class="rv">From intimate celebrations to weddings, birthdays, baby showers, and special occasions, we put care, flavor, and beautiful presentation into everything we create. Our goal is simple: to give you and your guests A Taste to Remember.</p>
+    <h2>Our Story</h2>
+    <p>At Neeracakesandmore, we believe good food brings people together and makes every celebration more memorable. What started as a passion for creating delicious Nigerian small chops has grown into a business offering small chops, pastries, cakes, and beautifully presented treats for all kinds of events.</p>
+    <p>From intimate celebrations to weddings, birthdays, baby showers, and special occasions, we put care, flavor, and beautiful presentation into everything we create. Our goal is simple: to give you and your guests A Taste to Remember.</p>
+    <a class="more" href="about.html">Read more about us</a>
   </div>
-  <div class="frame rv" data-z><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats prepared for a celebration in Atlanta" style="object-position:50% 50%"></div>
+  <div class="frame"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats prepared for a celebration in Atlanta" style="object-position:50% 50%"></div>
 </section>
 
-<section class="wrap" id="cakes"><div class="pin">
-  <div class="abs veil cl"><img src="images/cakes/cake1.jpg" alt="NeeraCakesAndMore celebration cake" style="object-position:50% 50%"></div>
-  <div class="abs veil cl"><img src="images/cakes/cake2.jpg" alt="NeeraCakesAndMore celebration cake detail" style="object-position:50% 45%"></div>
-  <div class="abs veil cl"><img src="images/cakes/cake3.jpg" alt="NeeraCakesAndMore decorated cake" style="object-position:50% 50%"></div>
-  <div class="abs veil cl"><img src="images/cakes/cake4.jpg" alt="NeeraCakesAndMore finished celebration cake" style="object-position:50% 55%"></div>
-  <div class="vig"></div>
-  <h2 class="ptitle">Cakes</h2>
-  <p class="cap">The centrepiece of the table.</p><p class="cap">Made to be remembered.</p><p class="cap">Every layer, considered.</p><p class="cap">For the moment the room goes quiet.</p>
-  <div class="ticks"><i></i><i></i><i></i><i></i></div>
-</div></section>
+<section id="cakes">
+  <div class="pin">
+    <div class="cl"><img loading="lazy" decoding="async" src="images/cakes/cake1.jpg" alt="NeeraCakesAndMore celebration cake" style="object-position:50% 50%"></div>
+    <div class="cl"><img loading="lazy" decoding="async" src="images/cakes/cake2.jpg" alt="NeeraCakesAndMore celebration cake detail" style="object-position:50% 45%"></div>
+    <div class="cl"><img loading="lazy" decoding="async" src="images/cakes/cake3.jpg" alt="NeeraCakesAndMore decorated cake" style="object-position:50% 50%"></div>
+    <div class="cl"><img loading="lazy" decoding="async" src="images/cakes/cake4.jpg" alt="NeeraCakesAndMore finished celebration cake" style="object-position:50% 55%"></div>
+    <h2 class="ptitle">Cakes</h2>
+    <p class="cap">The centrepiece of the table.</p><p class="cap">Made to be remembered.</p><p class="cap">Every layer, considered.</p><p class="cap">For the moment the room goes quiet.</p>
+    <div class="ticks"><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
 
 <section class="chops" id="small-chops">
-  <div class="chapter"><h2 class="rv">Small Chops</h2><p class="rv">Nigerian-inspired bites, made with care and presented to be shared.</p></div>
+  <div class="chapter"><h2>Small Chops</h2><p>Nigerian-inspired bites, made with care and presented to be shared.</p></div>
   <div class="mosaic">
-    <figure class="m1"><div class="frame rv" data-z><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
-    <figure class="m2"><div class="frame rv" data-z><img loading="lazy" decoding="async" src="images/small-chops/small-chops-02.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
-    <figure class="m3"><div class="frame rv" data-z><img loading="lazy" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
-    <figure class="m4"><div class="frame rv" data-z><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+    <figure class="m1"><div class="frame"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+    <figure class="m2"><div class="frame"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-02.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+    <figure class="m3"><div class="frame"><img loading="lazy" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
+    <figure class="m4"><div class="frame"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div></figure>
   </div>
 </section>
 
-<section class="wrap" id="cater"><div class="pin">
-  <div class="abs veil"><video id="cimg" class="media-video" muted loop playsinline preload="none" poster="images/hero/small-chops-hero.jpg" aria-label="Food beautifully presented for an Atlanta event"><source src="images/fourthvid-web.mp4" type="video/mp4"></video></div>
-  <div class="cin" id="ctext"><h2>Catering</h2><p>Weddings, birthdays, baby showers and special occasions, with the same care in every tray.</p></div>
+<section id="cater">
+  <div class="pin">
+    <div class="clip" id="clip"><video id="cimg" class="media-video" muted loop playsinline preload="none" poster="images/hero/small-chops-hero.jpg" aria-label="Food beautifully presented for an Atlanta event"><source src="images/fourthvid-web.mp4" type="video/mp4"></video></div>
+    <div class="cin" id="ctext"><h2>Catering</h2><p>Weddings, birthdays, baby showers and special occasions, with the same care in every tray.</p><a class="ghost" href="services.html">See our services</a></div>
+  </div>
+</section>
+
+<section class="gallery" id="gal">
+  <div class="chapter"><h2>Gallery</h2><a class="ghost" href="gallery.html">View full gallery</a></div>
+  <div class="strip" tabindex="0" aria-label="Gallery, scroll sideways">
+    <div class="frame t"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats" style="object-position:50% 50%"></div>
+    <div class="frame w"><img loading="lazy" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Small chops prepared in Atlanta" style="object-position:50% 50%"></div>
+    <div class="frame s"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-02.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div>
+    <div class="frame t"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="Party food presentation" style="object-position:50% 50%"></div>
+    <div class="frame w"><img loading="lazy" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Catering spread in Atlanta" style="object-position:50% 50%"></div>
+    <div class="frame s"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-02.jpg" alt="Small chops and pastries for a celebration" style="object-position:50% 50%"></div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials"><div class="tin">
+  <h2>Words from the table</h2>
+  <div class="lead"><blockquote>“My first time having proper small chops was in October when I went to Nigeria. I’ve been searching Atlanta up and down to see who will make it the same and you’ve outdone yourself.”</blockquote><cite>Small chops</cite></div>
+  <div class="tgrid">
+    <article class="tq"><blockquote>“The meat pie is sooooo good, i just ate the one i brought to work and they all look.”</blockquote><cite>Meat pie</cite></article>
+    <article class="tq"><blockquote>“I tried the menu. Everything is so good. The meat pie 10/10.”</blockquote><cite>Menu review</cite></article>
+    <article class="tq"><blockquote>“I’m eating now and I had to message youuuuuuuu. The meat pie?????? The puff puff?????? Everything mehn.”</blockquote><cite>Meat pie and puff-puff</cite></article>
+    <article class="tq"><blockquote>“The puff puff is sooooo good and not oily at all.”</blockquote><cite>Puff-puff</cite></article>
+    <article class="tq"><blockquote>“Thank you Ms Nera. Everything was chefs kiss.”</blockquote><cite>Client review</cite></article>
+  </div>
 </div></section>
 
-<section class="wrap" id="gal"><div class="pin"><div class="track" id="track">
-  <h2>Gallery</h2>
-  <div class="frame gi t"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats" style="object-position:50% 50%"></div>
-  <div class="frame gi w"><img loading="lazy" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Small chops prepared in Atlanta" style="object-position:50% 50%"></div>
-  <div class="frame gi s"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-02.jpg" alt="Small chops close-up" style="object-position:50% 50%"></div>
-  <div class="frame gi t"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="Party food presentation" style="object-position:50% 50%"></div>
-  <div class="frame gi w"><img loading="lazy" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Catering spread in Atlanta" style="object-position:50% 50%"></div>
-  <div class="frame gi s"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-02.jpg" alt="Finger foods for a celebration" style="object-position:50% 50%"></div>
-</div></div></section>
-
-<section class="testimonials" id="testimonials">
-  <div class="testimonials-head"><h2>Words from the table</h2><p>Real messages from clients who came back for the taste, the care and the details.</p></div>
-  <div class="testimonial-grid">
-    <article class="testimonial"><blockquote>“The meat pie is sooooo good, i just ate the one i brought to work and they all look.”</blockquote><cite>Meat pie</cite></article>
-    <article class="testimonial"><blockquote>“I tried the menu. Everything is so good. The meat pie 10/10.”</blockquote><cite>Menu review</cite></article>
-    <article class="testimonial"><blockquote>“My first time having proper small chops was in October when I went to Nigeria. I’ve been searching Atlanta up and down to see who will make it the same and you’ve outdone yourself.”</blockquote><cite>Small chops</cite></article>
-    <article class="testimonial"><blockquote>“I’m eating now and I had to message youuuuuuuu. The meat pie?????? The puff puff?????? Everything mehn.”</blockquote><cite>Meat pie and puff-puff</cite></article>
-    <article class="testimonial"><blockquote>“The puff puff is sooooo good and not oily at all.”</blockquote><cite>Puff-puff</cite></article>
-    <article class="testimonial"><blockquote>“Thank you Ms Nera. Everything was chefs kiss.”</blockquote><cite>Client review</cite></article>
-  </div>
-</section>
-
-<footer class="inquire" id="inquire">
-  <h2 class="rv">A Taste to Remember</h2>
-  <a class="btn rv" href="cart.html">Order / Inquire</a>
-  <div class="contact rv">
+<a class="pill" id="pill" href="cart.html">Order / Inquire</a>
+<footer id="inquire">
+  <h2>A Taste to Remember</h2>
+  <a class="btn" href="cart.html">Order / Inquire</a>
+  <div class="contact">
     <a href="tel:+14709626866">+1 (470) 962-6866</a>
     <a href="https://www.instagram.com/neeracakesandmore" target="_blank" rel="noopener">Instagram @neeracakesandmore</a>
     <a href="https://www.tiktok.com/@neeracakesandmore" target="_blank" rel="noopener">TikTok @neeracakesandmore</a>
   </div>
-  <a class="brand" href="#top" aria-label="NeeraCakesAndMore"><img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="wm" style="display:none">NeeraCakesAndMore</span><span class="tag">A TASTE TO REMEMBER</span></a>
-  <small>© 2026 NeeraCakesAndMore. Cakes, small chops and finger foods.</small>
+  <a class="brand" href="#top" aria-label="NeeraCakesAndMore"><img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo" onerror="this.style.display='none'"><span class="tag">A TASTE TO REMEMBER</span></a>
+  <small>© 2026 NeeraCakesAndMore. Cakes, small chops and pastries.</small>
 </footer>
 
 <script>
 (function(){
 var $=function(q){return [].slice.call(document.querySelectorAll(q))},cl=function(v,a,b){return Math.max(a,Math.min(b,v))},H=document.documentElement;
-var savedTheme;try{savedTheme=localStorage.getItem('nc-theme')}catch(e){}if(savedTheme==='light'||savedTheme==='dark')H.setAttribute('data-theme',savedTheme);var themeButton=document.createElement('button');themeButton.className='theme-toggle';themeButton.type='button';themeButton.setAttribute('aria-label','Switch theme');themeButton.innerHTML='<span aria-hidden="true">☼</span>';var homepageNav=document.querySelector('nav'),homepageBurger=homepageNav.querySelector('.burger');if(homepageBurger)homepageNav.insertBefore(themeButton,homepageBurger);else homepageNav.appendChild(themeButton);function updateThemeButton(){var dark=H.getAttribute('data-theme')!=='light';themeButton.innerHTML='<span aria-hidden="true">'+(dark?'☼':'☾')+'</span>';themeButton.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme')}themeButton.onclick=function(){var next=H.getAttribute('data-theme')==='light'?'dark':'light';H.setAttribute('data-theme',next);try{localStorage.setItem('nc-theme',next)}catch(e){}updateThemeButton()};updateThemeButton();
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-// title card, then the picture opens
-var intro=document.getElementById('intro');
-function go(){intro.classList.add('out');H.classList.remove('lock');document.body.classList.add('go')}
-if(rm){intro.remove();document.body.classList.add('go')}else{H.classList.add('lock');var mq=innerWidth<761;setTimeout(function(){intro.classList.add('show')},mq?100:150);setTimeout(go,mq?1500:3300)}
-// reveals
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
-$('.rv').forEach(function(e){io.observe(e)});
-var vh=innerHeight,vw=innerWidth,S={},MOB=innerWidth/innerHeight<.8;
-function sm(k,t,f){S[k]=S[k]===undefined?t:S[k]+(t-S[k])*(rm?1:(f||(MOB?.13:.06)));return S[k]}
-var hero=$('#hero')[0],cakes=$('#cakes')[0],cater=$('#cater')[0],gal=$('#gal')[0],track=$('#track');track=track[0]||document.getElementById('track');
-/* HERO SMOKE. Frame paths are RELATIVE (no leading slash) so they work from any folder or host.
-   Needs: images/hero/frames/ezgif-frame-001..072.webp  and  images/hero/frames-m/ezgif-frame-001..040.webp
-   If the frames cannot be loaded, live smoke is drawn over the photo instead (and a warning is printed in the browser console). */
-var CM={n:40,path:function(i){return 'images/hero/frames-m/ezgif-frame-'+String(i).padStart(3,'0')+'.webp'}},CD={n:72,path:function(i){return 'images/hero/frames/ezgif-frame-'+String(i).padStart(3,'0')+'.webp'}};
-var SETS=MOB?[CM,CD]:[CD],FR=SETS[0],fimgs=[],fok=false,smk=false,puffs=[],cv=null,cx=null;
-function np(r){return{x:Math.random(),y:r?Math.random():1.05,s:.14+Math.random()*.22,a:.06+Math.random()*.1,v:.00005+Math.random()*.0001,dx:(Math.random()-.5)*.00005,ph:Math.random()*6}}
-function boot(k){FR=SETS[k];var f0=new Image();f0.onload=function(){fimgs=[];fok=true;cv.style.display='block';sizeCv();for(var i=1;i<=FR.n;i++){var im=new Image();im.src=FR.path(i);fimgs[i]=im}};
-  f0.onerror=function(){if(SETS[k+1])boot(k+1);else{smk=false}};f0.src=FR.path(1)}
-function rdy(i,strict){var m=fimgs[i];while(!strict&&i>1&&!(m&&m.complete&&m.naturalWidth)){i--;m=fimgs[i]}return m&&m.complete&&m.naturalWidth?m:null}
-function sizeCv(){var d=smk?.5:Math.min(devicePixelRatio||1,2);cv.width=innerWidth*d;cv.height=innerHeight*d}
-function paint(im){var cw=cv.width,ch=cv.height,iw=im.naturalWidth,ih=im.naturalHeight,r2=Math.max(cw/iw,ch/ih),w2=iw*r2,h2=ih*r2;cx.drawImage(im,(cw-w2)/2,(ch-h2)/2,w2,h2)}
-function smoke(t){var cw=cv.width,ch=cv.height,base=Math.max(cw,ch);cx.clearRect(0,0,cw,ch);
-  puffs.forEach(function(q,i){q.y-=q.v*16;q.x+=q.dx*16+Math.sin(t/2200+q.ph)*.0004;if(q.y<-.25){puffs[i]=np(false);return}
-    var r=q.s*base*.5*(1+(1-q.y)*.7),al=q.a*Math.min(1,(1.15-q.y)*3)*Math.min(1,q.y*3+.7),px=q.x*cw,py=q.y*ch,g=cx.createRadialGradient(px,py,0,px,py,r);
-    g.addColorStop(0,'rgba(252,244,236,'+al.toFixed(3)+')');g.addColorStop(1,'rgba(252,244,236,0)');cx.fillStyle=g;cx.beginPath();cx.arc(px,py,r,0,7);cx.fill()})}
-var cimg=document.getElementById('cimg'),ctext=document.getElementById('ctext');
-if(cimg&&cimg.tagName==='VIDEO'){cimg.preload='none';var cvo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cimg.play().catch(function(){});}else{cimg.pause()}})},{threshold:.15});cvo.observe(cimg)}
-var layers=$('#cakes .cl'),caps=$('#cakes .cap'),ticks=$('#cakes .ticks i'),zs=$('[data-z]'),bar=document.getElementById('bar');
-function wp(el){var r=el.getBoundingClientRect();return cl(-r.top/(r.height-vh),0,1)}
-function size(){vh=innerHeight;vw=innerWidth;gal.style.height=(track.scrollWidth-vw+vh)+'px'}
-var lw=innerWidth,lh=innerHeight;
-addEventListener('resize',function(){if(innerWidth!==lw||Math.abs(innerHeight-lh)>140){lw=innerWidth;lh=innerHeight;size();if(fok||smk)sizeCv()}else{vh=innerHeight}});addEventListener('load',size);size();
-var bg=document.querySelector('.burger');function menu(o){H.classList.toggle('menu-open',o);document.body.classList.toggle('menu-open',o);bg.setAttribute('aria-expanded',o)}
-bg.addEventListener('click',function(){menu(!H.classList.contains('menu-open'))});
+
+/* welcome screen: shows the logo, leaves as soon as the page is ready (never before 1.6s) */
+var intro=document.getElementById('intro'),minDone=false,loaded=document.readyState==='complete',left=false;
+function leave(){if(left)return;left=true;intro.classList.add('out');H.classList.remove('lock');H.classList.add('go');setTimeout(function(){intro.remove()},1100)}
+function tryLeave(){if(minDone&&loaded)leave()}
+if(rm){intro.remove();H.classList.add('go')}else{
+  H.classList.add('lock');setTimeout(function(){intro.classList.add('show')},120);
+  setTimeout(function(){minDone=true;tryLeave()},innerWidth<761?1600:2200);
+  addEventListener('load',function(){loaded=true;tryLeave()});
+  setTimeout(leave,5000)}
+
+/* scroll reveals */
+var pend=[];
+function reveal(){pend=pend.filter(function(el){var b=el.getBoundingClientRect();if(b.top<innerHeight*.92&&b.bottom>0&&b.left<innerWidth&&b.right>0){el.classList.add('on');return false}return true})}
+$('.story h2,.chapter h2,.testimonials h2,footer h2').forEach(function(el){el.classList.add('rh');pend.push(el)});
+$('.story p,.story .more,.story .frame,.tile,.chapter p,.chapter .ghost,.mosaic .frame,.strip .frame,.lead,.tq,footer .btn,.contact').forEach(function(el){var h=el.parentNode.tagName==='FIGURE'?el.parentNode:el,n=[].indexOf.call(h.parentNode.children,h);el.style.setProperty('--d',(Math.min(n,4)*.12)+'s');el.classList.add('rv');pend.push(el)});
+/* second hero photo loads after the page is ready */
+addEventListener('load',function(){reveal();$('#hero [data-src]').forEach(function(i){i.src=i.getAttribute('data-src')})});
+
+/* theme */
+var saved;try{saved=localStorage.getItem('nc-theme')}catch(e){}
+if(saved==='light'||saved==='dark')H.setAttribute('data-theme',saved);
+var nav=document.getElementById('nav'),burger=nav.querySelector('.burger'),tb=document.createElement('button');
+tb.className='theme-toggle';tb.type='button';nav.insertBefore(tb,burger);
+function paintTheme(){var d=H.getAttribute('data-theme')!=='light';tb.innerHTML='<span aria-hidden="true">'+(d?'☼':'☾')+'</span>';tb.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme')}
+tb.onclick=function(){var n=H.getAttribute('data-theme')==='light'?'dark':'light';H.setAttribute('data-theme',n);try{localStorage.setItem('nc-theme',n)}catch(e){}paintTheme()};paintTheme();
+
+/* menu */
+function menu(o){H.classList.toggle('menu-open',o);document.body.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o)}
+burger.addEventListener('click',function(){menu(!H.classList.contains('menu-open'))});
 $('#menu a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
 addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
+
+/* hero slides */
+var slides=$('#hero .hero-slide'),dots=$('#hero .dots i'),si=0;
+if(slides.length>1&&!rm){setInterval(function(){slides[si].classList.remove('active');slides[si].style.opacity='0';dots[si].classList.remove('on');si=(si+1)%slides.length;slides[si].classList.add('active');slides[si].style.opacity='1';dots[si].classList.add('on')},6000)}
+
+/* catering video plays only while visible */
+var v=document.getElementById('cimg');
+if(v){new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?v.play().catch(function(){}):v.pause()})},{threshold:.15}).observe(v)}
+
+/* scroll-driven scenes */
+var vh=innerHeight,vw=innerWidth,cakes=document.getElementById('cakes'),cater=document.getElementById('cater'),clip=document.getElementById('clip'),ctext=document.getElementById('ctext'),bar=document.getElementById('bar');
+var layers=$('#cakes .cl'),caps=$('#cakes .cap'),ticks=$('#cakes .ticks i');
+function wp(el){var r=el.getBoundingClientRect();return cl(-r.top/(r.height-vh),0,1)}
+addEventListener('resize',function(){vh=innerHeight;vw=innerWidth});
+var tick=false;function near(el){var b=el.getBoundingClientRect();return b.bottom>-60&&b.top<vh+60}
 function draw(){
-  // cakes: four plates dissolve into each other, scene by scene
-  var s=sm('c',wp(cakes))*4;
-  layers.forEach(function(l,i){var o=i?cl((s-i+.18)/.36,0,1):1,t=cl((s-i+.18)/1.4,0,1);
-    l.style.opacity=o;l.firstElementChild.style.transform='scale('+(1.14-.1*t)+')'});
-  caps.forEach(function(c,i){var d=s-(i+.5),o=cl((.4-Math.abs(d))/.12,0,1);c.style.opacity=o;c.style.transform='translateY('+(-d*46)+'px)'});
-  ticks.forEach(function(t,i){t.classList.toggle('on',Math.floor(Math.min(s,3.99))===i)});
-  // catering: a letterbox band widens into the full frame
-  var q=sm('k',wp(cater)),e=cl(q/.6,0,1);e=1-Math.pow(1-e,3);
-  cater.querySelector('.abs').style.clipPath='inset('+((1-e)*vh*.26).toFixed(1)+'px '+((1-e)*vw*.14).toFixed(1)+'px)';
-  cimg.style.transform='scale('+(1.3-.26*e)+')';
-  var to=cl((q-.55)/.25,0,1);ctext.style.opacity=to;ctext.style.transform='translateY('+((1-to)*40)+'px)';
-  // gallery: vertical scroll pulls the film strip sideways
-  var g=sm('g',wp(gal),.08);track.style.transform='translate3d('+(-g*(track.scrollWidth-vw))+'px,0,0)';
-  // small chops and story: slow push-in as each frame crosses the screen
-  zs.forEach(function(f,i){var r=f.getBoundingClientRect();if(r.bottom<-80||r.top>vh+80)return;
-    var pp=cl((r.top+r.height/2-vh/2)/(vh/2+r.height/2),-1,1);pp=sm('z'+i,pp,.08);
-    var im=f.firstElementChild;im.style.transform='translate3d(0,'+(-pp*5)+'%,0) scale('+(1.04+.1*(1-Math.abs(pp)))+')'});
+  tick=false;reveal();
+  nav.classList.toggle('solid',scrollY>40);
+  var ft=document.getElementById('inquire').getBoundingClientRect().top;
+  document.getElementById('pill').classList.toggle('on',scrollY>vh*.7&&ft>vh*.6);
   bar.style.transform='scaleX('+cl(scrollY/(document.body.scrollHeight-vh),0,1)+')';
-  requestAnimationFrame(draw)
+  if(near(cakes)){var s=wp(cakes)*4;
+  layers.forEach(function(l,i){var o=i?cl((s-i+.18)/.36,0,1):1,t=cl((s-i+.18)/1.4,0,1);l.style.opacity=o;l.firstElementChild.style.transform='scale('+(1.12-.1*t)+')'});
+  caps.forEach(function(c,i){var d=s-(i+.5);c.style.opacity=cl((.4-Math.abs(d))/.12,0,1);c.style.transform='translateY('+(-d*40)+'px)'});
+  ticks.forEach(function(t,i){t.classList.toggle('on',Math.floor(Math.min(s,3.99))===i)});}
+  if(near(cater)){var q=wp(cater),e=cl(q/.6,0,1);e=1-Math.pow(1-e,3);
+  clip.style.clipPath='inset('+((1-e)*vh*.2).toFixed(1)+'px '+((1-e)*vw*.1).toFixed(1)+'px round '+((1-e)*18).toFixed(1)+'px)';
+  var to=cl((q-.5)/.25,0,1);ctext.style.opacity=to;ctext.style.transform='translateY('+((1-to)*36)+'px)';}
 }
-var heroSlides=document.querySelectorAll('#hero .hero-slide'),heroSlideIndex=0;
-if(heroSlides.length>1&&!rm){setInterval(function(){heroSlides[heroSlideIndex].classList.remove('active');heroSlides[heroSlideIndex].style.opacity='0';heroSlideIndex=(heroSlideIndex+1)%heroSlides.length;heroSlides[heroSlideIndex].classList.add('active');heroSlides[heroSlideIndex].style.opacity='1'},6000)}
-draw();
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(draw)}},{passive:true});
+addEventListener('resize',draw);var strip=document.querySelector('.strip');if(strip)strip.addEventListener('scroll',reveal,{passive:true});draw();
 })();
 </script>
 </body>
