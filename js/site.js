@@ -5,8 +5,16 @@ if(document.title.indexOf('A TASTE TO REMEMBER')===-1)document.title+=' | A TAST
 var WA='14709626866';
 /* ===== EDIT HERE: products. price: number in USD, or null = "price on request". SAMPLE PRICES, replace before going live. ===== */
 var PRODUCTS=[
- {id:'roll',name:'Spring Rolls',unit:'Dozen',price:24,displayPrice:'$24/dozen',img:'images/springroll and samosa.jpg',desc:'Crisp, crunchy and ready to share.'},
- {id:'samosa',name:'Samosas',unit:'Dozen',price:24,displayPrice:'$24/dozen',img:'images/springroll and samosa.jpg',desc:'Seasoned pastry filled for every occasion.'},
+ {id:'spring-roll-options',name:'Spring Rolls',img:'images/springroll and samosa.jpg',desc:'Half pan contains 40 pieces; full pan contains 80 pieces. Dozen available.',variants:[
+  {id:'spring-roll-half-pan',label:'Half pan (40 pieces)',price:80,displayPrice:'$80'},
+  {id:'spring-roll-full-pan',label:'Full pan (80 pieces)',price:160,displayPrice:'$160'},
+  {id:'roll',label:'Dozen',unit:'Dozen',price:24,displayPrice:'$24/dozen'}
+ ]},
+ {id:'samosa-options',name:'Samosas',img:'images/springroll and samosa.jpg',desc:'Half pan contains 50 pieces; full pan contains 100 pieces. Dozen available.',variants:[
+  {id:'samosa-half-pan',label:'Half pan (50 pieces)',price:100,displayPrice:'$100'},
+  {id:'samosa-full-pan',label:'Full pan (100 pieces)',price:200,displayPrice:'$200'},
+  {id:'samosa',label:'Dozen',unit:'Dozen',price:24,displayPrice:'$24/dozen'}
+ ]},
  {id:'shrimp-mayo',name:'Shrimp in Mayo Roll',unit:'Dozen',price:36,displayPrice:'$36/dozen',img:'images/shrimp in mayo.jpeg',desc:'Crisp shrimp roll.'},
  {id:'shrimp-tempura',name:'Shrimp Tempura',unit:'Dozen',price:36,displayPrice:'$36/dozen',video:'images/shrimp-only.mp4',desc:'Shrimp tempura.'},
  {id:'coconut-shrimp',name:'Coconut Shrimp',unit:'Dozen',price:30,displayPrice:'$30/dozen',img:'images/coconutshrimp.jpg',desc:'Coconut shrimp.'},
@@ -19,7 +27,7 @@ var PRODUCTS=[
  ]},
  {id:'chicken-kebab',name:'Chicken Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',desc:'Tender chicken kebabs.'},
  {id:'beef-kebab',name:'Beef Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/beefkebeb.jpeg',desc:'Seasoned beef kebabs.'},
- {id:'gizzard-kebab',name:'Gizzard Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',desc:'Gizzard kebabs, newly available.'},
+ {id:'gizzard-kebab',name:'Gizzard Kebab',unit:'Dozen',price:42,displayPrice:'$42/dozen',img:'images/gizzard.jpeg',desc:'Gizzard kebabs, newly available.'},
  {id:'puff-puff-options',name:'Puff-Puff',img:'images/puff.webp',desc:'Choose a pan size.',variants:[
   {id:'puff-puff-quarter',label:'Quarter pan',unit:'',price:30,displayPrice:'$30'},
   {id:'puff-puff-half',label:'Half pan',unit:'',price:60,displayPrice:'$60'},
@@ -36,18 +44,23 @@ var PRODUCTS=[
   {id:'suya',label:'Full pan',unit:'',price:350,displayPrice:'$350'},
   {id:'suya-half',label:'Half pan',unit:'',price:250,displayPrice:'$250'}
  ]},
- {id:'fried-yam',name:'Yam with Sauce',unit:'Order on request',price:null,displayPrice:'On Request',video:'images/yam and sauce.mp4',desc:'Yam served with sauce; request pricing.'},
+ {id:'fried-yam-options',name:'Yam with Sauce',optionLabel:'Protein option',video:'images/yam and sauce.mp4',desc:'Choose Protein, Beef, Gizzard, or All. Pricing on request.',variants:[
+  {id:'fried-yam',label:'Protein',unit:'Order on request',price:null,displayPrice:'On Request'},
+  {id:'fried-yam-beef',label:'Beef',unit:'Order on request',price:null,displayPrice:'On Request'},
+  {id:'fried-yam-gizzard',label:'Gizzard',unit:'Order on request',price:null,displayPrice:'On Request'},
+  {id:'fried-yam-all',label:'All',unit:'Order on request',price:null,displayPrice:'On Request'}
+ ]},
  {id:'grilled-fish',name:'Grilled Fish',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
 {id:'cocktail',name:'Cocktail',unit:'Each',price:7,displayPrice:'$7 each',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg',desc:'Minimum order: 12.'},
 {id:'mocktail',name:'Mocktail',unit:'Each',price:7,displayPrice:'$7 each',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg',desc:'Minimum order: 12.'},
-{id:'fruit-cup-options',name:'Fruit Cup',desc:'Choose a serving size. Minimum order: 15.',variants:[
+{id:'fruit-cup-options',name:'Fruit Cup',desc:'Choose a serving size. Minimum order: 12.',variants:[
    {id:'fruit-cup',label:'3 oz',unit:'',price:2.5,displayPrice:'$2.50'},
    {id:'fruit-cup-5oz',label:'5 oz',unit:'',price:3.5,displayPrice:'$3.50'}
  ]},
  {id:'combo-1',name:'Combo 1',unit:'Combo',price:6,displayPrice:'$6',img:'images/small-chops/small-chops-01.jpg',desc:'Spring roll, samosa and 3 puff-puff.'},
  {id:'combo-2',name:'Combo 2',unit:'Combo',price:9.5,displayPrice:'$9.50',img:'images/small-chops/small-chops-01.jpg',desc:'Combo 1 plus your choice of gizzard, chicken or beef kebab.'},
  {id:'party',name:'Party Pack',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-02.jpg',desc:'Choose your mix of bites for the party.'},
- {id:'combo',name:'Customize Your Own Party Pack Choose your preferred bites and quantities to create a party pack that fits your event.',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-01.jpg',desc:'Tell us exactly which bites and quantities you want.'},
+ {id:'combo',name:'Customize Your Own Party Pack',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-01.jpg',desc:'Choose your preferred bites and quantities to create a party pack that fits your event.'},
  {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On Request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour, design and date.'},
  {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On Request',desc:'Custom catering for weddings, birthdays, corporate events & all occasions.'},
  {id:'lux',name:'Luxury Set-Up',unit:'Quote',price:null,displayPrice:'On Request',desc:'Elegant food and beverage displays styled to complement your event.'}
@@ -98,11 +111,11 @@ if(mg){var menuNote=document.querySelector('main.pg.tight>.note'),priceHeading=e
 PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el('div','row'),options=p.variants||[p],selected=productOption(p,options[0]),price=el('span','price',priceLabel(selected));
  r.appendChild(el('h3',0,p.name));r.appendChild(price);
  b.appendChild(r);b.appendChild(el('p',0,(p.unit?p.unit+' · ':'')+p.desc));
- if(p.variants){var choiceLabel=el('label',0,'Size'),choice=el('select');choice.setAttribute('aria-label',p.name+' size');options.forEach(function(option){var entry=el('option',0,option.label);entry.value=option.id;choice.appendChild(entry)});choiceLabel.appendChild(choice);b.appendChild(choiceLabel);choice.onchange=function(){selected=productOption(p,options[choice.selectedIndex]);price.textContent=priceLabel(selected);a.textContent=isPriced(selected)?'Add to cart':'Add to request'}}
+ if(p.variants){var choiceLabel=el('label',0,p.optionLabel||'Size'),choice=el('select');choice.setAttribute('aria-label',p.name+' '+(p.optionLabel||'size').toLowerCase());options.forEach(function(option){var entry=el('option',0,option.label);entry.value=option.id;choice.appendChild(entry)});choiceLabel.appendChild(choice);b.appendChild(choiceLabel);choice.onchange=function(){selected=productOption(p,options[choice.selectedIndex]);price.textContent=priceLabel(selected);a.textContent=isPriced(selected)?'Add to cart':'Add to request'}}
  var a=el('button','btn',isPriced(selected)?'Add to cart':'Add to request');a.type='button';
  a.onclick=function(){var k=cart();k[selected.id]=(k[selected.id]||0)+1;save(k);a.textContent='Added ✓';setTimeout(function(){a.textContent=isPriced(selected)?'Add to cart':'Add to request'},1200)};
  b.appendChild(a);c.appendChild(pic(p));c.appendChild(b);mg.appendChild(c)});
-if(menuNote){menuNote.classList.add('price-notes');menuNote.textContent='';menuNote.appendChild(el('b',0,'Notes'));var noteList=el('ul');['A 20% non-refundable deposit is required to secure your booking.','On-the-spot frying fee: $300.','Servers: The number required is based on the number of guests/visitors expected for the event; $100 per server for up to 5 hours.','.'].forEach(function(text){noteList.appendChild(el('li',0,text))});menuNote.appendChild(noteList);mg.parentNode.insertBefore(menuNote,mg.nextSibling)}}
+if(menuNote){menuNote.classList.add('price-notes');menuNote.textContent='';menuNote.appendChild(el('b',0,'Notes'));var noteList=el('ul');['Minimum order: 12 for fruits and cocktails/mocktails.','A 20% non-refundable deposit is required to secure your booking.','On-the-spot frying fee: $300.','Servers: The number required is based on the number of guests/visitors expected for the event; $100 per server for up to 5 hours.'].forEach(function(text){noteList.appendChild(el('li',0,text))});menuNote.appendChild(noteList);mg.parentNode.insertBefore(menuNote,mg.nextSibling)}}
 /* cart page */
 var box=$('#cart');
 function total(){var c=cart(),s=0,q=false;for(var k in c){var p=P(k);if(!p)continue;if(!isPriced(p))q=true;else s+=p.price*c[k]}return{s:s,q:q}}
@@ -126,7 +139,7 @@ if(f)f.onsubmit=function(e){e.preventDefault();var c=cart(),ids=Object.keys(c).f
  var d=new FormData(f),code='NC-'+Math.floor(1000+Math.random()*9000),t=total();
  var L=['New order request '+code,'','CUSTOMER INFORMATION','Full name: '+d.get('fullName'),'First name: '+d.get('firstName'),'Last name: '+d.get('lastName'),'Phone: '+(d.get('phone')||'-'),'Email: '+(d.get('email')||'-'),'','EVENT DETAILS','Event type: '+d.get('eventType'),'Picking up / service: '+d.get('mode'),'Venue street address: '+d.get('streetAddress'),'Address line 2: '+(d.get('streetAddress2')||'-'),'City: '+d.get('city'),'State / Province: '+d.get('state'),'ZIP / Postal code: '+d.get('postalCode'),'Event date: '+(d.get('date')||'-'),'Event time: '+(d.get('time')||'-'),'Time zone: America/New_York','Personalization: '+d.get('personalization'),'','About the event: '+(d.get('eventDetails')||'-'),'Menu interests and food allergies: '+(d.get('menuInterests')||'-'),'','Items:'];
  ids.forEach(function(k){var p=P(k),unit=p.unit&&p.unit!=='Order on request'?' ('+p.unit+')':'';L.push('- '+c[k]+' x '+p.name+unit+': '+(isPriced(p)?money(p.price*c[k]):'Price to be confirmed'))});
- L.push('','Priced items subtotal: '+money(t.s),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. A 20% nonrefundable deposit is required to reserve the date. On-the-spot frying is $300. A minimum order of 12 applies to cocktails/mocktails and 15 to fruits. Delivery and setup fees are paid by the client. Please confirm availability and quote unpriced items. Thank you!');
+ L.push('','Priced items subtotal: '+money(t.s),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. A 20% nonrefundable deposit is required to reserve the date. On-the-spot frying is $300. A minimum order of 12 applies to fruits and cocktails/mocktails. Delivery and setup fees are paid by the client. Please confirm availability and quote unpriced items. Thank you!');
  L[L.length-1]=L[L.length-1].replace('Notes: -','');
  wr(R,{code:code,time:Date.now()});draw();
  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener')};
