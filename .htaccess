@@ -1,0 +1,16 @@
+Options -MultiViews
+DirectoryIndex index.html
+RewriteEngine On
+
+# Redirect .html requests to clean URLs
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1/ [R=301,L]
+
+# Serve folder URLs like /about/ to /about/index.html
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+# Serve clean paths like /about to /about.html if needed
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ $1.html [L,QSA]

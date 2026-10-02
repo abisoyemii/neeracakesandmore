@@ -6,6 +6,15 @@
 <title>NeeraCakesAndMore | Cakes & Catering in Atlanta | A TASTE TO REMEMBER</title>
 <link rel="icon" type="image/png" href="images/neeralogo.png?v=2">
 <meta name="description" content="NeeraCakesAndMore creates Nigerian-inspired cakes, small chops and pastries for celebrations in Atlanta, Georgia.">
+<link rel="canonical" href="https://neeracakesandmore.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NeeraCakesAndMore">
+<meta property="og:url" content="https://neeracakesandmore.com/">
+<meta property="og:title" content="NeeraCakesAndMore | Cakes &amp; Catering in Atlanta">
+<meta property="og:description" content="Nigerian-inspired cakes, small chops and pastries for celebrations in Atlanta. A Taste to Remember.">
+<meta property="og:image" content="https://neeracakesandmore.com/images/neeralogo.png">
+<meta property="og:image:alt" content="NeeraCakesAndMore logo">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="images/cakes/WhatsApp%20Image%202026-09-25%20at%2010.14.40.jpeg" fetchpriority="high">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;1,300&family=Figtree:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
@@ -28,8 +37,8 @@ h2{font-size:clamp(2.4rem,5.4vw,4.6rem)}
 /* nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;gap:20px;padding:calc(14px + env(safe-area-inset-top,0px)) var(--pad) 14px;transition:background .4s,box-shadow .4s}
 nav.solid{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
-.brand{display:flex;flex-direction:column;align-items:center;gap:5px;margin-right:auto}
-.brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
+.brand{display:flex;align-items:center;gap:12px;margin-right:auto}
+.brand img{width:88px;height:88px;border-radius:50%;object-fit:cover;flex:none}
 .wm{font-family:var(--serif);font-size:1.25rem;font-weight:600;line-height:1.1}
 .tag{display:block;font-size:.6rem;font-weight:600;color:var(--rose);letter-spacing:.2em;line-height:1;white-space:nowrap;text-shadow:0 1px 8px #0008}nav.solid .tag,footer .tag{text-shadow:none}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 nav ul{display:flex;gap:clamp(16px,2.2vw,34px);list-style:none;padding:0;font-size:.98rem;font-weight:500}
@@ -146,7 +155,7 @@ footer small{display:block;margin-top:30px;color:var(--mute);font-size:.85rem}
 #intro{display:none;position:fixed;inset:0;z-index:100;background:#150a0f;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity 1s ease}
 .js #intro{display:flex}#intro.out{opacity:0;pointer-events:none}
 #intro>*{opacity:0;transform:translateY(10px);transition:opacity 1.2s ease,transform 1.6s ease}#intro.show>*{opacity:1;transform:none}
-#intro img{width:120px;height:120px;border-radius:50%;object-fit:cover}#intro .tag{font-size:.8rem;text-shadow:none}#intro .tag{transition-delay:.25s}
+#intro img{width:100px;height:100px;border-radius:50%;object-fit:cover}#intro .tag{font-size:.8rem;text-shadow:none}#intro .tag{transition-delay:.25s}
 .js:not(.go) nav,.js:not(.go) .ctas>*{animation-play-state:paused}
 /* motion */
 :root{--ease:cubic-bezier(.2,.7,.2,1)}
@@ -178,17 +187,17 @@ nav{animation:navin .9s var(--ease) .1s both}@keyframes navin{from{opacity:0;tra
     <img class="logo" src="images/neeralogo.png" alt="NeeraCakesAndMore logo" onerror="this.style.display='none'">
     <span class="tag">A TASTE TO REMEMBER</span>
   </a>
-  <ul><li><a href="about.html">Our Story</a></li><li><a href="luxsetup.html">Lux Set-Up</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a class="order" href="cart.html">Order / Inquire</a></li></ul>
+  <ul><li><a href="about">Our Story</a></li><li><a href="luxsetup">Lux Set-Up</a></li><li><a href="gallery">Gallery</a></li><li><a href="services">Services</a></li><li><a href="faq">FAQ</a></li><li><a class="order" href="cart">Order / Inquire</a></li></ul>
   <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
 </nav>
-<div id="menu"><a href="about.html">Our Story</a><a href="luxsetup.html">Lux Set-Up</a><a href="gallery.html">Gallery</a><a href="services.html">Services</a><a href="faq.html">FAQ</a><a class="cta" href="cart.html">Order / Inquire</a></div>
+<div id="menu"><a href="about">Our Story</a><a href="luxsetup">Lux Set-Up</a><a href="gallery">Gallery</a><a href="services">Services</a><a href="faq">FAQ</a><a class="cta" href="cart">Order / Inquire</a></div>
 
 <header id="hero"><span id="top"></span>
   <img class="hero-slide active" loading="eager" fetchpriority="high" decoding="async" src="images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg" alt="NeeraCakesAndMore catering display" style="object-position:50% 45%;opacity:1">
   <img class="hero-slide" decoding="async" data-src="images/cakes/WhatsApp Image 2026-09-25 at 10.33.46.jpeg" alt="NeeraCakesAndMore drinks and catering display" style="object-position:50% 45%;opacity:0">
   <div class="hcopy">
     <h1 class="sr">NeeraCakesAndMore: cakes, small chops and pastries in Atlanta</h1>
-    <div class="ctas"><a class="btn" href="cart.html">Order / Inquire</a><a class="ghost" href="about.html">Our Story</a></div>
+    <div class="ctas"><a class="btn" href="cart">Order / Inquire</a><a class="ghost" href="about">Our Story</a></div>
   </div>
   <div class="dots" aria-hidden="true"><i class="on"></i><i></i></div>
 </header>
@@ -204,7 +213,7 @@ nav{animation:navin .9s var(--ease) .1s both}@keyframes navin{from{opacity:0;tra
     <h2>Our Story</h2>
     <p>At Neeracakesandmore, we believe good food brings people together and makes every celebration more memorable. What started as a passion for creating delicious Nigerian small chops has grown into a business offering small chops, pastries, cakes, and beautifully presented treats for all kinds of events.</p>
     <p>From intimate celebrations to weddings, birthdays, baby showers, and special occasions, we put care, flavor, and beautiful presentation into everything we create. Our goal is simple: to give you and your guests A Taste to Remember.</p>
-    <a class="more" href="about.html">Read more about us</a>
+    <a class="more" href="about">Read more about us</a>
   </div>
   <div class="frame"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats prepared for a celebration in Atlanta" style="object-position:50% 50%"></div>
 </section>
@@ -234,12 +243,12 @@ nav{animation:navin .9s var(--ease) .1s both}@keyframes navin{from{opacity:0;tra
 <section id="cater">
   <div class="pin">
     <div class="clip" id="clip"><video id="cimg" class="media-video" muted loop playsinline preload="none" poster="images/hero/small-chops-hero.jpg" aria-label="Food beautifully presented for an Atlanta event"><source src="images/fourthvid-web.mp4" type="video/mp4"></video></div>
-    <div class="cin" id="ctext"><h2>Catering</h2><p>Weddings, birthdays, baby showers and special occasions, with the same care in every tray.</p><a class="ghost" href="services.html">See our services</a></div>
+    <div class="cin" id="ctext"><h2>Catering</h2><p>Weddings, birthdays, baby showers and special occasions, with the same care in every tray.</p><a class="ghost" href="services">See our services</a></div>
   </div>
 </section>
 
 <section class="gallery" id="gal">
-  <div class="chapter"><h2>Gallery</h2><a class="ghost" href="gallery.html">View full gallery</a></div>
+  <div class="chapter"><h2>Gallery</h2><a class="ghost" href="gallery">View full gallery</a></div>
   <div class="strip" tabindex="0" aria-label="Gallery, scroll sideways">
     <div class="frame t"><img loading="lazy" decoding="async" src="images/small-chops/small-chops-01.jpg" alt="NeeraCakesAndMore treats" style="object-position:50% 50%"></div>
     <div class="frame w"><img loading="lazy" decoding="async" src="images/hero/small-chops-hero.jpg" alt="Small chops prepared in Atlanta" style="object-position:50% 50%"></div>
@@ -262,10 +271,10 @@ nav{animation:navin .9s var(--ease) .1s both}@keyframes navin{from{opacity:0;tra
   </div>
 </div></section>
 
-<a class="pill" id="pill" href="cart.html">Order / Inquire</a>
+<a class="pill" id="pill" href="cart">Order / Inquire</a>
 <footer id="inquire">
   <h2>A Taste to Remember</h2>
-  <a class="btn" href="cart.html">Order / Inquire</a>
+  <a class="btn" href="cart">Order / Inquire</a>
   <div class="contact">
     <a href="tel:+14709626866">+1 (470) 962-6866</a>
     <a href="https://www.instagram.com/neeracakesandmore" target="_blank" rel="noopener">Instagram @neeracakesandmore</a>
