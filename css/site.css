@@ -5,7 +5,7 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weigh
 a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 img{display:block;width:100%;height:100%;object-fit:cover;color:transparent}
 nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,4vw,56px);background:linear-gradient(#150c10f2,#150c10b3 70%,transparent)}
-.brand{display:flex;flex-direction:column;gap:2px}.brand img{width:60px;height:60px;border-radius:50%}
+.brand{display:flex;flex-direction:column;gap:2px}.brand img{width:52px;height:52px;border-radius:50%}
 .wm{font-family:var(--serif);font-size:1.6rem;font-weight:500;line-height:1}.tag{font-size:.7rem;letter-spacing:.34em;color:var(--gold)}
 nav ul{display:flex;gap:clamp(16px,2.4vw,38px);list-style:none;padding:0;font-size:1rem;letter-spacing:.06em;align-items:center}
 nav ul a{opacity:.8;transition:opacity .5s}nav ul a:hover,nav ul a.on{opacity:1}nav ul a.on{border-bottom:1px solid var(--gold);padding-bottom:3px}
@@ -77,3 +77,4 @@ footer small{font-size:.9rem}
 .eyebrow{font-size:.88rem}
 @media(max-width:560px){body{font-size:1.08rem}.bt p{font-size:1.25rem}.row2 p,.steps p,.summary p{font-size:1.05rem}.inquire .tag{font-size:.62rem}.btn{font-size:1.05rem}}
 @media(max-width:560px){body{font-size:1.08rem}p,li,button,input,select,textarea,label{font-size:1.04rem}.bt p,.row2 p,.steps p,.summary p,.service-area{font-size:1.06rem}.tag{font-size:.64rem}.btn{font-size:1.04rem}}
+@media(max-width:560px){nav{gap:10px;padding:10px 16px}.brand{flex:1;flex-direction:row;align-items:center;gap:8px;min-width:0;max-width:none}.brand img{width:42px;height:42px;flex:none}.brand .tag{max-width:132px;font-size:.55rem;letter-spacing:.12em;line-height:1.2;white-space:normal}.theme-toggle{width:38px;height:38px;margin:0;flex:none}.burger{width:42px;height:42px;margin-left:0;flex:none}.form-grid,.choice-grid{grid-template-columns:1fr}}

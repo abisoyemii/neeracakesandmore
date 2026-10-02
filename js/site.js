@@ -142,7 +142,9 @@ if(f)f.onsubmit=function(e){e.preventDefault();var c=cart(),ids=Object.keys(c).f
  L.push('','Priced items subtotal: '+money(t.s),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. A 20% nonrefundable deposit is required to reserve the date. On-the-spot frying is $300. A minimum order of 12 applies to fruits and cocktails/mocktails. Delivery and setup fees are paid by the client. Please confirm availability and quote unpriced items. Thank you!');
  L[L.length-1]=L[L.length-1].replace('Notes: -','');
  wr(R,{code:code,time:Date.now()});draw();
- window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener')};
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
+ try{fetch('/api/send-email',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requestCode:code,replyTo:d.get('email'),message:L.join('\n')})}).then(function(response){if(!response.ok)throw new Error('Email notification unavailable')}).catch(function(){})}catch(ignore){}
+};
 var cl=$('#clear');if(cl)cl.onclick=function(){save({});wr(R,null);draw()};
 /* shared: menu, reveals, badge */
 var bg=$('.burger');if(bg){var H=document.documentElement;bg.onclick=function(){var o=!H.classList.contains('menu-open');H.classList.toggle('menu-open',o);document.body.classList.toggle('menu-open',o);bg.setAttribute('aria-expanded',o)}}
