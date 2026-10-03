@@ -276,7 +276,7 @@ nav{animation:navin .9s var(--ease) .1s both}@keyframes navin{from{opacity:0;tra
 <a class="pill" id="pill" href="cart">Order / Inquire</a>
 <footer id="inquire">
   <h2>A Taste to Remember</h2>
-  <a class="btn" href="cart">Order / Inquire</a>
+  <button class="btn inquiry-open" type="button" aria-haspopup="dialog" aria-controls="inquiry-modal">Start Inquiry</button>
   <div class="contact">
     <a href="tel:+14709626866">+1 (470) 962-6866</a>
     <a href="mailto:info@neeracakesandmore.com">info@neeracakesandmore.com</a><a href="https://www.instagram.com/neeracakesandmore" target="_blank" rel="noopener">Instagram @neeracakesandmore</a>
@@ -355,5 +355,6 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(d
 addEventListener('resize',draw);var strip=document.querySelector('.strip');if(strip)strip.addEventListener('scroll',reveal,{passive:true});draw();
 })();
 </script>
+<script src="js/inquiry.js"></script>
 </body>
 </html>
