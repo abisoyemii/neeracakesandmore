@@ -124,7 +124,7 @@
     status.hidden = true;
     status.className = 'inquiry-status';
 
-    fetch('/api/send-email', {
+    fetch('/.netlify/functions/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

@@ -1,7 +1,4 @@
 {
   "name": "neeracakesandmore-site",
-  "private": true,
-  "dependencies": {
-    "nodemailer": "^10.0.13"
-  }
+  "private": true
 }

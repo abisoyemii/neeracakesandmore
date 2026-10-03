@@ -147,7 +147,8 @@ if(f)f.onsubmit=function(e){e.preventDefault();var c=cart(),ids=Object.keys(c).f
  L[L.length-1]=L[L.length-1].replace('Notes: -','');
  wr(R,{code:code,time:Date.now()});draw();
  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
- try{fetch('/api/send-email',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requestCode:code,replyTo:d.get('email'),message:L.join('\n')})}).then(function(response){if(!response.ok)throw new Error('Email notification unavailable')}).catch(function(){})}catch(ignore){}
+ var emailWorkflow=ids.some(function(k){return k==='cater'||k==='lux'||k==='cake'})?'booking':'order';
+ try{fetch('/.netlify/functions/send-email',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({workflow:emailWorkflow,requestCode:code,replyTo:d.get('email'),message:L.join('\n')})}).then(function(response){if(!response.ok)throw new Error('Email notification unavailable')}).catch(function(){})}catch(ignore){}
 };
 var cl=$('#clear');if(cl)cl.onclick=function(){save({});wr(R,null);draw()};
 /* shared: menu, reveals, badge */
