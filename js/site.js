@@ -46,9 +46,11 @@ var PRODUCTS=[
  ]},
  {id:'fried-yam-options',name:'Yam with Sauce',optionLabel:'Protein option',video:'images/yam and sauce.mp4',desc:'.',variants:[
   {id:'fried-yam',label:'Protein',unit:'Order on request',price:null,displayPrice:'On Request'},
-  {id:'fried-yam-beef',label:'Beef',unit:'Order on request',price:null,displayPrice:'On Request'},
+  {id:'fried-yam-Fish',label:'Fish',unit:'Order on request',price:null,displayPrice:'On Request'},
+  {id:'fried-yam-Turkey',label:'Turkey',unit:'Order on request',price:null,displayPrice:'On Request'},
   {id:'fried-yam-gizzard',label:'Gizzard',unit:'Order on request',price:null,displayPrice:'On Request'},
-  {id:'fried-yam-all',label:'All',unit:'Order on request',price:null,displayPrice:'On Request'}
+  {id:'fried-yam-chicken',label:'Chicken',unit:'Order on request',price:null,displayPrice:'On Request'},
+ {id:'fried-yam-all',label:'All',unit:'Order on request',price:null,displayPrice:'On Request'}
  ]},
  {id:'grilled-fish',name:'Grilled Fish',unit:'Order on request',price:null,displayPrice:'On request',desc:'Request pricing on WhatsApp.'},
 {id:'cocktail',name:'Cocktail',unit:'Each',price:7,displayPrice:'$7 each',img:'images/cakes/WhatsApp Image 2026-09-25 at 10.14.40.jpeg',desc:'Minimum order: 12.'},
@@ -59,7 +61,6 @@ var PRODUCTS=[
  ]},
  {id:'combo-1',name:'Combo 1',unit:'Combo',price:6,displayPrice:'$6',img:'images/small-chops/small-chops-01.jpg',desc:'Spring roll, samosa and 3 puff-puff.'},
  {id:'combo-2',name:'Combo 2',unit:'Combo',price:9.5,displayPrice:'$9.50',img:'images/small-chops/small-chops-01.jpg',desc:'Combo 1 plus your choice of gizzard, chicken or beef kebab.'},
- {id:'party',name:'Party Pack',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-02.jpg',desc:'Choose your mix of bites for the party.'},
  {id:'combo',name:'Customize Your Own Party Pack',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-01.jpg',desc:'Choose your preferred bites and quantities to create a party pack that fits your event.'},
  {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On Request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour, design and date.'},
  {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On Request',desc:'Custom Beautifully styled food displays for weddings, birthdays, baby showers, corporate events, and more.'},
@@ -118,7 +119,7 @@ PRODUCTS.forEach(function(p){var c=el('article','card rv'),b=el('div','bd'),r=el
  var a=el('button','btn',isPriced(selected)?'Add to cart':'Add to request');a.type='button';
  a.onclick=function(){var k=cart();k[selected.id]=(k[selected.id]||0)+1;save(k);a.textContent='Added ✓';setTimeout(function(){a.textContent=isPriced(selected)?'Add to cart':'Add to request'},1200)};
  b.appendChild(a);c.appendChild(pic(p));c.appendChild(b);mg.appendChild(c)});
-if(menuNote){menuNote.classList.add('price-notes');menuNote.textContent='';menuNote.appendChild(el('b',0,'Notes'));var noteList=el('ul');['Minimum order: 12 for fruits and cocktails/mocktails.','A 20% non-refundable deposit is required to secure your booking.','On-the-spot frying fee: $300.','Servers: The number required is based on the number of guests/visitors expected for the event; $100 per server for up to 5 hours.'].forEach(function(text){noteList.appendChild(el('li',0,text))});menuNote.appendChild(noteList);mg.parentNode.insertBefore(menuNote,mg.nextSibling)}}
+if(menuNote){menuNote.classList.add('price-notes');menuNote.textContent='';menuNote.appendChild(el('b',0,'Notes'));var noteList=el('ul');['Minimum order: 12 for fruits and cocktails/mocktails.','A 20% non-refundable deposit is required to secure your booking.','On-the-spot frying service charge: $300.','Servers: The number required is based on the number of guests/visitors expected for the event; $100 per server for up to 5 hours.'].forEach(function(text){noteList.appendChild(el('li',0,text))});menuNote.appendChild(noteList);mg.parentNode.insertBefore(menuNote,mg.nextSibling)}}
 /* cart page */
 var box=$('#cart');
 function total(){var c=cart(),s=0,q=false;for(var k in c){var p=P(k);if(!p)continue;if(!isPriced(p))q=true;else s+=p.price*c[k]}return{s:s,q:q}}
