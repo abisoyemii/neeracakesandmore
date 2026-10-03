@@ -1,4 +1,32 @@
 (function () {
+  var emojiPattern = /(?:\p{Regional_Indicator}{2}|[#*0-9]\uFE0F?\u20E3|\p{Extended_Pictographic}(?:\uFE0E|\uFE0F)?(?:\p{Emoji_Modifier})?(?:\u200D\p{Extended_Pictographic}(?:\uFE0E|\uFE0F)?(?:\p{Emoji_Modifier})?)*(?:[\u{E0020}-\u{E007E}]*\u{E007F})?)/gu;
+
+  function removeEmojis(field) {
+    var original = field.value;
+    var selectionStart = field.selectionStart;
+    var selectionEnd = field.selectionEnd;
+    var cleaned = original.replace(emojiPattern, '');
+    if (cleaned === original) return;
+
+    if (selectionStart !== null && selectionEnd !== null) {
+      var cursorStart = original.slice(0, selectionStart).replace(emojiPattern, '').length;
+      var cursorEnd = original.slice(0, selectionEnd).replace(emojiPattern, '').length;
+      field.value = cleaned;
+      field.setSelectionRange(cursorStart, cursorEnd);
+    } else {
+      field.value = cleaned;
+    }
+  }
+
+  function filterTextInput(event) {
+    var field = event.target;
+    if (event.isComposing || !field.matches('input:not([type]),input[type=""],input[type="text"],input[type="email"],input[type="tel"],input[type="search"],input[type="url"],textarea')) return;
+    removeEmojis(field);
+  }
+
+  document.addEventListener('input', filterTextInput, true);
+  document.addEventListener('compositionend', filterTextInput, true);
+
   var triggers = [].slice.call(document.querySelectorAll('.inquiry-open'));
   if (!triggers.length) return;
 
