@@ -1,5 +1,6 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const brandedDomain = 'neeracakesandmore.com';
+const submissionRecipient = 'oluwafunmilayo_bello@yahoo.com';
 const eventTypes = ['Wedding', 'Birthday', 'Baby Shower', 'Corporate Event', 'Graduation', 'Anniversary', 'Other'];
 const interestsAllowed = ['Small Chops', 'Catering', 'Mocktails', 'Cakes/Cupcakes', 'Luxe Setup'];
 
@@ -61,7 +62,7 @@ function validInquiry(body) {
       'Customer Message: ' + (message || 'Not provided')
     ].join('\n'),
     from: 'info@' + brandedDomain,
-    to: 'info@' + brandedDomain,
+    to: submissionRecipient,
     subject: 'New Website Inquiry - NeeraCakesAndMore'
   };
 }
@@ -82,7 +83,7 @@ function validOrder(body, workflow) {
   const mailbox = workflow === 'booking' ? 'bookings' : 'orders';
   return {
     from: mailbox + '@' + brandedDomain,
-    to: mailbox + '@' + brandedDomain,
+    to: submissionRecipient,
     replyTo: replyTo,
     subject: workflow === 'booking'
       ? 'NeeraCakesAndMore booking request ' + requestCode
