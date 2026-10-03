@@ -62,7 +62,7 @@ var PRODUCTS=[
  {id:'combo-1',name:'Combo 1',unit:'Combo',price:6,displayPrice:'$6',img:'images/small-chops/small-chops-01.jpg',desc:'Spring roll, samosa and 3 puff-puff.'},
  {id:'combo-2',name:'Combo 2',unit:'Combo',price:9.5,displayPrice:'$9.50',img:'images/small-chops/small-chops-01.jpg',desc:'Combo 1 plus your choice of gizzard, chicken or beef kebab.'},
  {id:'combo',name:'Customize Your Own Party Pack',unit:'Custom mix',price:null,displayPrice:'On Request',img:'images/small-chops/small-chops-01.jpg',desc:'Choose your preferred bites and quantities to create a party pack that fits your event.'},
- {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On Request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour, design and date.'},
+ {id:'cake',name:'Celebration Cake',unit:'Custom',price:null,displayPrice:'On Request',img:'images/cakes/cake1.jpg',desc:'Tell us the size, flavour,  and date.'},
  {id:'cater',name:'Event Catering',unit:'Quote',price:null,displayPrice:'On Request',desc:'Custom Beautifully styled food displays for weddings, birthdays, baby showers, corporate events, and more.'},
  {id:'lux',name:'Luxury Set-Up',unit:'Quote',price:null,displayPrice:'On Request',desc:'Elegant food and beverage displays styled to complement your event.'}
 ];
@@ -143,7 +143,7 @@ if(f)f.onsubmit=function(e){e.preventDefault();var c=cart(),ids=Object.keys(c).f
  var d=new FormData(f),code='NC-'+Math.floor(1000+Math.random()*9000),t=total();
  var L=['New order request '+code,'','CUSTOMER INFORMATION','1. Full name: '+d.get('fullName'),'2. First name: '+d.get('firstName'),'3. Last name: '+d.get('lastName'),'4. Phone: '+(d.get('phone')||'-'),'5. Email: '+(d.get('email')||'-'),'','EVENT DETAILS','6. Event type: '+d.get('eventType'),'7. Picking up / service: '+d.get('mode'),'8. Venue street address: '+d.get('streetAddress'),'9. Address line 2: '+(d.get('streetAddress2')||'-'),'10. City: '+d.get('city'),'11. State / Province: '+d.get('state'),'12. ZIP / Postal code: '+d.get('postalCode'),'13. Event date: '+(d.get('date')||'-'),'14. Event time: '+(d.get('time')||'-'),'15. Time zone: America/New_York','16. Personalization: '+d.get('personalization'),'17. About the event: '+(d.get('eventDetails')||'-'),'18. Menu interests and food allergies: '+(d.get('menuInterests')||'-'),'','Items:'];
  ids.forEach(function(k){var p=P(k),unit=p.unit&&p.unit!=='Order on request'?' ('+p.unit+')':'';L.push('- '+c[k]+' x '+p.name+unit+': '+(isPriced(p)?money(p.price*c[k]):'Price to be confirmed'))});
- L.push('','Priced items subtotal: '+money(t.s),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. A 20% nonrefundable deposit is required to reserve the date. On-the-spot frying is $300. Delivery and setup fees are paid by the client. Please confirm availability and quote unpriced items. Thank you!');
+ L.push('','Priced items subtotal: '+money(t.s),'Notes: '+(d.get('notes')||'-'),'','Important: minimum 48 hours notice. A 20% nonrefundable deposit is required to reserve the date. On-the-spot frying is $300.Delivery and setup fees are paid by the client. Please confirm availability and quote unpriced items. Thank you!');
  L[L.length-1]=L[L.length-1].replace('Notes: -','');
  wr(R,{code:code,time:Date.now()});draw();
  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
